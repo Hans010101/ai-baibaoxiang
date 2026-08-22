@@ -1,0 +1,31 @@
+name: 提交组件
+description: 推荐一个 API、MCP、模型、SDK 或 Agent 工具
+title: "[收录] "
+labels: [submission]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 组件名称
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 官方网站或仓库
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: 核心功能与使用场景
+    validations:
+      required: true
+  - type: input
+    id: free
+    attributes:
+      label: 免费方式
+      description: 例如“完全免费”“每月 1,000 次”或“免费额度待确认”
+    validations:
+      required: true
