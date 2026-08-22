@@ -11,6 +11,7 @@
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "validate:data": "python3 scripts/validate_catalog.py",
+    "import:data": "python3 scripts/update_catalog.py --full-import",
     "update:data": "python3 scripts/update_catalog.py",
     "deploy:cloudflare": "npm run build && wrangler deploy --config dist/server/wrangler.json --name ai-baibaoxiang"
   },

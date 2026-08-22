@@ -1,6 +1,11 @@
 import catalogData from '@/data/catalog.json';
 
-export type CatalogItem = (typeof catalogData)[number];
+type CatalogRecord = (typeof catalogData)[number];
+export type CatalogItem = CatalogRecord & {
+  sourceCategory?: string;
+  https?: string;
+  cors?: string;
+};
 export const catalog = catalogData as CatalogItem[];
 
 export function getCatalogItem(slug: string) {

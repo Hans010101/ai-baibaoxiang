@@ -75,6 +75,8 @@ h1 em { color:var(--blue); font-style:normal; }
 .tags span { padding:5px 8px; background:#f3f6fb; color:#61708a; border-radius:5px; font-size:10px; }
 .tool-card > a { margin-top:auto; padding-top:20px; color:#294fcd; font-size:13px; font-weight:700; }
 .tool-card > a b { float:right; }
+.load-more { display:block;margin:28px auto 0;padding:12px 22px;border:1px solid #b9c9ee;border-radius:10px;background:white;color:#294fcd;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px #315bea0d; }
+.load-more:hover { background:#f2f6ff; }
 .empty-state { padding:70px 20px; border:1px dashed #cbd7e9; border-radius:15px; text-align:center; background:#f9fbff; }
 .empty-state > span { display:block; color:#91a1b8; font-size:40px; transform:rotate(-15deg); }
 .empty-state h3 { margin:14px 0 6px; }

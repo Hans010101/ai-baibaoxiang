@@ -6,12 +6,15 @@ import type { CatalogItem } from '@/lib/catalog';
 import { SiteFooter, SiteHeader } from '@/components/site-shell';
 
 const typeIcons: Record<string, string> = { API: '⌁', MCP: '⋈', 模型: '◈', SDK: '{ }' };
+const PAGE_SIZE = 48;
+export type ExplorerItem = Pick<CatalogItem, 'slug' | 'name' | 'initial' | 'type' | 'category' | 'description' | 'auth' | 'free' | 'status' | 'accent' | 'tags'>;
 
-export function CatalogExplorer({ items, categories }: { items: CatalogItem[]; categories: string[] }) {
+export function CatalogExplorer({ items, categories }: { items: ExplorerItem[]; categories: string[] }) {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('全部');
   const [verifiedOnly, setVerifiedOnly] = useState(false);
   const [freeOnly, setFreeOnly] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const searchRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -64,7 +67,7 @@ export function CatalogExplorer({ items, categories }: { items: CatalogItem[]; c
       </section>
 
       <section className="stats" aria-label="网站数据">
-        <div><strong>{items.length}</strong><span>首批精选组件</span></div>
+        <div><strong>{items.length}</strong><span>已收录组件</span></div>
         <div><strong>{categories.length}</strong><span>能力分类</span></div>
         <div><strong>{items.filter((item) => item.status === '已验证').length}</strong><span>已验证可用</span></div>
         <div><strong>每日更新</strong><span>UTC 00:20 自动运行</span></div>
@@ -98,7 +101,7 @@ export function CatalogExplorer({ items, categories }: { items: CatalogItem[]; c
         <div className="result-line"><span>找到 {filtered.length} 个组件</span>{query && <button onClick={() => setQuery('')}>清除“{query}” ×</button>}</div>
         {filtered.length ? (
           <div className="tool-grid">
-            {filtered.map((tool) => (
+            {filtered.slice(0, visibleCount).map((tool) => (
               <article className="tool-card" key={tool.slug}>
                 <div className="tool-top">
                   <span className="tool-icon" style={{ background: tool.accent }}>{tool.initial}</span>
@@ -115,6 +118,7 @@ export function CatalogExplorer({ items, categories }: { items: CatalogItem[]; c
         ) : (
           <div className="empty-state"><span>⌕</span><h3>暂时没有匹配的组件</h3><p>试试缩短关键词，或者清除筛选条件。</p><button onClick={() => { setQuery(''); setCategory('全部'); setVerifiedOnly(false); setFreeOnly(false); }}>查看全部组件</button></div>
         )}
+        {visibleCount < filtered.length && <button className="load-more" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>继续查看 <b>{Math.min(PAGE_SIZE, filtered.length - visibleCount)}</b> 个组件</button>}
       </section>
 
       <section className="standards" id="standards">

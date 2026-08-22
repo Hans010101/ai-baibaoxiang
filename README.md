@@ -8,7 +8,7 @@ AI 百宝箱是一个亮色科技风的 AI 组件黄页，集中展示免费 API
 
 - 首页搜索、能力分类、免费/已验证筛选与响应式布局
 - 组件详情页、快速接入命令复制、同类组件和证据链接
-- 12 个首批精选组件，以及可持续扩展的 JSON 内容库
+- 已完整同步 `public-apis` 目录，并保留原有 AI / MCP 精选组件
 - 每日发现 `public-apis` 新 API，并检索 GitHub 新增 MCP / Agent 组件
 - 使用 Cloudflare Workers AI 自动生成中文摘要、标签、场景和接入说明
 - 结构校验通过后由机器人创建 PR，启用自动合并后自动发布
@@ -41,6 +41,7 @@ npm run dev
 
 ```bash
 npm run validate:data
+npm run import:data
 npm run build
 ```
 
@@ -67,7 +68,7 @@ API Token 只授予所需账户的 Workers Scripts 编辑与 Workers AI 权限�
 
 ## 自动更新规则
 
-1. 首次基线已记录 `public-apis` 当前条目，避免第一次运行导入上千条旧数据。
+1. 首次全量同步使用 `npm run import:data`；命令可重复执行，只补充尚未收录的条目。
 2. 每天只处理最多 8 个新候选，控制免费额度和审核噪声；可用 `MAX_NEW_COMPONENTS` 调整。
 3. AI 只整理文字，不允许改写官网、来源、认证方式等事实字段。
 4. 新增组件统一标记为“待确认”；人工核对官网、免费政策与示例后再改为“已验证”。
@@ -77,10 +78,11 @@ API Token 只授予所需账户的 Workers Scripts 编辑与 Workers AI 权限�
 
 ```bash
 python3 scripts/update_catalog.py --self-check
+python3 scripts/update_catalog.py --full-import
 python3 scripts/update_catalog.py
 ```
 
-本地执行第二条命令时，可按 `.env.example` 提供 Cloudflare 环境变量。不要再次运行 `--bootstrap`，否则会重置上游基线。
+本地执行最后一条命令时，可按 `.env.example` 提供 Cloudflare 环境变量。不要再次运行 `--bootstrap`，否则会重置上游基线。
 
 ## 内容字段
 
