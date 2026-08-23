@@ -36,9 +36,9 @@ export function ToolLogo({ name, initial, officialUrl, accent, className, locale
 export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: BilingualExplorerItem[]; categories: string[]; locale?: Locale }) {
   const en = locale === 'en';
   const copy = en ? {
-    all: 'All', verified: 'Verified', pending: 'Pending review', free: 'Free tier', paid: 'Paid', noKey: 'No key required',
+    all: 'All', verified: 'Verified', pending: 'Pending review', free: 'Free tier', paid: 'Paid',
     eyebrow: 'The continuously updated AI component directory', title: <>Find, understand, and integrate<br /><em>every AI capability.</em></>,
-    subtitle: 'APIs, MCP services, models, SDKs, and agent tools—all in one place.', placeholder: 'What capability does your product need?', search: 'Search', popular: 'Popular:',
+    subtitle: 'APIs, MCP services, models, SDKs, and agent tools—all in one place.', placeholder: 'What capability does your product need?', search: 'Search',
     collected: 'components listed', categories: 'capability categories', verifiedCount: 'verified and available', daily: 'Daily updates', schedule: 'Runs automatically at 00:20 UTC',
     explore: 'EXPLORE', browse: 'Browse by capability', browseNote: 'Start with the need, even if you do not know the tool name', components: 'components',
     catalog: 'CATALOG', componentCatalog: 'Component catalog', found: 'components found', clear: 'Clear', details: 'View integration guide',
@@ -46,9 +46,9 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
     trusted: 'TRUSTED DATA', trustedTitle: 'Every entry links back to its source.', trustedText: 'The system discovers new components daily and only publishes entries from official channels that pass schema validation. Unconfirmed availability and free tiers are clearly marked as pending review.',
     steps: [['Discovery & deduplication', 'Track public directories, official repositories, and product documentation'], ['Bilingual AI editing', 'Generate Chinese and English descriptions, tags, use cases, and quick-start guidance'], ['Evidence & availability checks', 'Keep official sites, documentation, sources, and last verification dates']],
   } : {
-    all: '全部', verified: '已验证', pending: '待确认', free: '有免费额度', paid: '付费', noKey: '无需密钥',
+    all: '全部', verified: '已验证', pending: '待确认', free: '有免费额度', paid: '付费',
     eyebrow: '持续更新的 AI 组件黄页', title: <>找到、看懂、接入<br /><em>每一种 AI 能力。</em></>,
-    subtitle: '开放接口、MCP、模型、开发工具包与智能体工具，一站查清。', placeholder: '你想给产品接入什么能力？', search: '搜索', popular: '热门：',
+    subtitle: '开放接口、MCP、模型、开发工具包与智能体工具，一站查清。', placeholder: '你想给产品接入什么能力？', search: '搜索',
     collected: '已收录组件', categories: '能力分类', verifiedCount: '已验证可用', daily: '每日更新', schedule: '新加坡时间 08:20 自动运行',
     explore: '探索', browse: '按能力查找', browseNote: '从需求出发，不必先知道工具名字', components: '个组件',
     catalog: '目录', componentCatalog: '组件目录', found: '个组件', clear: '清除', details: '查看接入说明',
@@ -59,7 +59,6 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('all');
   const [verifiedOnly, setVerifiedOnly] = useState(false);
-  const [freeOnly, setFreeOnly] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const searchRef = useRef<HTMLInputElement>(null);
 
@@ -79,9 +78,9 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
     return items.filter((item) => {
       const matchesText = !needle || [item.name, en ? item.descriptionEn : item.description, categoryLabel(item.category, locale), ...(en ? item.tagsEn : item.tags)]
         .join(' ').toLowerCase().includes(needle);
-      return matchesText && (category === 'all' || item.category === category) && (!verifiedOnly || item.status === '已验证') && (!freeOnly || item.free);
+      return matchesText && (category === 'all' || item.category === category) && (!verifiedOnly || item.status === '已验证');
     });
-  }, [items, query, category, verifiedOnly, freeOnly, en, locale]);
+  }, [items, query, category, verifiedOnly, en, locale]);
 
   const selectCategory = (value: string) => {
     setCategory(value);
@@ -103,13 +102,6 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
           <kbd>⌘ K</kbd>
           <button type="submit">{copy.search}</button>
         </form>
-        <div className="quick-filters" aria-label={en ? 'Quick filters' : '快捷筛选'}>
-          <span>{copy.popular}</span>
-          <button onClick={() => setQuery(copy.noKey)}>{copy.noKey}</button>
-          <button onClick={() => setFreeOnly(!freeOnly)} className={freeOnly ? 'active' : ''}>{copy.free}</button>
-          <button onClick={() => { setQuery(''); setCategory('MCP 服务'); }}>MCP</button>
-          <button onClick={() => setVerifiedOnly(!verifiedOnly)} className={verifiedOnly ? 'active' : ''}>{copy.verified}</button>
-        </div>
       </section>
 
       <section className="stats" aria-label={en ? 'Site statistics' : '网站数据'}>
@@ -165,7 +157,7 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
             ))}
           </div>
         ) : (
-          <div className="empty-state"><span>⌕</span><h3>{copy.emptyTitle}</h3><p>{copy.emptyText}</p><button onClick={() => { setQuery(''); setCategory('all'); setVerifiedOnly(false); setFreeOnly(false); }}>{copy.viewAll}</button></div>
+          <div className="empty-state"><span>⌕</span><h3>{copy.emptyTitle}</h3><p>{copy.emptyText}</p><button onClick={() => { setQuery(''); setCategory('all'); setVerifiedOnly(false); }}>{copy.viewAll}</button></div>
         )}
         {visibleCount < filtered.length && <button className="load-more" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>{copy.loadMore} <b>{Math.min(PAGE_SIZE, filtered.length - visibleCount)}</b> {copy.more}</button>}
       </section>
