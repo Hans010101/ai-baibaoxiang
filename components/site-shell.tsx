@@ -1,11 +1,10 @@
-import Link from 'next/link';
-
+/* eslint-disable @next/next/no-html-link-for-pages */
 export function Brand() {
   return (
-    <Link className="brand" href="/" aria-label="AI 百宝箱首页">
+    <a className="brand" href="/" aria-label="AI 百宝箱首页">
       <span className="brand-mark" aria-hidden="true"><i /><i /><i /><i /></span>
       <span>AI 百宝箱</span>
-    </Link>
+    </a>
   );
 }
 
@@ -19,9 +18,9 @@ export function SiteHeader() {
     <header className="site-header">
       <Brand />
       <nav aria-label="主导航">
-        <Link href="/#categories">能力分类</Link>
-        <Link href="/#catalog">全部组件</Link>
-        <Link href="/#standards">收录标准</Link>
+        <a href="/#categories">能力分类</a>
+        <a href="/#catalog">全部组件</a>
+        <a href="/#standards">收录标准</a>
       </nav>
       <a className="submit-link" href={submitUrl} target="_blank" rel="noreferrer">提交组件 ↗</a>
     </header>

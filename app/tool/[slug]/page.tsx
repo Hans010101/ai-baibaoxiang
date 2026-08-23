@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CopyButton } from '@/components/copy-button';
 import { SiteFooter, SiteHeader } from '@/components/site-shell';
@@ -27,7 +27,7 @@ export default async function ToolDetail({ params }: { params: Promise<{ slug: s
     <main>
       <SiteHeader />
       <div className="detail-wrap">
-        <div className="breadcrumbs"><Link href="/">首页</Link><span>›</span><Link href="/#categories">{item.category}</Link><span>›</span><b>{item.name}</b></div>
+        <div className="breadcrumbs"><a href="/">首页</a><span>›</span><a href="/#categories">{item.category}</a><span>›</span><b>{item.name}</b></div>
         <section className="detail-hero">
           <span className="detail-icon" style={{ background: item.accent }}>{item.initial}</span>
           <div className="detail-heading">
@@ -44,7 +44,7 @@ export default async function ToolDetail({ params }: { params: Promise<{ slug: s
             <section><span className="section-kicker">QUICK START</span><h2>开始接入</h2><div className="code-block"><div><span>接入说明</span><CopyButton value={item.quickstart} /></div><pre><code>{item.quickstart}</code></pre></div><p className="code-note">生产环境请阅读官方文档，并妥善保管密钥。</p></section>
             <section><span className="section-kicker">USE CASES</span><h2>适合这些场景</h2><div className="use-case-grid">{item.useCases.map((useCase, index) => <div key={useCase}><b>0{index + 1}</b><span>{useCase}</span></div>)}</div></section>
             <section><span className="section-kicker">EVIDENCE</span><h2>官方资料与信息来源</h2><div className="source-list"><a href={item.docsUrl} target="_blank" rel="noreferrer"><span>官方文档</span><b>{new URL(item.docsUrl).hostname} ↗</b></a><a href={item.sourceUrl} target="_blank" rel="noreferrer"><span>收录来源</span><b>{new URL(item.sourceUrl).hostname} ↗</b></a></div></section>
-            {alternatives.length > 0 && <section><span className="section-kicker">ALTERNATIVES</span><h2>同类组件</h2><div className="alternative-list">{alternatives.map((alt) => <Link href={`/tool/${alt.slug}`} key={alt.slug}><span className="mini-icon" style={{ background: alt.accent }}>{alt.initial}</span><span><b>{alt.name}</b><small>{alt.description}</small></span><em>→</em></Link>)}</div></section>}
+            {alternatives.length > 0 && <section><span className="section-kicker">ALTERNATIVES</span><h2>同类组件</h2><div className="alternative-list">{alternatives.map((alt) => <a href={`/tool/${alt.slug}`} key={alt.slug}><span className="mini-icon" style={{ background: alt.accent }}>{alt.initial}</span><span><b>{alt.name}</b><small>{alt.description}</small></span><em>→</em></a>)}</div></section>}
           </article>
           <aside className="fact-panel">
             <h3>接入信息</h3>

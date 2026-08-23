@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import Link from 'next/link';
 import type { CatalogItem } from '@/lib/catalog';
 import { SiteFooter, SiteHeader } from '@/components/site-shell';
 
@@ -111,7 +110,7 @@ export function CatalogExplorer({ items, categories }: { items: ExplorerItem[]; 
                 <h3>{tool.name}</h3>
                 <p>{tool.description}</p>
                 <div className="tags"><span>{tool.auth}</span><span>{tool.free ? '有免费额度' : '付费'}</span></div>
-                <Link href={`/tool/${tool.slug}`}>查看接入说明 <b>→</b></Link>
+                <a href={`/tool/${tool.slug}`}>查看接入说明 <b>→</b></a>
               </article>
             ))}
           </div>

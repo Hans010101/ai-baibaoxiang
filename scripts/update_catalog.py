@@ -186,6 +186,7 @@ def source_enrichment(candidate: dict) -> dict:
     description = candidate["description"].strip().rstrip(".")
     https = {"yes": "支持", "no": "不支持"}.get(candidate.get("https", "").lower(), "未知")
     cors = {"yes": "支持", "no": "不支持"}.get(candidate.get("cors", "").lower(), "未知")
+    use_case = CATEGORY_CASES.get(candidate["category"], ["数据查询"])[0]
     return {
         "description": f"面向{candidate['category']}场景的开放 API：{description}。",
         "summary": (
@@ -195,7 +196,13 @@ def source_enrichment(candidate: dict) -> dict:
         ),
         "tags": [candidate.get("source_category", candidate["category"]), candidate["auth"], "开放 API"],
         "useCases": CATEGORY_CASES.get(candidate["category"], ["数据查询", "产品能力扩展", "自动化工作流"]),
-        "quickstart": "请先访问官方文档，确认接口地址与认证参数后，按照官方示例发起请求。",
+        "quickstart": (
+            f"1. 打开官方文档：{candidate['url']}\n"
+            f"2. 认证方式：{candidate['auth']}；按官方说明申请并配置所需凭证。\n"
+            f"3. 连接能力：HTTPS {https}；CORS {cors}。\n"
+            f"4. 从文档选择适合“{use_case}”的端点，按官方参数示例发起测试请求。\n"
+            "5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。"
+        ),
     }
 
 
@@ -215,6 +222,7 @@ def main(bootstrap: bool = False, full_import: bool = False) -> None:
 
     if full_import:
         existing = {item["officialUrl"].rstrip("/") for item in catalog}
+        public_by_url = {item["url"].rstrip("/"): item for item in public_items}
         used_slugs = {item["slug"] for item in catalog}
         additions = []
         for candidate in public_items:
@@ -223,15 +231,21 @@ def main(bootstrap: bool = False, full_import: bool = False) -> None:
                 continue
             additions.append(assemble(candidate, source_enrichment(candidate), used_slugs))
             existing.add(normalized_url)
+        updated = 0
+        for item in catalog:
+            candidate = public_by_url.get(item["officialUrl"].rstrip("/"))
+            if candidate and item.get("quickstart") == "请先访问官方文档，确认接口地址与认证参数后，按照官方示例发起请求。":
+                item["quickstart"] = source_enrichment(candidate)["quickstart"]
+                updated += 1
         catalog.extend(additions)
         CATALOG_PATH.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         state["publicApis"] = sorted(public_urls)
         STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         REPORT_PATH.write_text(json.dumps({
             "updatedAt": dt.datetime.now(dt.timezone.utc).isoformat(),
-            "mode": "full-import", "addedCount": len(additions), "upstreamCount": len(public_items),
+            "mode": "full-import", "addedCount": len(additions), "updatedCount": updated, "upstreamCount": len(public_items),
         }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        print(f"full import added {len(additions)} components from {len(public_items)} upstream rows")
+        print(f"full import added {len(additions)} and updated {updated} components from {len(public_items)} upstream rows")
         return
 
     known = set(state.get("publicApis", [])) | set(state.get("githubRepos", []))
@@ -264,6 +278,7 @@ def self_check() -> None:
     sample = """## Index\n### Weather\nAPI | Description | Auth | HTTPS | CORS\n|:---|:---|:---|:---|:---|\n| [Demo API](https://example.com/docs) | Weather data | No | Yes | Yes |"""
     parsed = parse_public_apis(sample)
     assert parsed == [{"name": "Demo API", "url": "https://example.com/docs", "description": "Weather data", "auth": "无需密钥", "category": "天气与地理", "source_category": "Weather", "https": "Yes", "cors": "Yes", "type": "API", "source_url": SOURCE_URL, "origin": "public-apis"}]
+    assert source_enrichment(parsed[0])["quickstart"].startswith("1. 打开官方文档：https://example.com/docs")
     assert slugify("Hello, API!") == "hello-api"
     print("self-check passed")
 
