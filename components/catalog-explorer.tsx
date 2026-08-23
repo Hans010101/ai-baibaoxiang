@@ -38,8 +38,8 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
   const en = locale === 'en';
   const copy = en ? {
     all: 'All', verified: 'Verified', pending: 'Pending review', free: 'Free tier', paid: 'Paid',
-    eyebrow: 'The continuously updated AI component directory', title: <>Find, understand, and integrate<br /><em>every AI capability.</em></>,
-    subtitle: 'APIs, MCP services, models, SDKs, and agent tools—all in one place.',
+    title: <>Find, understand, and integrate<br /><em>every AI capability</em></>,
+    subtitle: 'APIs, MCP services, models, SDKs, and agent tools—all in one place',
     collected: 'components listed', categories: 'capability categories', verifiedCount: 'verified and available', daily: 'Daily updates', schedule: 'Runs automatically at 00:20 UTC',
     explore: 'EXPLORE', browse: 'Browse by capability', browseNote: 'Start with the need, even if you do not know the tool name', components: 'components',
     catalog: 'CATALOG', componentCatalog: 'Component catalog', found: 'components found', details: 'View integration guide',
@@ -50,8 +50,8 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
     steps: [['Discovery & deduplication', 'Track public directories, official repositories, and product documentation'], ['Bilingual AI editing', 'Generate Chinese and English descriptions, tags, use cases, and quick-start guidance'], ['Evidence & availability checks', 'Keep official sites, documentation, sources, and last verification dates']],
   } : {
     all: '全部', verified: '已验证', pending: '待确认', free: '有免费额度', paid: '付费',
-    eyebrow: '持续更新的 AI 组件黄页', title: <>找到、看懂、接入<br /><em>每一种 AI 能力。</em></>,
-    subtitle: '开放接口、MCP、模型、开发工具包与智能体工具，一站查清。',
+    title: <>找到、看懂、接入<br /><em>每一种 AI 能力</em></>,
+    subtitle: '开放接口、MCP、模型、开发工具包与智能体工具，一站查清',
     collected: '已收录组件', categories: '能力分类', verifiedCount: '已验证可用', daily: '每日更新', schedule: '新加坡时间 08:20 自动运行',
     explore: '探索', browse: '按能力查找', browseNote: '从需求出发，不必先知道工具名字', components: '个组件',
     catalog: '目录', componentCatalog: '组件目录', found: '个组件', details: '查看接入说明',
@@ -130,7 +130,6 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
       <section className="hero">
         <div className="hero-grid" aria-hidden="true" />
         <div className="orbit orbit-one" aria-hidden="true"><span>API</span><span>MCP</span><span>SDK</span></div>
-        <div className="eyebrow"><span /> {copy.eyebrow}</div>
         <h1>{copy.title}</h1>
         <p>{copy.subtitle}</p>
       </section>
