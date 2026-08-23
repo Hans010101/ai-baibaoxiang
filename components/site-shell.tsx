@@ -33,18 +33,10 @@ export function SiteHeader({ locale = 'zh', alternateHref }: { locale?: Locale; 
 }
 
 export function SiteFooter({ locale = 'zh' }: { locale?: Locale }) {
-  const repositoryUrl = process.env.NEXT_PUBLIC_REPOSITORY_URL ?? 'https://github.com/public-apis/public-apis';
-
   return (
     <footer className="site-footer">
-      <div>
-        <Brand locale={locale} />
-        <p>{locale === 'en' ? 'Find, understand, and integrate every AI capability.' : '找到、看懂、接入每一种 AI 能力。'}</p>
-      </div>
-      <div className="footer-note">
-        <span>{locale === 'en' ? 'Data updates automatically every day' : '数据每日自动更新'}</span>
-        <a href={repositoryUrl} target="_blank" rel="noreferrer">{locale === 'en' ? 'Sources & contributions ↗' : '数据源与贡献 ↗'}</a>
-      </div>
+      <Brand locale={locale} />
+      <p>{locale === 'en' ? 'Find, understand, and integrate every AI capability.' : '找到、看懂、接入每一种 AI 能力。'}</p>
     </footer>
   );
 }
