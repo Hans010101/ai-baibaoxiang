@@ -52693,5 +52693,229 @@
     "sourceCategory": "Weather",
     "https": "Yes",
     "cors": "No"
+  },
+  {
+    "slug": "northcinder",
+    "name": "northcinder",
+    "initial": "N",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "开源 MCP 服务器，支持产品对比并在购买前向买家提问。",
+    "summary": "这是一个开源的 MCP 服务器，旨在帮助用户在购买前进行产品对比。它允许 AI 助手与买家互动，提供客观的产品信息，辅助做出明智的购买决策，提升购物体验。",
+    "officialUrl": "https://github.com/cinderline/northcinder",
+    "docsUrl": "https://github.com/cinderline/northcinder",
+    "sourceUrl": "https://github.com/cinderline/northcinder",
+    "auth": "以官方文档为准",
+    "free": true,
+    "status": "待确认",
+    "verifiedAt": "2026-08-23",
+    "accent": "#315bea",
+    "tags": [
+      "产品对比",
+      "购物辅助",
+      "购买决策"
+    ],
+    "useCases": [
+      "比较不同品牌手机的参数差异",
+      "询问购买前需要注意的事项",
+      "辅助用户选择最合适的电子产品"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。"
+  },
+  {
+    "slug": "x64dbg-mcp-server",
+    "name": "x64dbg-mcp-server",
+    "initial": "X",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "x64dbg 的原生 MCP 插件，通过 HTTP 暴露调试功能，支持断点、单步、内存读取等操作。",
+    "summary": "这是一个基于 Zig 构建的 x64dbg 原生 MCP 插件，通过 HTTP 协议将调试器的完整功能暴露给 AI 助手。用户可以远程控制 x64dbg 进行断点设置、代码单步执行、内存读取和寄存器转储等操作，实现自动化逆向工程。",
+    "officialUrl": "https://github.com/duty1g/x64dbg-mcp-server",
+    "docsUrl": "https://github.com/duty1g/x64dbg-mcp-server",
+    "sourceUrl": "https://github.com/duty1g/x64dbg-mcp-server",
+    "auth": "以官方文档为准",
+    "free": true,
+    "status": "待确认",
+    "verifiedAt": "2026-08-23",
+    "accent": "#315bea",
+    "tags": [
+      "逆向工程",
+      "调试工具",
+      "自动化"
+    ],
+    "useCases": [
+      "自动化分析恶意软件的行为",
+      "远程控制调试器进行代码调试",
+      "批量处理二进制文件的内存数据"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。"
+  },
+  {
+    "slug": "openquantum",
+    "name": "OpenQuantum",
+    "initial": "O",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "开源量子智能体工作区，集成桌面客户端、Web 界面及 Qiskit 工具，支持科学验证。",
+    "summary": "这是一个开源的量子智能体工作空间，集成了桌面客户端、Web 界面和消息传递功能。它支持 Qiskit 和 MCP 工具，为量子计算研究提供科学验证环境，帮助用户更高效地开发和测试量子算法。",
+    "officialUrl": "https://github.com/xi-zhao/OpenQuantum",
+    "docsUrl": "https://github.com/xi-zhao/OpenQuantum",
+    "sourceUrl": "https://github.com/xi-zhao/OpenQuantum",
+    "auth": "以官方文档为准",
+    "free": true,
+    "status": "待确认",
+    "verifiedAt": "2026-08-23",
+    "accent": "#18a87b",
+    "tags": [
+      "量子计算",
+      "智能体",
+      "科学验证"
+    ],
+    "useCases": [
+      "开发和测试量子算法",
+      "进行量子模拟实验",
+      "管理量子计算任务和资源"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。"
+  },
+  {
+    "slug": "mac-developer-bridge",
+    "name": "mac-developer-bridge",
+    "initial": "M",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "开源 MCP 桥接器，为 Mac 提供 Shell、文件和 PTY 会话访问，连接真实终端。",
+    "summary": "这是一个开源的 MCP 桥接器，旨在为 Mac 设备上的 AI 助手提供真实的终端访问权限。它支持 Shell 命令执行、文件操作、PTY 会话管理以及 Codex 历史记录，让 AI 能够像人类一样与本地系统交互。",
+    "officialUrl": "https://github.com/alexanderradahl/mac-developer-bridge",
+    "docsUrl": "https://github.com/alexanderradahl/mac-developer-bridge",
+    "sourceUrl": "https://github.com/alexanderradahl/mac-developer-bridge",
+    "auth": "以官方文档为准",
+    "free": true,
+    "status": "待确认",
+    "verifiedAt": "2026-08-23",
+    "accent": "#d4634a",
+    "tags": [
+      "终端访问",
+      "文件操作",
+      "Mac 开发"
+    ],
+    "useCases": [
+      "通过 AI 执行本地 Shell 命令",
+      "自动化文件管理和编辑",
+      "管理 PTY 会话和后台任务"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。"
+  },
+  {
+    "slug": "consensus-mcp",
+    "name": "consensus-mcp",
+    "initial": "C",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "Consensus 官方 MCP 服务器，支持从 Claude、ChatGPT 等客户端搜索 2.2 亿篇同行评审论文。",
+    "summary": "这是 Consensus 的官方 MCP 服务器，允许用户通过 Claude、ChatGPT 或 Cursor 等客户端搜索超过 2.2 亿篇同行评审研究论文。它为 AI 助手提供了强大的学术文献检索能力，帮助用户快速获取科学证据。",
+    "officialUrl": "https://github.com/Consensus-NLP/consensus-mcp",
+    "docsUrl": "https://github.com/Consensus-NLP/consensus-mcp",
+    "sourceUrl": "https://github.com/Consensus-NLP/consensus-mcp",
+    "auth": "以官方文档为准",
+    "free": true,
+    "status": "待确认",
+    "verifiedAt": "2026-08-23",
+    "accent": "#d4634a",
+    "tags": [
+      "学术搜索",
+      "论文检索",
+      "研究工具"
+    ],
+    "useCases": [
+      "查找特定科学问题的研究证据",
+      "验证 AI 生成的学术观点",
+      "快速浏览最新的同行评审文献"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。"
+  },
+  {
+    "slug": "perenna",
+    "name": "Perenna",
+    "initial": "P",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "轻量级 Git 备份的永久记忆存储，专为 AI 智能体设计，确保数据持久化。",
+    "summary": "这是一个轻量级的 AI 智能体永久记忆存储系统，采用 Git 作为后端。它确保智能体的记忆和上下文能够持久化保存，防止数据丢失，同时利用 Git 的版本控制特性，方便管理和追溯历史记录。",
+    "officialUrl": "https://github.com/scarletkc/Perenna",
+    "docsUrl": "https://github.com/scarletkc/Perenna",
+    "sourceUrl": "https://github.com/scarletkc/Perenna",
+    "auth": "以官方文档为准",
+    "free": true,
+    "status": "待确认",
+    "verifiedAt": "2026-08-23",
+    "accent": "#e48743",
+    "tags": [
+      "持久化存储",
+      "记忆管理",
+      "Git"
+    ],
+    "useCases": [
+      "保存 AI 对话的历史上下文",
+      "管理智能体的长期状态",
+      "追踪智能体决策的演变过程"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。"
+  },
+  {
+    "slug": "ida-headless-mcp",
+    "name": "ida-headless-mcp",
+    "initial": "I",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "Rust 原生多会话 IDA Pro 无头 MCP 服务器，兼容 ida-pro-mcp 公共协议。",
+    "summary": "这是一个基于 Rust 构建的多会话 IDA Pro 无头 MCP 服务器。它采用“一个监督者、一个 IDA 工作进程”的架构，兼容 ida-pro-mcp 公共协议，为 AI 助手提供了强大的静态分析能力，支持多数据库并发处理。",
+    "officialUrl": "https://github.com/fuqiuluo/ida-headless-mcp",
+    "docsUrl": "https://github.com/fuqiuluo/ida-headless-mcp",
+    "sourceUrl": "https://github.com/fuqiuluo/ida-headless-mcp",
+    "auth": "以官方文档为准",
+    "free": true,
+    "status": "待确认",
+    "verifiedAt": "2026-08-23",
+    "accent": "#6f63d9",
+    "tags": [
+      "静态分析",
+      "IDA Pro",
+      "多会话"
+    ],
+    "useCases": [
+      "批量分析多个二进制文件",
+      "远程控制 IDA Pro 进行逆向工程",
+      "集成到自动化分析流水线中"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。"
+  },
+  {
+    "slug": "frama-c-mcp",
+    "name": "frama-c-mcp",
+    "initial": "F",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "为 AI 智能体提供 Frama-C 工具，支持 EVA、WP 和沙盒 ACSL 迭代分析。",
+    "summary": "这是一个为 AI 智能体提供 Frama-C 工具的 MCP 服务器。它集成了 EVA（数值分析）、WP（谓词编程）和沙盒 ACSL 迭代功能，帮助 AI 对 C/C++ 代码进行形式化验证和静态分析，确保代码的正确性。",
+    "officialUrl": "https://github.com/sysprog21/frama-c-mcp",
+    "docsUrl": "https://github.com/sysprog21/frama-c-mcp",
+    "sourceUrl": "https://github.com/sysprog21/frama-c-mcp",
+    "auth": "以官方文档为准",
+    "free": true,
+    "status": "待确认",
+    "verifiedAt": "2026-08-23",
+    "accent": "#e48743",
+    "tags": [
+      "形式化验证",
+      "静态分析",
+      "代码安全"
+    ],
+    "useCases": [
+      "验证关键代码逻辑的正确性",
+      "检测潜在的内存安全问题",
+      "进行代码覆盖率分析"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。"
   }
 ]
