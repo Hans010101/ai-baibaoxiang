@@ -44,10 +44,15 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
     explore: 'EXPLORE', browse: 'Browse by capability', browseNote: 'Start with the need, even if you do not know the tool name', components: 'components',
     catalog: 'CATALOG', componentCatalog: 'Component catalog', found: 'components found', details: 'View integration guide',
     emptyTitle: 'No matching components yet', emptyText: 'Try a shorter keyword or clear the filters.', viewAll: 'View all components', loadMore: 'Load', more: 'more components',
-    trusted: 'TRUSTED DATA', trustedTitle: 'Every entry links back to its source.', trustedText: 'The system discovers new components daily and only publishes entries from official channels that pass schema validation. Unconfirmed availability and free tiers are clearly marked as pending review.',
+    useCases: 'START WITH A GOAL', useCasesTitle: 'Turn an idea into a tool plan', useCasesNote: 'Choose a common goal and let AI recommend a practical stack', useCaseAction: 'Build my plan',
     assistant: 'AI Advisor', assistantIntro: 'Tell me what you want to build. I’ll turn the directory into a practical tool plan.', assistantPlaceholder: 'What do you want to build?', send: 'Ask AI', close: 'Close AI advisor',
     thinking: 'Building a tool plan…', advisorError: 'The AI assistant is temporarily unavailable. Showing a locally matched plan instead.', recommended: 'Recommended tools', open: 'Open guide',
-    steps: [['Discovery & deduplication', 'Track public directories, official repositories, and product documentation'], ['Bilingual AI editing', 'Generate Chinese and English descriptions, tags, use cases, and quick-start guidance'], ['Evidence & availability checks', 'Keep official sites, documentation, sources, and last verification dates']],
+    scenarios: [
+      ['◎', 'Build an AI customer service agent', 'Knowledge base, model, orchestration, and support tools', 'Help me build an AI customer service agent for an ecommerce website'],
+      ['⌕', 'Automate research and intelligence', 'Search, extraction, analysis, and reporting tools', 'Help me automate market research, source checking, analysis, and report generation'],
+      ['⌁', 'Connect business data to AI', 'Databases, APIs, security, and agent integration', 'Help me connect internal business data to an AI assistant securely'],
+      ['✦', 'Launch a content workflow', 'Writing, images, video, publishing, and automation', 'Help me build an AI content creation and publishing workflow'],
+    ],
   } : {
     all: '全部', verified: '已验证', pending: '待确认', free: '有免费额度', paid: '付费',
     title: <>找到、看懂、接入<br /><em>每一种 AI 能力</em></>,
@@ -56,10 +61,15 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
     explore: '探索', browse: '按能力查找', browseNote: '从需求出发，不必先知道工具名字', components: '个组件',
     catalog: '目录', componentCatalog: '组件目录', found: '个组件', details: '查看接入说明',
     emptyTitle: '暂时没有匹配的组件', emptyText: '试试缩短关键词，或者清除筛选条件。', viewAll: '查看全部组件', loadMore: '继续查看', more: '个组件',
-    trusted: '可信数据', trustedTitle: '每一条信息，都能回到来源。', trustedText: '系统每日发现新增组件，只自动发布来自官方渠道且通过结构校验的内容。无法确认的免费额度和可用性，会明确标记“待确认”。',
+    useCases: '从目标出发', useCasesTitle: '把一个想法变成工具方案', useCasesNote: '选择常见目标，让 AI 推荐可落地的工具组合', useCaseAction: '生成方案',
     assistant: 'AI 助手', assistantIntro: '告诉我你想实现什么，我会从全站组件中整理方案并推荐合适工具。', assistantPlaceholder: '例如：为电商网站搭建智能客服', send: '发送', close: '关闭 AI 助手',
     thinking: '正在整理工具方案…', advisorError: 'AI 助手暂时不可用，已为你展示本地匹配方案。', recommended: '推荐工具', open: '查看接入说明',
-    steps: [['发现与去重', '持续跟踪公开目录、官方仓库与产品文档'], ['AI 双语整理', '同步生成中英文介绍、标签、场景和快速接入说明'], ['证据与可用性校验', '保留官网、文档、来源与最后验证日期']],
+    scenarios: [
+      ['◎', '搭建 AI 智能客服', '知识库、模型、编排与客服工具', '帮我为电商网站搭建一套 AI 智能客服方案'],
+      ['⌕', '自动化调研与情报', '搜索、采集、分析与报告工具', '帮我实现市场调研、来源核验、分析和报告生成的自动化'],
+      ['⌁', '让 AI 连接业务数据', '数据库、接口、安全与智能体接入', '帮我安全地把企业内部业务数据接入 AI 助手'],
+      ['✦', '构建内容生产工作流', '文案、图片、视频、发布与自动化', '帮我搭建一套 AI 内容创作和自动发布工作流'],
+    ],
   };
   const [advisorInput, setAdvisorInput] = useState('');
   const [advisorOpen, setAdvisorOpen] = useState(false);
@@ -155,6 +165,23 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
         <div><strong>{copy.daily}</strong><span>{copy.schedule}</span></div>
       </section>
 
+      <section className="section scenario-section" id="use-cases">
+        <div className="section-head">
+          <div><span className="section-kicker">{copy.useCases}</span><h2>{copy.useCasesTitle}</h2></div>
+          <p>{copy.useCasesNote}</p>
+        </div>
+        <div className="scenario-grid">
+          {copy.scenarios.map(([icon, title, detail, prompt]) => (
+            <button key={title} type="button" onClick={() => { setAdvisorInput(prompt); void askAdvisor(prompt); }}>
+              <span className="scenario-icon" aria-hidden="true">{icon}</span>
+              <strong>{title}</strong>
+              <small>{detail}</small>
+              <b>{copy.useCaseAction} →</b>
+            </button>
+          ))}
+        </div>
+      </section>
+
       <section className="section category-section" id="categories">
         <div className="section-head">
           <div><span className="section-kicker">{copy.explore}</span><h2>{copy.browse}</h2></div>
@@ -206,12 +233,6 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
         {visibleCount < filtered.length && <button className="load-more" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>{copy.loadMore} <b>{Math.min(PAGE_SIZE, filtered.length - visibleCount)}</b> {copy.more}</button>}
       </section>
 
-      <section className="standards" id="standards">
-        <div><span className="section-kicker">{copy.trusted}</span><h2>{copy.trustedTitle}</h2><p>{copy.trustedText}</p></div>
-        <ol>
-          {copy.steps.map(([title, detail], index) => <li key={title}><b>0{index + 1}</b><span><strong>{title}</strong><small>{detail}</small></span></li>)}
-        </ol>
-      </section>
       <SiteFooter locale={locale} />
       <div className="assistant-dock">
         {advisorOpen && (

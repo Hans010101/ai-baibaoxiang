@@ -22,7 +22,7 @@ export function SiteHeader({ locale = 'zh', alternateHref }: { locale?: Locale; 
       <nav aria-label={locale === 'en' ? 'Main navigation' : '主导航'}>
         <a href={`${home}#categories`}>{locale === 'en' ? 'Categories' : '能力分类'}</a>
         <a href={`${home}#catalog`}>{locale === 'en' ? 'All tools' : '全部组件'}</a>
-        <a href={`${home}#standards`}>{locale === 'en' ? 'Standards' : '收录标准'}</a>
+        <a href={`${home}#use-cases`}>{locale === 'en' ? 'Use cases' : '常见场景'}</a>
       </nav>
       <div className="header-actions">
         <a className="language-link" href={alternateHref ?? (locale === 'en' ? '/' : '/en')} aria-label={locale === 'en' ? '切换到中文' : 'Switch to English'}><span className={locale === 'zh' ? 'active' : ''}>中文</span><i>/</i><span className={locale === 'en' ? 'active' : ''}>EN</span></a>
