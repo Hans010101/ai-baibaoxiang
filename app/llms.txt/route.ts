@@ -1,5 +1,6 @@
 import { getCatalog } from '@/lib/catalog';
 import { categoryLabel } from '@/lib/i18n';
+import { scenarios } from '@/lib/scenarios';
 
 export async function GET() {
   const origin = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aiboxhub.top';
@@ -15,6 +16,8 @@ export async function GET() {
     '',
     `- [中文目录](${origin}/): 中文组件说明、接入信息与官方资料`,
     `- [English directory](${origin}/en): English component descriptions, integration facts, and official sources`,
+    `- [中文方案库](${origin}/#use-cases): ${scenarios.length} 个 AI 应用场景与开发参考方案`,
+    `- [English solution library](${origin}/en#use-cases): ${scenarios.length} AI use cases with developer reference architectures`,
     `- [XML sitemap](${origin}/sitemap.xml): Complete bilingual URL inventory`,
     '',
     '## Coverage and evidence',
@@ -26,6 +29,10 @@ export async function GET() {
     '## Categories',
     '',
     ...categories.map((category) => `- ${category} / ${categoryLabel(category, 'en')}`),
+    '',
+    '## Developer solution guides',
+    '',
+    ...scenarios.map((scenario) => `- [${scenario.title.zh}](${origin}/solution/${scenario.slug}) · [${scenario.title.en}](${origin}/en/solution/${scenario.slug}) — ${scenario.summary.en}`),
     '',
     '## Representative component records',
     '',

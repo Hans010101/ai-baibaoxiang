@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { CatalogItem } from '@/lib/catalog';
 import { localAdvisorPlan, rankAdvisorCandidates, type AdvisorPlan } from '@/lib/advisor';
 import { authLabel, categoryLabel, statusLabel, typeLabel, type Locale } from '@/lib/i18n';
+import { scenarios } from '@/lib/scenarios';
 import { JsonLd, SiteFooter, SiteHeader } from '@/components/site-shell';
 
 const typeIcons: Record<string, string> = { API: '⌁', MCP: '⋈', 模型: '◈', SDK: '{ }' };
@@ -18,6 +19,7 @@ const categoryIcons: Record<string, string> = {
   '金融数据': '%', '音乐与视频': '♫',
 };
 const PAGE_SIZE = 48;
+const SCENARIO_PAGE_SIZE = 8;
 export type ExplorerItem = Pick<CatalogItem, 'slug' | 'name' | 'initial' | 'type' | 'category' | 'description' | 'auth' | 'free' | 'status' | 'accent' | 'tags' | 'officialUrl'>;
 type BilingualExplorerItem = ExplorerItem & Pick<CatalogItem, 'descriptionEn' | 'tagsEn'>;
 
@@ -44,15 +46,9 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
     explore: 'EXPLORE', browse: 'Browse by capability', browseNote: 'Start with the need, even if you do not know the tool name', components: 'components',
     catalog: 'CATALOG', componentCatalog: 'Component catalog', found: 'components found', details: 'View integration guide',
     emptyTitle: 'No matching components yet', emptyText: 'Try a shorter keyword or clear the filters.', viewAll: 'View all components', loadMore: 'Load', more: 'more components',
-    useCases: 'START WITH A GOAL', useCasesTitle: 'Turn an idea into a tool plan', useCasesNote: 'Choose a common goal and let AI recommend a practical stack', useCaseAction: 'Build my plan',
+    useCases: 'START WITH A GOAL', useCasesTitle: 'Turn an idea into a complete solution', useCasesNote: 'Choose a common goal for an architecture, implementation path, and practical stack', useCaseAction: 'View solution', moreScenarios: 'View more use cases',
     assistant: 'AI Advisor', assistantIntro: 'Tell me what you want to build. I’ll turn the directory into a practical tool plan.', assistantPlaceholder: 'What do you want to build?', send: 'Ask AI', close: 'Close AI advisor',
     thinking: 'Building a tool plan…', advisorError: 'The AI assistant is temporarily unavailable. Showing a locally matched plan instead.', recommended: 'Recommended tools', open: 'Open guide',
-    scenarios: [
-      ['◎', 'Build an AI customer service agent', 'Knowledge base, model, orchestration, and support tools', 'Help me build an AI customer service agent for an ecommerce website'],
-      ['⌕', 'Automate research and intelligence', 'Search, extraction, analysis, and reporting tools', 'Help me automate market research, source checking, analysis, and report generation'],
-      ['⌁', 'Connect business data to AI', 'Databases, APIs, security, and agent integration', 'Help me connect internal business data to an AI assistant securely'],
-      ['✦', 'Launch a content workflow', 'Writing, images, video, publishing, and automation', 'Help me build an AI content creation and publishing workflow'],
-    ],
   } : {
     all: '全部', verified: '已验证', pending: '待确认', free: '有免费额度', paid: '付费',
     title: <>找到、看懂、接入<br /><em>每一种 AI 能力</em></>,
@@ -61,15 +57,9 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
     explore: '探索', browse: '按能力查找', browseNote: '从需求出发，不必先知道工具名字', components: '个组件',
     catalog: '目录', componentCatalog: '组件目录', found: '个组件', details: '查看接入说明',
     emptyTitle: '暂时没有匹配的组件', emptyText: '试试缩短关键词，或者清除筛选条件。', viewAll: '查看全部组件', loadMore: '继续查看', more: '个组件',
-    useCases: '从目标出发', useCasesTitle: '把一个想法变成工具方案', useCasesNote: '选择常见目标，让 AI 推荐可落地的工具组合', useCaseAction: '生成方案',
+    useCases: '从目标出发', useCasesTitle: '把一个想法变成完整方案', useCasesNote: '选择常见目标，查看参考架构、实施路径与可落地的工具组合', useCaseAction: '查看方案', moreScenarios: '继续查看更多场景',
     assistant: 'AI 助手', assistantIntro: '告诉我你想实现什么，我会从全站组件中整理方案并推荐合适工具。', assistantPlaceholder: '例如：为电商网站搭建智能客服', send: '发送', close: '关闭 AI 助手',
     thinking: '正在整理工具方案…', advisorError: 'AI 助手暂时不可用，已为你展示本地匹配方案。', recommended: '推荐工具', open: '查看接入说明',
-    scenarios: [
-      ['◎', '搭建 AI 智能客服', '知识库、模型、编排与客服工具', '帮我为电商网站搭建一套 AI 智能客服方案'],
-      ['⌕', '自动化调研与情报', '搜索、采集、分析与报告工具', '帮我实现市场调研、来源核验、分析和报告生成的自动化'],
-      ['⌁', '让 AI 连接业务数据', '数据库、接口、安全与智能体接入', '帮我安全地把企业内部业务数据接入 AI 助手'],
-      ['✦', '构建内容生产工作流', '文案、图片、视频、发布与自动化', '帮我搭建一套 AI 内容创作和自动发布工作流'],
-    ],
   };
   const [advisorInput, setAdvisorInput] = useState('');
   const [advisorOpen, setAdvisorOpen] = useState(false);
@@ -79,6 +69,7 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
   const [category, setCategory] = useState('all');
   const [verifiedOnly, setVerifiedOnly] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [visibleScenarioCount, setVisibleScenarioCount] = useState(SCENARIO_PAGE_SIZE);
   const advisorRef = useRef<HTMLTextAreaElement>(null);
   const origin = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aiboxhub.top';
   const pageUrl = `${origin}${en ? '/en' : '/'}`;
@@ -171,15 +162,16 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
           <p>{copy.useCasesNote}</p>
         </div>
         <div className="scenario-grid">
-          {copy.scenarios.map(([icon, title, detail, prompt]) => (
-            <button key={title} type="button" onClick={() => { setAdvisorInput(prompt); void askAdvisor(prompt); }}>
-              <span className="scenario-icon" aria-hidden="true">{icon}</span>
-              <strong>{title}</strong>
-              <small>{detail}</small>
+          {scenarios.slice(0, visibleScenarioCount).map((scenario) => (
+            <a key={scenario.slug} href={`${en ? '/en' : ''}/solution/${scenario.slug}`}>
+              <span className="scenario-icon" aria-hidden="true">{scenario.icon}</span>
+              <strong>{scenario.title[locale]}</strong>
+              <small>{scenario.summary[locale]}</small>
               <b>{copy.useCaseAction} →</b>
-            </button>
+            </a>
           ))}
         </div>
+        {visibleScenarioCount < scenarios.length && <button className="load-more" onClick={() => setVisibleScenarioCount(scenarios.length)}>{copy.moreScenarios} <b>{scenarios.length - visibleScenarioCount}</b></button>}
       </section>
 
       <section className="section category-section" id="categories">

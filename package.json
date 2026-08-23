@@ -11,6 +11,7 @@
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern worker-configuration.d.ts",
     "check:advisor": "node --experimental-strip-types scripts/check-advisor.mjs",
+    "check:scenarios": "node --experimental-strip-types scripts/check-scenarios.mjs",
     "validate:data": "python3 scripts/validate_catalog.py",
     "import:data": "python3 scripts/update_catalog.py --full-import",
     "update:data": "python3 scripts/update_catalog.py",
