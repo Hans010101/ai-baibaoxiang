@@ -95,8 +95,7 @@ export function CatalogExplorer({ items, categories }: { items: ExplorerItem[]; 
           {categories.map((name, index) => (
             <button key={name} onClick={() => selectCategory(name)}>
               <span className={`category-symbol symbol-${index % 4}`}>{['⌁', '◫', '✦', '⋈'][index % 4]}</span>
-              <strong>{name}</strong>
-              <small>{items.filter((item) => item.category === name).length} 个组件</small>
+              <span className="category-copy"><strong>{name}</strong><small>{items.filter((item) => item.category === name).length} 个组件</small></span>
               <b>→</b>
             </button>
           ))}
