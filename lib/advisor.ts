@@ -18,7 +18,6 @@ export type AdvisorPlan = {
   provider?: 'cloudflare' | 'deepseek' | 'local';
 };
 
-const intentTerms = /(?:我想|我需要|帮我|如何|怎么|用于|实现|方案|推荐|适合|需求|build|create|need|want|help|recommend|how|for my|solution)/i;
 const synonyms: Record<string, string[]> = {
   客服: ['对话', '聊天', '智能体', 'agent', 'chatbot', 'text'],
   电商: ['商业', '支付', '商品', 'business', 'commerce', 'shopping'],
@@ -35,12 +34,6 @@ const synonyms: Record<string, string[]> = {
 };
 
 const normalize = (value: string) => value.toLowerCase().normalize('NFKC').replace(/[\s\p{P}\p{S}]+/gu, ' ').trim();
-
-export function shouldUseAdvisor(input: string, names: string[] = []) {
-  const value = normalize(input);
-  if (!value || names.some((name) => normalize(name) === value)) return false;
-  return intentTerms.test(value) || value.length > 18 || value.split(' ').length > 4;
-}
 
 export function rankAdvisorCandidates(query: string, items: AdvisorCandidate[], limit = 12) {
   const normalized = normalize(query);

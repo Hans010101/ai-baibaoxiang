@@ -3,7 +3,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { CatalogItem } from '@/lib/catalog';
-import { localAdvisorPlan, rankAdvisorCandidates, shouldUseAdvisor, type AdvisorPlan } from '@/lib/advisor';
+import { localAdvisorPlan, rankAdvisorCandidates, type AdvisorPlan } from '@/lib/advisor';
 import { authLabel, categoryLabel, statusLabel, typeLabel, type Locale } from '@/lib/i18n';
 import { SiteFooter, SiteHeader } from '@/components/site-shell';
 
@@ -39,28 +39,32 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
   const copy = en ? {
     all: 'All', verified: 'Verified', pending: 'Pending review', free: 'Free tier', paid: 'Paid',
     eyebrow: 'The continuously updated AI component directory', title: <>Find, understand, and integrate<br /><em>every AI capability.</em></>,
-    subtitle: 'APIs, MCP services, models, SDKs, and agent tools—all in one place.', placeholder: 'Describe your goal, or enter a tool name', search: 'Ask AI',
+    subtitle: 'APIs, MCP services, models, SDKs, and agent tools—all in one place.', placeholder: 'Search tools, capabilities, or categories', search: 'Search',
     collected: 'components listed', categories: 'capability categories', verifiedCount: 'verified and available', daily: 'Daily updates', schedule: 'Runs automatically at 00:20 UTC',
     explore: 'EXPLORE', browse: 'Browse by capability', browseNote: 'Start with the need, even if you do not know the tool name', components: 'components',
     catalog: 'CATALOG', componentCatalog: 'Component catalog', found: 'components found', clear: 'Clear', details: 'View integration guide',
     emptyTitle: 'No matching components yet', emptyText: 'Try a shorter keyword or clear the filters.', viewAll: 'View all components', loadMore: 'Load', more: 'more components',
     trusted: 'TRUSTED DATA', trustedTitle: 'Every entry links back to its source.', trustedText: 'The system discovers new components daily and only publishes entries from official channels that pass schema validation. Unconfirmed availability and free tiers are clearly marked as pending review.',
+    assistant: 'AI Advisor', assistantIntro: 'Tell me what you want to build. I’ll turn the directory into a practical tool plan.', assistantPlaceholder: 'What do you want to build?', send: 'Ask AI', close: 'Close AI advisor',
     thinking: 'Building a tool plan…', advisorError: 'The AI assistant is temporarily unavailable. Showing a locally matched plan instead.', recommended: 'Recommended tools', open: 'Open guide',
     steps: [['Discovery & deduplication', 'Track public directories, official repositories, and product documentation'], ['Bilingual AI editing', 'Generate Chinese and English descriptions, tags, use cases, and quick-start guidance'], ['Evidence & availability checks', 'Keep official sites, documentation, sources, and last verification dates']],
   } : {
     all: '全部', verified: '已验证', pending: '待确认', free: '有免费额度', paid: '付费',
     eyebrow: '持续更新的 AI 组件黄页', title: <>找到、看懂、接入<br /><em>每一种 AI 能力。</em></>,
-    subtitle: '开放接口、MCP、模型、开发工具包与智能体工具，一站查清。', placeholder: '描述你想实现的功能，或直接输入工具名称', search: '问 AI',
+    subtitle: '开放接口、MCP、模型、开发工具包与智能体工具，一站查清。', placeholder: '搜索工具、能力或分类', search: '搜索',
     collected: '已收录组件', categories: '能力分类', verifiedCount: '已验证可用', daily: '每日更新', schedule: '新加坡时间 08:20 自动运行',
     explore: '探索', browse: '按能力查找', browseNote: '从需求出发，不必先知道工具名字', components: '个组件',
     catalog: '目录', componentCatalog: '组件目录', found: '个组件', clear: '清除', details: '查看接入说明',
     emptyTitle: '暂时没有匹配的组件', emptyText: '试试缩短关键词，或者清除筛选条件。', viewAll: '查看全部组件', loadMore: '继续查看', more: '个组件',
     trusted: '可信数据', trustedTitle: '每一条信息，都能回到来源。', trustedText: '系统每日发现新增组件，只自动发布来自官方渠道且通过结构校验的内容。无法确认的免费额度和可用性，会明确标记“待确认”。',
+    assistant: 'AI 助手', assistantIntro: '告诉我你想实现什么，我会从全站组件中整理方案并推荐合适工具。', assistantPlaceholder: '例如：为电商网站搭建智能客服', send: '发送', close: '关闭 AI 助手',
     thinking: '正在整理工具方案…', advisorError: 'AI 助手暂时不可用，已为你展示本地匹配方案。', recommended: '推荐工具', open: '查看接入说明',
     steps: [['发现与去重', '持续跟踪公开目录、官方仓库与产品文档'], ['AI 双语整理', '同步生成中英文介绍、标签、场景和快速接入说明'], ['证据与可用性校验', '保留官网、文档、来源与最后验证日期']],
   };
   const [query, setQuery] = useState('');
   const [inputValue, setInputValue] = useState('');
+  const [advisorInput, setAdvisorInput] = useState('');
+  const [advisorOpen, setAdvisorOpen] = useState(false);
   const [advisorPlan, setAdvisorPlan] = useState<AdvisorPlan>();
   const [advisorLoading, setAdvisorLoading] = useState(false);
   const [advisorError, setAdvisorError] = useState(false);
@@ -68,6 +72,7 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
   const [verifiedOnly, setVerifiedOnly] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const searchRef = useRef<HTMLInputElement>(null);
+  const advisorRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -75,10 +80,15 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
         event.preventDefault();
         searchRef.current?.focus();
       }
+      if (event.key === 'Escape') setAdvisorOpen(false);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, []);
+
+  useEffect(() => {
+    if (advisorOpen) advisorRef.current?.focus();
+  }, [advisorOpen]);
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -95,6 +105,7 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
   };
 
   const askAdvisor = async (need: string) => {
+    setAdvisorOpen(true);
     const source = items.map((item) => ({
       slug: item.slug, name: item.name, category: categoryLabel(item.category, locale),
       description: en ? item.descriptionEn : item.description, tags: en ? item.tagsEn : item.tags,
@@ -127,16 +138,9 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
     }
   };
 
-  const submitSearch = async () => {
+  const submitSearch = () => {
     const need = inputValue.trim();
     if (!need) return searchRef.current?.focus();
-    if (shouldUseAdvisor(need, items.map((item) => item.name))) {
-      setQuery('');
-      await askAdvisor(need);
-      return;
-    }
-    setAdvisorPlan(undefined);
-    setAdvisorError(false);
     setQuery(need);
     document.querySelector('#catalog')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -150,31 +154,12 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
         <div className="eyebrow"><span /> {copy.eyebrow}</div>
         <h1>{copy.title}</h1>
         <p>{copy.subtitle}</p>
-        <form className="search-box" onSubmit={(event) => { event.preventDefault(); void submitSearch(); }}>
+        <form className="search-box" onSubmit={(event) => { event.preventDefault(); submitSearch(); }}>
           <span aria-hidden="true">⌕</span>
           <input ref={searchRef} value={inputValue} onChange={(event) => setInputValue(event.target.value)} aria-label={copy.search} placeholder={copy.placeholder} />
           <kbd>⌘ K</kbd>
-          <button type="submit" disabled={advisorLoading}>{advisorLoading ? '…' : copy.search}</button>
+          <button type="submit">{copy.search}</button>
         </form>
-        <div className="advisor-live" aria-live="polite">
-          {advisorLoading && <div className="advisor-loading"><i /> {copy.thinking}</div>}
-          {advisorPlan && (
-            <section className="advisor-card">
-              <div className="advisor-heading"><span>AI</span><p>{advisorPlan.summary}</p></div>
-              {advisorError && <small className="advisor-error">{copy.advisorError}</small>}
-              <ol>{advisorPlan.steps.map((step) => <li key={step}>{step}</li>)}</ol>
-              {!!advisorPlan.recommendations.length && <strong className="advisor-label">{copy.recommended}</strong>}
-              <div className="advisor-tools">
-                {advisorPlan.recommendations.map((recommendation) => {
-                  const tool = items.find((item) => item.slug === recommendation.slug);
-                  if (!tool) return null;
-                  return <a key={recommendation.slug} href={`${en ? '/en' : ''}/tool/${recommendation.slug}`}><b>{tool.name}</b><span>{recommendation.role} · {recommendation.reason}</span><em>{copy.open} →</em></a>;
-                })}
-              </div>
-              {advisorPlan.followUp && <p className="advisor-follow-up">{advisorPlan.followUp}</p>}
-            </section>
-          )}
-        </div>
       </section>
 
       <section className="stats" aria-label={en ? 'Site statistics' : '网站数据'}>
@@ -242,6 +227,46 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
         </ol>
       </section>
       <SiteFooter locale={locale} />
+      <div className="assistant-dock">
+        {advisorOpen && (
+          <aside className="assistant-panel" id="ai-advisor-panel" aria-label={copy.assistant}>
+            <header>
+              <span className="assistant-mini-bot" aria-hidden="true"><i /><i /></span>
+              <div><strong>{copy.assistant}</strong><small>ONLINE</small></div>
+              <button type="button" onClick={() => setAdvisorOpen(false)} aria-label={copy.close}>×</button>
+            </header>
+            <div className="assistant-body" aria-live="polite">
+              {!advisorPlan && !advisorLoading && <p className="assistant-intro">{copy.assistantIntro}</p>}
+              {advisorLoading && <div className="advisor-loading"><i /> {copy.thinking}</div>}
+              {advisorPlan && (
+                <section className="advisor-card">
+                  <div className="advisor-heading"><span>AI</span><p>{advisorPlan.summary}</p></div>
+                  {advisorError && <small className="advisor-error">{copy.advisorError}</small>}
+                  <ol>{advisorPlan.steps.map((step) => <li key={step}>{step}</li>)}</ol>
+                  {!!advisorPlan.recommendations.length && <strong className="advisor-label">{copy.recommended}</strong>}
+                  <div className="advisor-tools">
+                    {advisorPlan.recommendations.map((recommendation) => {
+                      const tool = items.find((item) => item.slug === recommendation.slug);
+                      if (!tool) return null;
+                      return <a key={recommendation.slug} href={`${en ? '/en' : ''}/tool/${recommendation.slug}`}><b>{tool.name}</b><span>{recommendation.role} · {recommendation.reason}</span><em>{copy.open} →</em></a>;
+                    })}
+                  </div>
+                  {advisorPlan.followUp && <p className="advisor-follow-up">{advisorPlan.followUp}</p>}
+                </section>
+              )}
+            </div>
+            <form className="assistant-form" onSubmit={(event) => { event.preventDefault(); const need = advisorInput.trim(); if (need) void askAdvisor(need); }}>
+              <textarea ref={advisorRef} rows={2} value={advisorInput} onChange={(event) => setAdvisorInput(event.target.value)} placeholder={copy.assistantPlaceholder} aria-label={copy.assistantPlaceholder} />
+              <button type="submit" disabled={advisorLoading || !advisorInput.trim()}>{advisorLoading ? '…' : copy.send}</button>
+            </form>
+          </aside>
+        )}
+        <button className="robot-launcher" type="button" aria-expanded={advisorOpen} aria-controls="ai-advisor-panel" aria-label={advisorOpen ? copy.close : copy.assistant} onClick={() => setAdvisorOpen((open) => !open)}>
+          <span className="robot-antenna" aria-hidden="true" />
+          <span className="robot-face" aria-hidden="true"><i /><i /><b /></span>
+          <em>{copy.assistant}</em>
+        </button>
+      </div>
     </main>
   );
 }
