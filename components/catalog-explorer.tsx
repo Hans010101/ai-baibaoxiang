@@ -126,10 +126,12 @@ export function CatalogExplorer({ items, categories }: { items: ExplorerItem[]; 
               <article className="tool-card" key={tool.slug}>
                 <div className="tool-top">
                   <ToolLogo {...tool} className="tool-icon" />
+                  <div className="tool-title">
+                    <h3>{tool.name}</h3>
+                    <span className="type">{typeIcons[tool.type] || '◫'} {tool.type} · {tool.category}</span>
+                  </div>
                   <span className={tool.status === '已验证' ? 'verified' : 'pending'}>{tool.status === '已验证' ? '✓' : '◷'} {tool.status}</span>
                 </div>
-                <span className="type">{typeIcons[tool.type] || '◫'} {tool.type} · {tool.category}</span>
-                <h3>{tool.name}</h3>
                 <p>{tool.description}</p>
                 <div className="tags"><span>{tool.auth}</span><span>{tool.free ? '有免费额度' : '付费'}</span></div>
                 <a href={`/tool/${tool.slug}`}>查看接入说明 <b>→</b></a>
