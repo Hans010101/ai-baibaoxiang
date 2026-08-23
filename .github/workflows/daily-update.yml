@@ -7,7 +7,10 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
+
+concurrency:
+  group: daily-catalog-update
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -22,26 +25,19 @@ jobs:
       - name: Discover and organize components
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CF_AI_MODEL: ${{ vars.CF_AI_MODEL }}
+          CLOUDFLARE_EDITORIAL_ENDPOINT: ${{ vars.CLOUDFLARE_EDITORIAL_ENDPOINT }}
+          EDITORIAL_API_TOKEN: ${{ secrets.EDITORIAL_API_TOKEN }}
         run: python3 scripts/update_catalog.py
       - name: Validate data and site
         run: |
           python3 scripts/validate_catalog.py
           npm ci
           npm run build
-      - name: Open update pull request
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Publish validated update
         run: |
           git diff --quiet && exit 0
-          branch="bot/catalog-$(date -u +%Y%m%d-%H%M%S)"
           git config user.name "ai-baibaoxiang-bot"
           git config user.email "actions@users.noreply.github.com"
-          git switch -c "$branch"
           git add data/catalog.json data/sync-state.json data/update-report.json
           git commit -m "content: update component catalog"
-          git push origin "$branch"
-          pr=$(gh pr create --title "content: 每日组件更新" --body "自动发现、整理并校验的新组件。所有新增内容先标记为待确认。" --base main --head "$branch")
-          gh pr merge --auto --squash "$pr"
+          git push origin HEAD:main

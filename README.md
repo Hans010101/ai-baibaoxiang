@@ -11,8 +11,8 @@ AI 百宝箱是一个亮色科技风的 AI 组件黄页，集中展示免费 API
 - 已完整同步 `public-apis` 目录，并保留原有 AI / MCP 精选组件
 - 每日发现 `public-apis` 新 API，并检索 GitHub 新增 MCP / Agent 组件
 - 使用 Cloudflare Workers AI 自动生成中文摘要、标签、场景和接入说明
-- 结构校验通过后由机器人创建 PR，启用自动合并后自动发布
-- `main` 更新后由 GitHub Actions 自动部署到 Cloudflare Workers
+- 结构校验通过后由机器人提交到 GitHub，线上站点在 15 分钟内读取最新目录
+- Cloudflare Workers AI 编辑接口独立部署，调用密钥仅保存在 Cloudflare 与 GitHub Secrets
 
 ## 架构
 
@@ -20,10 +20,10 @@ AI 百宝箱是一个亮色科技风的 AI 组件黄页，集中展示免费 API
 public-apis + GitHub Search
           ↓ 每日 GitHub Actions
 Cloudflare Workers AI（增量内容整理）
-          ↓ 校验 + 机器人 PR
+          ↓ 校验 + 自动提交
 GitHub JSON 内容库
-          ↓ main 更新
-Cloudflare Worker（网站自动发布）
+          ↓ 15 分钟缓存
+AI 百宝箱线上站点
 ```
 
 当前不引入数据库、传统 CMS、用户系统、向量数据库或通用 API 代理。目录规模未达到 JSON 构建瓶颈前，这套结构更省钱、更透明，也更容易回滚。
@@ -47,24 +47,16 @@ npm run build
 
 ## GitHub 与 Cloudflare 配置
 
-把项目推送到 GitHub 后，在仓库 `Settings → Secrets and variables → Actions` 添加：
+自动更新需要以下 GitHub Actions 配置：
 
 | 类型 | 名称 | 用途 |
 | --- | --- | --- |
-| Secret | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare 账户 ID |
-| Secret | `CLOUDFLARE_API_TOKEN` | Workers 部署及 Workers AI 调用 |
-| Variable | `NEXT_PUBLIC_SITE_URL` | 正式网站地址，例如 `https://example.com` |
-| Variable | `NEXT_PUBLIC_REPOSITORY_URL` | 当前 GitHub 仓库地址 |
-| Variable（可选） | `CF_AI_MODEL` | 默认 `@cf/meta/llama-3.1-8b-instruct` |
+| Secret | `EDITORIAL_API_TOKEN` | 调用编辑接口的站点专用密钥 |
+| Variable | `CLOUDFLARE_EDITORIAL_ENDPOINT` | Workers AI 编辑接口地址 |
 
-API Token 只授予所需账户的 Workers Scripts 编辑与 Workers AI 权限，不要把 Token 写入仓库。首次设置后，还需要在 GitHub 仓库设置中启用 `Allow auto-merge`，机器人 PR 才能在校验通过后自动合并。
+站点专用密钥不要写入仓库。编辑接口的 Cloudflare 配置位于 `wrangler.editor.jsonc`。
 
-已有两条工作流：
-
-- `Daily catalog update`：每天 UTC 00:20（新加坡时间 08:20）发现、整理、验证并提交增量内容。
-- `Deploy to Cloudflare`：`main` 每次更新后构建并部署名为 `ai-baibaoxiang` 的 Worker。
-
-也可以在 GitHub Actions 页面手动运行任一工作流。Cloudflare 自定义域名可在 Worker 的 `Settings → Domains & Routes` 中绑定。
+`Daily catalog update` 每天 UTC 00:20（新加坡时间 08:20）发现、整理、验证并提交增量内容，也可在 GitHub Actions 页面手动运行。
 
 ## 自动更新规则
 

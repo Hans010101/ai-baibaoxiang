@@ -6,10 +6,20 @@ export type CatalogItem = CatalogRecord & {
   https?: string;
   cors?: string;
 };
-export const catalog = catalogData as CatalogItem[];
+const bundledCatalog = catalogData as CatalogItem[];
+const feedUrl = 'https://raw.githubusercontent.com/Hans010101/ai-baibaoxiang/main/data/catalog.json';
 
-export function getCatalogItem(slug: string) {
-  return catalog.find((item) => item.slug === slug);
+export async function getCatalog() {
+  try {
+    const response = await fetch(feedUrl, { next: { revalidate: 900 } });
+    if (response.ok) {
+      const remote = await response.json();
+      if (Array.isArray(remote) && remote.length) return remote as CatalogItem[];
+    }
+  } catch { /* use the bundled catalog when GitHub is temporarily unavailable */ }
+  return bundledCatalog;
 }
 
-export const categories = [...new Set(catalog.map((item) => item.category))].sort();
+export async function getCatalogItem(slug: string) {
+  return (await getCatalog()).find((item) => item.slug === slug);
+}

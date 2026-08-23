@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ai-baibaoxiang-editor",
+  "main": "worker/editor.ts",
+  "compatibility_date": "2026-08-23",
+  "ai": { "binding": "AI" },
+  "observability": { "enabled": true }
+}

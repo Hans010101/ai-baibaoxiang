@@ -124,26 +124,23 @@ def slugify(value: str) -> str:
 
 
 def enrich_with_cloudflare(candidates: list[dict]) -> list[dict]:
-    account = os.getenv("CLOUDFLARE_ACCOUNT_ID", "")
-    token = os.getenv("CLOUDFLARE_API_TOKEN", "")
-    if not account or not token:
-        print("Workers AI credentials missing; candidates will be retried next run")
-        return []
+    endpoint = os.getenv("CLOUDFLARE_EDITORIAL_ENDPOINT", "")
+    token = os.getenv("EDITORIAL_API_TOKEN", "")
+    if not endpoint or not token:
+        raise RuntimeError("CLOUDFLARE_EDITORIAL_ENDPOINT and EDITORIAL_API_TOKEN are required")
 
-    model = os.getenv("CF_AI_MODEL") or "@cf/meta/llama-3.1-8b-instruct"
     prompt = f"""你是 AI 工具黄页编辑。把下面候选组件整理为严格 JSON 数组，顺序和数量必须完全一致。
 每项只返回 description、summary、tags、useCases、quickstart 五个字段。
 要求：简体中文；description 30-55 字；summary 60-120 字；tags 3 个短词；useCases 3 个具体场景；quickstart 只在候选信息足以确认时给一条可复制命令，否则写“请先阅读官方文档并按项目说明安装。”。不得虚构免费额度、密钥、命令或功能。
 候选：{json.dumps(candidates, ensure_ascii=False)}"""
-    body = json.dumps({"messages": [{"role": "user", "content": prompt}], "max_tokens": 3500}).encode()
-    endpoint = f"https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/{model}"
+    body = json.dumps({"prompt": prompt}, ensure_ascii=False).encode()
     request = urllib.request.Request(endpoint, data=body, headers={
         "Authorization": f"Bearer {token}", "Content-Type": "application/json",
         "User-Agent": "ai-baibaoxiang/1.0",
     })
     with urllib.request.urlopen(request, timeout=90) as response:
         payload = json.loads(response.read().decode("utf-8"))
-    text = payload.get("result", {}).get("response", "")
+    text = payload.get("response", "")
     start, end = text.find("["), text.rfind("]")
     if start < 0 or end < start:
         raise ValueError("Workers AI did not return a JSON array")
@@ -252,12 +249,15 @@ def main(bootstrap: bool = False, full_import: bool = False) -> None:
     existing = {item["officialUrl"] for item in catalog}
     candidates = [item for item in public_items + github_items if item["url"] not in known and item["url"] not in existing][:MAX_NEW]
     if not candidates:
+        REPORT_PATH.write_text(json.dumps({
+            "updatedAt": dt.datetime.now(dt.timezone.utc).isoformat(),
+            "mode": "daily", "status": "no-changes", "addedCount": 0,
+            "upstreamCount": len(public_items),
+        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print("no new components")
         return
 
     enriched = enrich_with_cloudflare(candidates)
-    if not enriched:
-        return
     used_slugs = {item["slug"] for item in catalog}
     additions = [assemble(candidate, ai, used_slugs) for candidate, ai in zip(candidates, enriched)]
     catalog.extend(additions)

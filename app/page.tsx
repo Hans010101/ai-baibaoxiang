@@ -1,7 +1,9 @@
 import { CatalogExplorer } from '@/components/catalog-explorer';
-import { catalog, categories } from '@/lib/catalog';
+import { getCatalog } from '@/lib/catalog';
 
-export default function Home() {
+export default async function Home() {
+  const catalog = await getCatalog();
+  const categories = [...new Set(catalog.map((item) => item.category))].sort();
   const items = catalog.map(({ slug, name, initial, type, category, description, auth, free, status, accent, tags, officialUrl }) => (
     { slug, name, initial, type, category, description, auth, free, status, accent, tags, officialUrl }
   ));

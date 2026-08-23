@@ -4,11 +4,11 @@ import { notFound } from 'next/navigation';
 import { CopyButton } from '@/components/copy-button';
 import { ToolLogo } from '@/components/catalog-explorer';
 import { SiteFooter, SiteHeader } from '@/components/site-shell';
-import { catalog, getCatalogItem } from '@/lib/catalog';
+import { getCatalog, getCatalogItem } from '@/lib/catalog';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const item = getCatalogItem(slug);
+  const item = await getCatalogItem(slug);
   if (!item) return { title: '组件未找到 - AI 百宝箱' };
   return {
     title: `${item.name}：功能、免费额度与接入说明 - AI 百宝箱`,
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ToolDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const item = getCatalogItem(slug);
+  const [item, catalog] = await Promise.all([getCatalogItem(slug), getCatalog()]);
   if (!item) notFound();
   const alternatives = catalog.filter((candidate) => candidate.category === item.category && candidate.slug !== item.slug).slice(0, 3);
 
