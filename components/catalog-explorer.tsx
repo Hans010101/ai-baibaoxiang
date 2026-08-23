@@ -133,8 +133,10 @@ export function CatalogExplorer({ items, categories }: { items: ExplorerItem[]; 
                   <span className={tool.status === '已验证' ? 'verified' : 'pending'}>{tool.status === '已验证' ? '✓' : '◷'} {tool.status}</span>
                 </div>
                 <p>{tool.description}</p>
-                <div className="tags"><span>{tool.auth}</span><span>{tool.free ? '有免费额度' : '付费'}</span></div>
-                <a href={`/tool/${tool.slug}`}>查看接入说明 <b>→</b></a>
+                <div className="card-actions">
+                  <div className="tags"><span>{tool.auth}</span><span>{tool.free ? '有免费额度' : '付费'}</span></div>
+                  <a href={`/tool/${tool.slug}`}>查看接入说明 <b>→</b></a>
+                </div>
               </article>
             ))}
           </div>

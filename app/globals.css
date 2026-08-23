@@ -78,10 +78,11 @@ h1 em { color:var(--blue); font-style:normal; }
 .type { display:block; color:#5c6c88; font-size:11px; letter-spacing:1.2px; font-weight:800; }
 .tool-card h3 { font-size:22px; line-height:1.25; letter-spacing:-.5px; text-wrap:balance; }
 .tool-card p { display:-webkit-box; overflow:hidden; margin:18px 0 0; color:#647189; font-size:14px; line-height:1.7; -webkit-box-orient:vertical; -webkit-line-clamp:3; text-wrap:pretty; }
-.tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:17px; }
+.card-actions { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-top:17px; }
+.tags { min-width:0; display:flex; flex-wrap:wrap; gap:7px; }
 .tags span { padding:6px 9px; background:#f3f6fb; color:#5e6d85; border-radius:6px; font-size:11px; }
-.tool-card > a { margin-top:20px; padding-top:17px; border-top:1px solid #edf1f6; color:#294fcd; font-size:14px; font-weight:700; }
-.tool-card > a b { float:right; }
+.card-actions > a { flex:none; color:#294fcd; font-size:13px; font-weight:700; white-space:nowrap; }
+.card-actions > a b { margin-left:5px; }
 .load-more { display:block;margin:28px auto 0;padding:12px 22px;border:1px solid #b9c9ee;border-radius:10px;background:white;color:#294fcd;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px #315bea0d; }
 .load-more:hover { background:#f2f6ff; }
 .empty-state { padding:70px 20px; border:1px dashed #cbd7e9; border-radius:15px; text-align:center; background:#f9fbff; }
