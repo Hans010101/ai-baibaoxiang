@@ -16,8 +16,32 @@ export default {
 
     const result = await env.AI.run('@cf/zai-org/glm-4.7-flash', {
       messages: [{ role: 'user', content: prompt }],
-      max_tokens: 3500,
-    }) as { response?: string; choices?: Array<{ message?: { content?: string } }> };
+      max_completion_tokens: 5000,
+      reasoning_effort: 'low',
+      response_format: {
+        type: 'json_schema',
+        json_schema: {
+          type: 'object',
+          properties: {
+            items: {
+              type: 'array',
+              items: {
+                type: 'object',
+                properties: {
+                  description: { type: 'string' },
+                  summary: { type: 'string' },
+                  tags: { type: 'array', items: { type: 'string' } },
+                  useCases: { type: 'array', items: { type: 'string' } },
+                  quickstart: { type: 'string' },
+                },
+                required: ['description', 'summary', 'tags', 'useCases', 'quickstart'],
+              },
+            },
+          },
+          required: ['items'],
+        },
+      },
+    }) as { response?: unknown; choices?: Array<{ message?: { content?: string } }> };
     return Response.json({ response: result.response ?? result.choices?.[0]?.message?.content ?? '' });
   },
 } satisfies ExportedHandler<Env>;

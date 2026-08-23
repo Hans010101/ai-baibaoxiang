@@ -123,14 +123,23 @@ def slugify(value: str) -> str:
     return slug or hashlib.sha1(value.encode()).hexdigest()[:10]
 
 
+def parse_editorial_response(value: object) -> list[dict]:
+    if isinstance(value, str):
+        value = json.loads(value.strip().removeprefix("```json").removesuffix("```").strip())
+    items = value.get("items") if isinstance(value, dict) else value
+    if not isinstance(items, list) or not all(isinstance(item, dict) for item in items):
+        raise ValueError("Workers AI did not return editorial items")
+    return items
+
+
 def enrich_with_cloudflare(candidates: list[dict]) -> list[dict]:
     endpoint = os.getenv("CLOUDFLARE_EDITORIAL_ENDPOINT", "")
     token = os.getenv("EDITORIAL_API_TOKEN", "")
     if not endpoint or not token:
         raise RuntimeError("CLOUDFLARE_EDITORIAL_ENDPOINT and EDITORIAL_API_TOKEN are required")
 
-    prompt = f"""你是 AI 工具黄页编辑。把下面候选组件整理为严格 JSON 数组，顺序和数量必须完全一致。
-每项只返回 description、summary、tags、useCases、quickstart 五个字段。
+    prompt = f"""你是 AI 工具黄页编辑。把下面候选组件整理为严格 JSON 对象：{{"items": [...]}}，items 顺序和数量必须完全一致。
+items 每项只返回 description、summary、tags、useCases、quickstart 五个字段。
 要求：简体中文；description 30-55 字；summary 60-120 字；tags 3 个短词；useCases 3 个具体场景；quickstart 只在候选信息足以确认时给一条可复制命令，否则写“请先阅读官方文档并按项目说明安装。”。不得虚构免费额度、密钥、命令或功能。
 候选：{json.dumps(candidates, ensure_ascii=False)}"""
     body = json.dumps({"prompt": prompt}, ensure_ascii=False).encode()
@@ -140,11 +149,7 @@ def enrich_with_cloudflare(candidates: list[dict]) -> list[dict]:
     })
     with urllib.request.urlopen(request, timeout=90) as response:
         payload = json.loads(response.read().decode("utf-8"))
-    text = payload.get("response", "")
-    start, end = text.find("["), text.rfind("]")
-    if start < 0 or end < start:
-        raise ValueError("Workers AI did not return a JSON array")
-    enriched = json.loads(text[start:end + 1])
+    enriched = parse_editorial_response(payload.get("response"))
     if len(enriched) != len(candidates):
         raise ValueError("Workers AI returned a different item count")
     return enriched
@@ -279,6 +284,7 @@ def self_check() -> None:
     parsed = parse_public_apis(sample)
     assert parsed == [{"name": "Demo API", "url": "https://example.com/docs", "description": "Weather data", "auth": "无需密钥", "category": "天气与地理", "source_category": "Weather", "https": "Yes", "cors": "Yes", "type": "API", "source_url": SOURCE_URL, "origin": "public-apis"}]
     assert source_enrichment(parsed[0])["quickstart"].startswith("1. 打开官方文档：https://example.com/docs")
+    assert parse_editorial_response('{"items":[{"description":"demo"}]}')[0]["description"] == "demo"
     assert slugify("Hello, API!") == "hello-api"
     print("self-check passed")
 
