@@ -6,6 +6,15 @@ import type { CatalogItem } from '@/lib/catalog';
 import { SiteFooter, SiteHeader } from '@/components/site-shell';
 
 const typeIcons: Record<string, string> = { API: '⌁', MCP: '⋈', 模型: '◈', SDK: '{ }' };
+const categoryIcons: Record<string, string> = {
+  'Agent 框架': '⌁', 'MCP 服务': '⋈', '云存储与文件': '▤', '公共数据': '▦',
+  '动漫与娱乐': '◉', '动物与自然': '♧', '区块链与加密': '⬡', '商业与金融': '↗',
+  '天气与地理': '◎', '安全与认证': '◇', '开发者工具': '{ }', '政府与社会': '⚖',
+  '数据与校验': '✓', '新闻与媒体': '◫', '日历与活动': '□', '模型与推理': '∑',
+  '模型与文本': '¶', '游戏与体育': '◆', '知识与内容': '≡', '科学与健康': '+',
+  '科学与研究': '⌬', '网络服务': '⌘', '艺术与设计': '✦', '邮件与通信': '@',
+  '金融数据': '%', '音乐与视频': '♫',
+};
 const PAGE_SIZE = 48;
 export type ExplorerItem = Pick<CatalogItem, 'slug' | 'name' | 'initial' | 'type' | 'category' | 'description' | 'auth' | 'free' | 'status' | 'accent' | 'tags' | 'officialUrl'>;
 
@@ -94,7 +103,7 @@ export function CatalogExplorer({ items, categories }: { items: ExplorerItem[]; 
         <div className="category-grid">
           {categories.map((name, index) => (
             <button key={name} onClick={() => selectCategory(name)}>
-              <span className={`category-symbol symbol-${index % 4}`}>{['⌁', '◫', '✦', '⋈'][index % 4]}</span>
+              <span className={`category-symbol symbol-${index % 6}`}>{categoryIcons[name] ?? name.slice(0, 1)}</span>
               <span className="category-copy"><strong>{name}</strong><small>{items.filter((item) => item.category === name).length} 个组件</small></span>
               <b>→</b>
             </button>

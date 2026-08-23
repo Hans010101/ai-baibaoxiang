@@ -52,7 +52,7 @@ h1 em { color:var(--blue); font-style:normal; }
 .category-grid button:hover { z-index:1; background:#f7faff; border-color:#b9cafa; transform:translateY(-2px); box-shadow:0 14px 30px #33527b12; }
 .category-grid button:active { transform:translateY(0); }
 .category-symbol { width:46px;height:46px;display:grid;place-items:center;flex:0 0 auto;border-radius:12px;background:#edf2ff;color:#315bea;font-size:18px; }
-.symbol-1{background:#eaf9f5;color:#0b966d}.symbol-2{background:#fff7e5;color:#cd8611}.symbol-3{background:#f1edff;color:#7056cc}
+.symbol-1{background:#eaf9f5;color:#0b966d}.symbol-2{background:#fff7e5;color:#cd8611}.symbol-3{background:#f1edff;color:#7056cc}.symbol-4{background:#eaf6ff;color:#2472b8}.symbol-5{background:#fff0f2;color:#c34f68}
 .category-copy { min-width:0; display:flex; flex:1; flex-direction:column; gap:6px; }
 .category-grid strong { padding-right:18px; font-size:16px; line-height:1.25; }
 .category-grid small { color:#7e8b9f; font-size:12px; font-variant-numeric:tabular-nums; }
