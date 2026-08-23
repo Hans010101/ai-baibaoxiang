@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -6,7 +7,20 @@ import { SiteFooter, SiteHeader } from '@/components/site-shell';
 
 const typeIcons: Record<string, string> = { API: '⌁', MCP: '⋈', 模型: '◈', SDK: '{ }' };
 const PAGE_SIZE = 48;
-export type ExplorerItem = Pick<CatalogItem, 'slug' | 'name' | 'initial' | 'type' | 'category' | 'description' | 'auth' | 'free' | 'status' | 'accent' | 'tags'>;
+export type ExplorerItem = Pick<CatalogItem, 'slug' | 'name' | 'initial' | 'type' | 'category' | 'description' | 'auth' | 'free' | 'status' | 'accent' | 'tags' | 'officialUrl'>;
+
+export function ToolLogo({ name, initial, officialUrl, accent, className }: Pick<CatalogItem, 'name' | 'initial' | 'officialUrl' | 'accent'> & { className: string }) {
+  const [failed, setFailed] = useState(false);
+  let logoUrl = '';
+  try { logoUrl = `${new URL(officialUrl).origin}/favicon.ico`; } catch { /* invalid source falls back to the initial */ }
+
+  return (
+    <span className={`tool-logo ${className}`} style={{ background: accent }}>
+      <span aria-hidden="true">{initial}</span>
+      {!failed && logoUrl && <img src={logoUrl} alt={`${name} 官方标识`} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={() => setFailed(true)} />}
+    </span>
+  );
+}
 
 export function CatalogExplorer({ items, categories }: { items: ExplorerItem[]; categories: string[] }) {
   const [query, setQuery] = useState('');
@@ -103,7 +117,7 @@ export function CatalogExplorer({ items, categories }: { items: ExplorerItem[]; 
             {filtered.slice(0, visibleCount).map((tool) => (
               <article className="tool-card" key={tool.slug}>
                 <div className="tool-top">
-                  <span className="tool-icon" style={{ background: tool.accent }}>{tool.initial}</span>
+                  <ToolLogo {...tool} className="tool-icon" />
                   <span className={tool.status === '已验证' ? 'verified' : 'pending'}>{tool.status === '已验证' ? '✓' : '◷'} {tool.status}</span>
                 </div>
                 <span className="type">{typeIcons[tool.type] || '◫'} {tool.type} · {tool.category}</span>
