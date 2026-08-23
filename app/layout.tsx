@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aiboxhub.top'),
   title: 'AI 百宝箱 - 找到、看懂、接入每一种 AI 能力',
-  description: '持续发现并验证免费的 API、MCP、AI 模型、SDK 与 Agent 工具，提供中文说明、免费额度、接入示例和官方链接。',
+  description: '持续发现并验证免费的 API、MCP、AI 模型、SDK 与 Agent 工具，提供中英文说明、免费额度、接入示例和官方链接。',
   icons: { icon: '/favicon.png' },
   openGraph: {
     title: 'AI 百宝箱 - AI 组件黄页',

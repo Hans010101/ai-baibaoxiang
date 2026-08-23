@@ -14,7 +14,7 @@ export async function getCatalog() {
     const response = await fetch(feedUrl, { next: { revalidate: 900 } });
     if (response.ok) {
       const remote = await response.json();
-      if (Array.isArray(remote) && remote.length) return remote as CatalogItem[];
+      if (Array.isArray(remote) && remote.length && remote.every((item) => item.descriptionEn)) return remote as CatalogItem[];
     }
   } catch { /* use the bundled catalog when GitHub is temporarily unavailable */ }
   return bundledCatalog;

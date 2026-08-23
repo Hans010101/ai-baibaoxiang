@@ -1,45 +1,7 @@
 {
-  "updatedAt": "2026-08-23T10:46:38.181087+00:00",
-  "added": [
-    {
-      "name": "northcinder",
-      "slug": "northcinder",
-      "status": "待确认"
-    },
-    {
-      "name": "x64dbg-mcp-server",
-      "slug": "x64dbg-mcp-server",
-      "status": "待确认"
-    },
-    {
-      "name": "OpenQuantum",
-      "slug": "openquantum",
-      "status": "待确认"
-    },
-    {
-      "name": "mac-developer-bridge",
-      "slug": "mac-developer-bridge",
-      "status": "待确认"
-    },
-    {
-      "name": "consensus-mcp",
-      "slug": "consensus-mcp",
-      "status": "待确认"
-    },
-    {
-      "name": "Perenna",
-      "slug": "perenna",
-      "status": "待确认"
-    },
-    {
-      "name": "ida-headless-mcp",
-      "slug": "ida-headless-mcp",
-      "status": "待确认"
-    },
-    {
-      "name": "frama-c-mcp",
-      "slug": "frama-c-mcp",
-      "status": "待确认"
-    }
-  ]
+  "updatedAt": "2026-08-23T12:47:48.358707+00:00",
+  "mode": "full-import",
+  "addedCount": 0,
+  "updatedCount": 1693,
+  "upstreamCount": 1695
 }
