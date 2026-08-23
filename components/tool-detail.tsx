@@ -1,6 +1,6 @@
 import { CopyButton } from '@/components/copy-button';
 import { ToolLogo } from '@/components/catalog-explorer';
-import { SiteFooter, SiteHeader } from '@/components/site-shell';
+import { JsonLd, SiteFooter, SiteHeader } from '@/components/site-shell';
 import type { CatalogItem } from '@/lib/catalog';
 import { authLabel, categoryLabel, connectionLabel, statusLabel, typeLabel, type Locale } from '@/lib/i18n';
 
@@ -13,9 +13,35 @@ export function ToolDetailPage({ item, alternatives, locale }: { item: CatalogIt
   const useCases = en ? item.useCasesEn : item.useCases;
   const tags = en ? item.tagsEn : item.tags;
   const verified = item.status === '已验证';
+  const origin = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aiboxhub.top';
+  const pageUrl = `${origin}${home}/tool/${item.slug}`;
+  const category = categoryLabel(item.category, locale);
 
   return (
     <main lang={en ? 'en' : 'zh-CN'}>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebPage', '@id': `${pageUrl}#webpage`, url: pageUrl, name: item.name, description,
+            inLanguage: en ? 'en' : 'zh-CN', dateModified: item.verifiedAt, isPartOf: { '@id': `${origin}/#website` },
+            mainEntity: { '@id': `${pageUrl}#software` },
+          },
+          {
+            '@type': 'SoftwareApplication', '@id': `${pageUrl}#software`, name: item.name, description: summary,
+            url: item.officialUrl, mainEntityOfPage: { '@id': `${pageUrl}#webpage` }, applicationCategory: category,
+            operatingSystem: 'Web', isAccessibleForFree: item.free, keywords: tags.join(', '),
+            ...(item.free ? { offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' } } : {}),
+          },
+          {
+            '@type': 'BreadcrumbList', '@id': `${pageUrl}#breadcrumb`, itemListElement: [
+              { '@type': 'ListItem', position: 1, name: en ? 'Home' : '首页', item: `${origin}${home || '/'}` },
+              { '@type': 'ListItem', position: 2, name: category, item: `${origin}${home || '/'}#categories` },
+              { '@type': 'ListItem', position: 3, name: item.name, item: pageUrl },
+            ],
+          },
+        ],
+      }} />
       <SiteHeader locale={locale} alternateHref={`${en ? '' : '/en'}/tool/${item.slug}`} />
       <div className="detail-wrap">
         <div className="breadcrumbs"><a href={home || '/'}>{en ? 'Home' : '首页'}</a><span>›</span><a href={`${home || '/'}#categories`}>{categoryLabel(item.category, locale)}</a><span>›</span><b>{item.name}</b></div>

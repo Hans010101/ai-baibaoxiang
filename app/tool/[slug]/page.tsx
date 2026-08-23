@@ -7,7 +7,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const item = await getCatalogItem(slug);
   if (!item) return { title: '组件未找到 - AI 百宝箱' };
-  return { title: `${item.name}：功能、免费额度与接入说明 - AI 百宝箱`, description: item.description, alternates: { canonical: `/tool/${slug}`, languages: { 'zh-CN': `/tool/${slug}`, en: `/en/tool/${slug}` } } };
+  const title = `${item.name}：功能、免费额度与接入说明｜AI 百宝箱`;
+  const description = `${item.description} 查看认证方式、免费额度、快速接入、使用场景与官方资料。`;
+  return {
+    title, description,
+    alternates: { canonical: `/tool/${slug}`, languages: { 'zh-CN': `/tool/${slug}`, en: `/en/tool/${slug}`, 'x-default': `/tool/${slug}` } },
+    openGraph: { title, description, url: `/tool/${slug}`, type: 'article', locale: 'zh_CN', alternateLocale: ['en_US'], images: [] },
+    twitter: { card: 'summary', title, description, images: [] },
+  };
 }
 
 export default async function ToolDetail({ params }: { params: Promise<{ slug: string }> }) {

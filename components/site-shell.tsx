@@ -1,5 +1,9 @@
 import type { Locale } from '@/lib/i18n';
 
+export function JsonLd({ data }: { data: object }) {
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />;
+}
+
 export function Brand({ locale = 'zh' }: { locale?: Locale }) {
   return (
     <a className="brand" href={locale === 'en' ? '/en' : '/'} aria-label={locale === 'en' ? 'AI Toolbox home' : 'AI 百宝箱首页'}>

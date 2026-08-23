@@ -5,7 +5,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { CatalogItem } from '@/lib/catalog';
 import { localAdvisorPlan, rankAdvisorCandidates, type AdvisorPlan } from '@/lib/advisor';
 import { authLabel, categoryLabel, statusLabel, typeLabel, type Locale } from '@/lib/i18n';
-import { SiteFooter, SiteHeader } from '@/components/site-shell';
+import { JsonLd, SiteFooter, SiteHeader } from '@/components/site-shell';
 
 const typeIcons: Record<string, string> = { API: '⌁', MCP: '⋈', 模型: '◈', SDK: '{ }' };
 const categoryIcons: Record<string, string> = {
@@ -70,6 +70,8 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
   const [verifiedOnly, setVerifiedOnly] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const advisorRef = useRef<HTMLTextAreaElement>(null);
+  const origin = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aiboxhub.top';
+  const pageUrl = `${origin}${en ? '/en' : '/'}`;
 
   useEffect(() => {
     if (!advisorOpen) return;
@@ -126,6 +128,18 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
 
   return (
     <main lang={en ? 'en' : 'zh-CN'}>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@graph': [
+          { '@type': 'Organization', '@id': `${origin}/#organization`, name: 'AI 百宝箱 / AI Toolbox', url: `${origin}/`, logo: `${origin}/favicon.png` },
+          { '@type': 'WebSite', '@id': `${origin}/#website`, name: 'AI 百宝箱 / AI Toolbox', url: `${origin}/`, inLanguage: ['zh-CN', 'en'], publisher: { '@id': `${origin}/#organization` } },
+          {
+            '@type': 'CollectionPage', '@id': `${pageUrl}#directory`, url: pageUrl,
+            name: en ? 'AI Toolbox directory' : 'AI 百宝箱组件目录', inLanguage: en ? 'en' : 'zh-CN', isPartOf: { '@id': `${origin}/#website` },
+            mainEntity: { '@type': 'ItemList', numberOfItems: items.length, itemListElement: items.slice(0, PAGE_SIZE).map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, url: `${origin}${en ? '/en' : ''}/tool/${item.slug}` })) },
+          },
+        ],
+      }} />
       <SiteHeader locale={locale} />
       <section className="hero">
         <div className="hero-grid" aria-hidden="true" />

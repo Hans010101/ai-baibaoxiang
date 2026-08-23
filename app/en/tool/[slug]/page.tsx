@@ -7,7 +7,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const item = await getCatalogItem(slug);
   if (!item) return { title: 'Component not found - AI Toolbox' };
-  return { title: `${item.name}: features, free tier, and integration guide - AI Toolbox`, description: item.descriptionEn, alternates: { canonical: `/en/tool/${slug}`, languages: { 'zh-CN': `/tool/${slug}`, en: `/en/tool/${slug}` } } };
+  const title = `${item.name}: Features, Free Tier & Integration Guide | AI Toolbox`;
+  const description = `${item.descriptionEn} Review authentication, free access, quick-start steps, use cases, and official sources.`;
+  return {
+    title, description,
+    alternates: { canonical: `/en/tool/${slug}`, languages: { 'zh-CN': `/tool/${slug}`, en: `/en/tool/${slug}`, 'x-default': `/tool/${slug}` } },
+    openGraph: { title, description, url: `/en/tool/${slug}`, type: 'article', locale: 'en_US', alternateLocale: ['zh_CN'], images: [] },
+    twitter: { card: 'summary', title, description, images: [] },
+  };
 }
 
 export default async function EnglishToolDetail({ params }: { params: Promise<{ slug: string }> }) {
