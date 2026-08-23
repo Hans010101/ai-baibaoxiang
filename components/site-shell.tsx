@@ -14,10 +14,6 @@ export function Brand({ locale = 'zh' }: { locale?: Locale }) {
 }
 
 export function SiteHeader({ locale = 'zh', alternateHref }: { locale?: Locale; alternateHref?: string }) {
-  const repositoryUrl = process.env.NEXT_PUBLIC_REPOSITORY_URL;
-  const submitUrl = repositoryUrl
-    ? `${repositoryUrl}/issues/new?template=submit-component.yml`
-    : 'https://github.com/public-apis/public-apis/blob/master/CONTRIBUTING.md';
   const home = locale === 'en' ? '/en' : '/';
 
   return (
@@ -30,7 +26,6 @@ export function SiteHeader({ locale = 'zh', alternateHref }: { locale?: Locale; 
       </nav>
       <div className="header-actions">
         <a className="language-link" href={alternateHref ?? (locale === 'en' ? '/' : '/en')} aria-label={locale === 'en' ? '切换到中文' : 'Switch to English'}><span className={locale === 'zh' ? 'active' : ''}>中文</span><i>/</i><span className={locale === 'en' ? 'active' : ''}>EN</span></a>
-        <a className="submit-link" href={submitUrl} target="_blank" rel="noreferrer">{locale === 'en' ? 'Submit a tool ↗' : '提交组件 ↗'}</a>
       </div>
     </header>
   );
