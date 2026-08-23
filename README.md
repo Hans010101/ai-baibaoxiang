@@ -7,6 +7,7 @@ AI 百宝箱是一个亮色科技风的 AI 组件黄页，集中展示免费 API
 ## 已实现
 
 - 首页搜索、能力分类、免费/已验证筛选与响应式布局
+- 首页 AI 工具顾问：短关键词精准搜索，完整需求生成步骤与站内工具方案
 - 组件详情页、快速接入命令复制、同类组件和证据链接
 - 已完整同步 `public-apis` 目录，并保留原有 AI / MCP 精选组件
 - 每日发现 `public-apis` 新 API，并检索 GitHub 新增 MCP / Agent 组件
@@ -25,6 +26,8 @@ GitHub JSON 内容库
           ↓ 15 分钟缓存
 AI 百宝箱线上站点
 ```
+
+首页顾问同样复用这套 Worker：优先使用 Cloudflare Workers AI，异常时自动尝试 DeepSeek，两个模型都不可用时返回本地匹配方案。推荐链接只允许来自当前目录候选，避免生成不存在的工具。
 
 当前不引入数据库、传统 CMS、用户系统、向量数据库或通用 API 代理。目录规模未达到 JSON 构建瓶颈前，这套结构更省钱、更透明，也更容易回滚。
 
@@ -53,8 +56,11 @@ npm run build
 | --- | --- | --- |
 | Secret | `EDITORIAL_API_TOKEN` | 调用编辑接口的站点专用密钥 |
 | Variable | `CLOUDFLARE_EDITORIAL_ENDPOINT` | Workers AI 编辑接口地址 |
+| Secret（Cloudflare，可选） | `DEEPSEEK_API_KEY` | 首页顾问的备用模型密钥 |
 
 站点专用密钥不要写入仓库。编辑接口的 Cloudflare 配置位于 `wrangler.editor.jsonc`。
+
+申请 DeepSeek 密钥后执行 `npx wrangler secret put DEEPSEEK_API_KEY --config wrangler.editor.jsonc` 即可启用备用链路；未配置时不影响 Cloudflare 主链路和本地兜底。
 
 `Daily catalog update` 每天 UTC 00:20（新加坡时间 08:20）发现、整理、验证并提交增量内容，也可在 GitHub Actions 页面手动运行。
 
