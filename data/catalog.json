@@ -75146,5 +75146,128 @@
       "context enrichment"
     ],
     "quickstartEn": "Read the official documentation at https://github.com/sysprog21/frama-c-mcp and follow the project setup guide."
+  },
+  {
+    "slug": "mediagen",
+    "name": "mediagen",
+    "initial": "M",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "为 Claude Code 及其他编码代理提供 AI 图像和视频生成技能，支持 Gemini、OpenAI 和 Kie AI，具备欧盟 AI 法案内容标记功能。",
+    "summary": "这是一个集成了多种主流 AI 模型的 CLI 和 MCP 服务器，旨在为编程助手提供图像与视频生成能力，并符合欧盟 AI 法案合规要求。",
+    "officialUrl": "https://github.com/Cripacx/mediagen",
+    "docsUrl": "https://github.com/Cripacx/mediagen",
+    "sourceUrl": "https://github.com/Cripacx/mediagen",
+    "auth": "以官方文档为准",
+    "free": true,
+    "status": "待确认",
+    "verifiedAt": "2026-08-25",
+    "accent": "#e48743",
+    "tags": [
+      "AI 生成",
+      "图像视频",
+      "MCP 服务器"
+    ],
+    "useCases": [
+      "代码演示生成",
+      "UI 原型设计",
+      "文档配图制作"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "AI image and video generation skill for Claude Code and other coding agents — Gemini, OpenAI and Kie AI behind one CLI and MCP server, with EU AI Act content marking.",
+    "summaryEn": "mediagen provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Cripacx/mediagen\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "harken",
+    "name": "harken",
+    "initial": "H",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "解决编码代理无法收听音频的问题，提供本地 MCP 服务器和 CLI 工具，单文件 13MB，完全离线运行，无需 Python、ffmpeg 或 API 密钥。",
+    "summary": "这是一个完全离线的音频监听工具，通过单二进制文件提供 MCP 服务器和 CLI 功能，无需任何外部依赖，让 AI 代理能够处理本地音频输入。",
+    "officialUrl": "https://github.com/montezuma-p/harken",
+    "docsUrl": "https://github.com/montezuma-p/harken",
+    "sourceUrl": "https://github.com/montezuma-p/harken",
+    "auth": "以官方文档为准",
+    "free": true,
+    "status": "待确认",
+    "verifiedAt": "2026-08-25",
+    "accent": "#e48743",
+    "tags": [
+      "音频监听",
+      "本地运行",
+      "离线工具"
+    ],
+    "useCases": [
+      "语音指令识别",
+      "会议录音转写",
+      "环境声音监控"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Your agent cannot listen to audio. harken fixes that — locally. MCP server + CLI, one 13 MB binary, fully offline: no Python, no ffmpeg, no API key.",
+    "summaryEn": "harken provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/montezuma-p/harken\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "docs-masked",
+    "name": "docs_masked",
+    "initial": "D",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "在发送文档给 LLM 之前进行本地匿名化处理，并在回复后恢复原始内容，提供 Skill、MCP 服务器和 CLI 工具。",
+    "summary": "这是一个用于保护隐私的文档处理工具，支持在本地对敏感数据进行匿名化处理，确保 LLM 仅处理脱敏信息，并在对话结束后自动还原。",
+    "officialUrl": "https://github.com/kpshinnik/docs_masked",
+    "docsUrl": "https://github.com/kpshinnik/docs_masked",
+    "sourceUrl": "https://github.com/kpshinnik/docs_masked",
+    "auth": "以官方文档为准",
+    "free": true,
+    "status": "待确认",
+    "verifiedAt": "2026-08-25",
+    "accent": "#18a87b",
+    "tags": [
+      "隐私保护",
+      "文档脱敏",
+      "本地处理"
+    ],
+    "useCases": [
+      "敏感数据问答",
+      "企业文档分析",
+      "个人笔记整理"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Локальное обезличивание документов перед отправкой в LLM и обратная подстановка после ответа. Скилл, MCP-сервер и CLI.",
+    "summaryEn": "docs_masked provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/kpshinnik/docs_masked\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]

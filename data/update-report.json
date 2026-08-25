@@ -1,7 +1,20 @@
 {
-  "updatedAt": "2026-08-23T12:47:48.358707+00:00",
-  "mode": "full-import",
-  "addedCount": 0,
-  "updatedCount": 1693,
-  "upstreamCount": 1695
+  "updatedAt": "2026-08-25T01:57:22.059078+00:00",
+  "added": [
+    {
+      "name": "mediagen",
+      "slug": "mediagen",
+      "status": "待确认"
+    },
+    {
+      "name": "harken",
+      "slug": "harken",
+      "status": "待确认"
+    },
+    {
+      "name": "docs_masked",
+      "slug": "docs-masked",
+      "status": "待确认"
+    }
+  ]
 }
