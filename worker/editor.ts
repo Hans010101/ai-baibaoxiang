@@ -3,6 +3,14 @@ import { localAdvisorPlan, normalizeAdvisorPlan, type AdvisorCandidate, type Adv
 const allowedOrigins = new Set(['https://aiboxhub.top', 'https://www.aiboxhub.top', 'http://localhost:3000', 'http://127.0.0.1:3000']);
 const encoder = new TextEncoder();
 
+function withTimeout<T>(promise: Promise<T>, milliseconds: number): Promise<T> {
+  let timer: ReturnType<typeof setTimeout>;
+  return Promise.race([
+    promise,
+    new Promise<T>((_, reject) => { timer = setTimeout(() => reject(new Error('provider_timeout')), milliseconds); }),
+  ]).finally(() => clearTimeout(timer));
+}
+
 function cors(request: Request): Record<string, string> {
   const origin = request.headers.get('Origin');
   return origin && allowedOrigins.has(origin) ? {
@@ -110,7 +118,7 @@ async function handleAdvisor(request: Request, env: Env) {
   let value: unknown;
   let provider: AdvisorPlan['provider'] = 'cloudflare';
   try {
-    value = await cloudflarePlan(env, prompt);
+    value = await withTimeout(cloudflarePlan(env, prompt), 10_000);
   } catch (error) {
     console.warn(JSON.stringify({ event: 'advisor_provider_failed', provider, error: String(error).slice(0, 180) }));
     provider = 'deepseek';
