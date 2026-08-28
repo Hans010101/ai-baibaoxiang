@@ -15,13 +15,14 @@ export function Brand({ locale = 'zh' }: { locale?: Locale }) {
 
 export function SiteHeader({ locale = 'zh', alternateHref }: { locale?: Locale; alternateHref?: string }) {
   const home = locale === 'en' ? '/en' : '/';
+  const catalog = locale === 'en' ? '/en/catalog' : '/catalog';
 
   return (
     <header className="site-header">
       <Brand locale={locale} />
       <nav aria-label={locale === 'en' ? 'Main navigation' : '主导航'}>
         <a href={`${home}#categories`}>{locale === 'en' ? 'Categories' : '能力分类'}</a>
-        <a href={`${home}#catalog`}>{locale === 'en' ? 'All tools' : '全部组件'}</a>
+        <a href={catalog}>{locale === 'en' ? 'All tools' : '全部组件'}</a>
         <a href={`${home}#use-cases`}>{locale === 'en' ? 'Use cases' : '常见场景'}</a>
       </nav>
       <div className="header-actions">
@@ -36,6 +37,10 @@ export function SiteFooter({ locale = 'zh' }: { locale?: Locale }) {
     <footer className="site-footer">
       <Brand locale={locale} />
       <p>{locale === 'en' ? 'Find, understand, and integrate every AI capability.' : '找到、看懂、接入每一种 AI 能力。'}</p>
+      <nav aria-label={locale === 'en' ? 'Footer navigation' : '页脚导航'}>
+        <a href={`${locale === 'en' ? '/en' : ''}/methodology`}>{locale === 'en' ? 'Data & privacy' : '数据与隐私'}</a>
+        <a href="https://github.com/Hans010101/ai-baibaoxiang/issues" target="_blank" rel="noreferrer">{locale === 'en' ? 'Report a correction ↗' : '反馈纠错 ↗'}</a>
+      </nav>
     </footer>
   );
 }

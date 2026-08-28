@@ -7,6 +7,7 @@ export type Scenario = {
   summary: LocalizedText;
   audience: LocalizedText;
   categories: string[];
+  recommendedTools?: string[];
   flow: LocalizedText[];
 };
 
@@ -17,6 +18,7 @@ export const scenarios: Scenario[] = [
     summary: { zh: '把知识库、对话模型、工单系统和人工接管串成一套可追踪的服务流程', en: 'Connect a knowledge base, conversational model, ticketing, and human handoff into one traceable service flow' },
     audience: { zh: '电商、SaaS 与客户支持团队', en: 'Ecommerce, SaaS, and customer support teams' },
     categories: ['知识与内容', '模型与文本', '智能体框架', '邮件与通信'],
+    recommendedTools: ['langchain-js', 'hugging-face', 'context7'],
     flow: [
       { zh: '接收网页、App 或社交渠道的用户问题', en: 'Receive questions from web, app, or social channels' },
       { zh: '检索已授权的产品知识与历史答案', en: 'Retrieve approved product knowledge and prior answers' },
@@ -31,6 +33,7 @@ export const scenarios: Scenario[] = [
     summary: { zh: '持续完成多源搜索、正文抽取、交叉核验、分析归纳与报告输出', en: 'Continuously search multiple sources, extract content, cross-check facts, analyze findings, and produce reports' },
     audience: { zh: '战略、投资、咨询与市场研究团队', en: 'Strategy, investment, consulting, and market research teams' },
     categories: ['网络服务', '新闻与媒体', '模型与文本', '科学与研究'],
+    recommendedTools: ['nasa-open-apis', 'open-library', 'rest-countries', 'nominatim'],
     flow: [
       { zh: '把研究问题拆成关键词、实体与时间范围', en: 'Break the research question into keywords, entities, and time ranges' },
       { zh: '并行搜索公开网页、新闻与专业数据源', en: 'Search public web, news, and specialist data sources in parallel' },
@@ -45,6 +48,7 @@ export const scenarios: Scenario[] = [
     summary: { zh: '在权限、审计和数据边界内，让团队用自然语言查询内部业务数据', en: 'Let teams query internal business data in natural language within permission, audit, and data boundaries' },
     audience: { zh: '运营、财务、产品与数据团队', en: 'Operations, finance, product, and data teams' },
     categories: ['云存储与文件', '数据与校验', '安全与认证', '智能体框架'],
+    recommendedTools: ['langchain-js', 'hugging-face', 'rest-countries'],
     flow: [
       { zh: '统一数据库、文档和业务接口的只读访问', en: 'Unify read-only access to databases, documents, and business APIs' },
       { zh: '按用户身份注入行列级权限', en: 'Apply row- and column-level access by user identity' },
@@ -59,6 +63,7 @@ export const scenarios: Scenario[] = [
     summary: { zh: '从选题、文案、图片和视频到审核发布，建立可复用的多渠道内容流水线', en: 'Build a reusable multichannel pipeline from ideation and copy to visuals, review, and publishing' },
     audience: { zh: '品牌、增长、新媒体与内容团队', en: 'Brand, growth, social media, and content teams' },
     categories: ['模型与文本', '艺术与设计', '音乐与视频', '日历与活动'],
+    recommendedTools: ['hugging-face', 'langchain-js'],
     flow: [
       { zh: '汇总品牌规范、受众和渠道目标', en: 'Collect brand rules, audience context, and channel goals' },
       { zh: '生成选题、内容大纲和素材清单', en: 'Generate topics, outlines, and asset lists' },
@@ -73,6 +78,7 @@ export const scenarios: Scenario[] = [
     summary: { zh: '把分散文档转成带权限、引用与版本控制的内部问答知识库', en: 'Turn scattered documents into an internal Q&A knowledge base with permissions, citations, and version control' },
     audience: { zh: '企业 IT、知识管理与内部支持团队', en: 'Enterprise IT, knowledge management, and internal support teams' },
     categories: ['云存储与文件', '知识与内容', '模型与文本', '安全与认证'],
+    recommendedTools: ['open-library', 'langchain-js', 'context7', 'hugging-face'],
     flow: [
       { zh: '同步网盘、Wiki、PDF 与业务文档', en: 'Sync drives, wikis, PDFs, and business documents' },
       { zh: '解析、去重、分块并保留访问权限', en: 'Parse, deduplicate, chunk, and preserve access rights' },
@@ -87,6 +93,7 @@ export const scenarios: Scenario[] = [
     summary: { zh: '在合并请求中自动识别缺陷、安全风险、性能问题和缺失测试', en: 'Automatically identify defects, security risks, performance issues, and missing tests in pull requests' },
     audience: { zh: '研发团队、平台工程与技术负责人', en: 'Engineering teams, platform engineers, and technical leads' },
     categories: ['开发者工具', '模型与文本', '安全与认证', '数据与校验'],
+    recommendedTools: ['github-rest-api', 'context7', 'playwright-mcp', 'mcp-typescript-sdk'],
     flow: [
       { zh: '接收提交差异、仓库规范和相关代码上下文', en: 'Ingest diffs, repository rules, and related code context' },
       { zh: '运行静态检查、测试和依赖安全扫描', en: 'Run static checks, tests, and dependency security scans' },
@@ -101,6 +108,7 @@ export const scenarios: Scenario[] = [
     summary: { zh: '合并客户行为、公司信息和沟通记录，为销售生成优先级与下一步动作', en: 'Combine behavior, company data, and conversations to give sales teams priorities and next actions' },
     audience: { zh: 'B2B 销售、增长运营与收入团队', en: 'B2B sales, growth operations, and revenue teams' },
     categories: ['商业与金融', '公共数据', '模型与文本', '邮件与通信'],
+    recommendedTools: ['rest-countries', 'nominatim', 'langchain-js'],
     flow: [
       { zh: '汇总表单、访问行为、CRM 与公开公司信息', en: 'Combine forms, product activity, CRM, and public company data' },
       { zh: '校验联系人与公司实体并补全字段', en: 'Validate contacts and companies and enrich missing fields' },
@@ -115,6 +123,7 @@ export const scenarios: Scenario[] = [
     summary: { zh: '把市场洞察转成受众、信息、渠道、素材与复盘指标完整方案', en: 'Turn market insight into a complete audience, message, channel, creative, and measurement plan' },
     audience: { zh: '品牌营销、增长与活动运营团队', en: 'Brand marketing, growth, and campaign operations teams' },
     categories: ['商业与金融', '新闻与媒体', '艺术与设计', '模型与文本'],
+    recommendedTools: ['rest-countries', 'nominatim', 'open-library', 'hugging-face'],
     flow: [
       { zh: '分析市场、竞品、受众与历史活动', en: 'Analyze market, competitors, audiences, and prior campaigns' },
       { zh: '确定活动目标、核心信息和细分人群', en: 'Define objectives, core messages, and segments' },

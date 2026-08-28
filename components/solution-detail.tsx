@@ -1,8 +1,8 @@
 import { CopyButton } from '@/components/copy-button';
-import { ToolLogo } from '@/components/catalog-explorer';
 import { JsonLd, SiteFooter, SiteHeader } from '@/components/site-shell';
+import { ToolLogo } from '@/components/tool-logo';
 import type { CatalogItem } from '@/lib/catalog';
-import { categoryLabel, type Locale } from '@/lib/i18n';
+import { categoryLabel, statusLabel, type Locale } from '@/lib/i18n';
 import type { Scenario } from '@/lib/scenarios';
 
 export function SolutionDetailPage({ scenario, catalog, locale }: { scenario: Scenario; catalog: CatalogItem[]; locale: Locale }) {
@@ -10,9 +10,10 @@ export function SolutionDetailPage({ scenario, catalog, locale }: { scenario: Sc
   const home = en ? '/en' : '';
   const origin = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aiboxhub.top';
   const pageUrl = `${origin}${home}/solution/${scenario.slug}`;
-  const tools = scenario.categories.flatMap((category) =>
-    catalog.filter((item) => item.category === category).sort((a, b) => Number(b.status === '已验证') - Number(a.status === '已验证')).slice(0, 2),
-  ).filter((item, index, list) => list.findIndex((candidate) => candidate.slug === item.slug) === index).slice(0, 8);
+  const verified = catalog.filter((item) => item.status === '已验证');
+  const tools = scenario.recommendedTools
+    ? scenario.recommendedTools.flatMap((slug) => verified.find((item) => item.slug === slug) ?? [])
+    : verified.filter((item) => scenario.categories.includes(item.category)).slice(0, 8);
   const implementation = en ? [
     'Define the user journey, input and output schemas, permission boundaries, and success metrics.',
     'Build one end-to-end happy path with the smallest viable tool stack and a fixed evaluation set.',
@@ -40,21 +41,18 @@ export function SolutionDetailPage({ scenario, catalog, locale }: { scenario: Sc
     '工作流具备用户可见的降级提示与人工恢复路径。',
   ];
   const code = `type WorkflowInput = { request: string; userId: string };
+type StageAdapter = (context: unknown) => Promise<unknown>;
 
 const stages = ${JSON.stringify(scenario.flow.map((step) => step[locale]), null, 2)};
 const selectedTools = ${JSON.stringify(tools.map((tool) => tool.name), null, 2)};
 
-export async function runWorkflow(input: WorkflowInput) {
+export async function runWorkflow(input: WorkflowInput, adapters: Record<string, StageAdapter>) {
   let context: unknown = { ...input, selectedTools };
 
   for (const stage of stages) {
-    const response = await fetch('/api/workflow/execute', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ stage, context }),
-    });
-    if (!response.ok) throw new Error(\`Stage failed: \${stage}\`);
-    context = await response.json();
+    const adapter = adapters[stage];
+    if (!adapter) throw new Error(\`Missing adapter: \${stage}\`);
+    context = await adapter(context);
   }
 
   return context;
@@ -97,7 +95,8 @@ export async function runWorkflow(input: WorkflowInput) {
             <span className="section-kicker">{en ? 'STACK' : '工具组合'}</span>
             <h2>{en ? 'Recommended components' : '推荐组件'}</h2>
             <p>{en ? 'Start with one component per capability and replace it only when evaluation data shows a clear gap.' : '每种能力先选择一个组件，只有评测数据证明存在明确短板时再替换或增加。'}</p>
-            <div className="solution-tools">{tools.map((tool) => <a href={`${home}/tool/${tool.slug}`} key={tool.slug}><ToolLogo {...tool} className="mini-icon" locale={locale} /><span><b>{tool.name}</b><small>{categoryLabel(tool.category, locale)} · {en ? tool.descriptionEn : tool.description}</small></span><em>→</em></a>)}</div>
+            <div className="solution-tools">{tools.map((tool) => <a href={`${home}/tool/${tool.slug}`} key={tool.slug}><ToolLogo {...tool} className="mini-icon" /><span><b>{tool.name} <small className="solution-status">✓ {statusLabel(tool.status, locale)}</small></b><small>{categoryLabel(tool.category, locale)} · {en ? tool.descriptionEn : tool.description}</small></span><em>→</em></a>)}</div>
+            {!tools.length && <p className="evidence-notice">{en ? 'No independently verified component matches this capability yet. Use the architecture as a reference and confirm providers before implementation.' : '目前还没有与该能力匹配且完成独立核验的组件，请先参考架构并在实施前核验供应商。'}</p>}
           </section>
 
           <section>
@@ -110,7 +109,7 @@ export async function runWorkflow(input: WorkflowInput) {
             <span className="section-kicker">{en ? 'CODE SAMPLE' : '开发样例'}</span>
             <h2>{en ? 'Framework-neutral orchestration skeleton' : '与框架无关的编排骨架'}</h2>
             <div className="code-block"><div><span>TypeScript</span><CopyButton value={code} locale={locale} /></div><pre><code>{code}</code></pre></div>
-            <p className="code-note">{en ? 'Replace the placeholder endpoint with server-side adapters for the selected components. Never expose provider credentials in browser code.' : '请在服务端用所选组件的适配器替换示例接口，任何供应商密钥都不要暴露在浏览器代码中。'}</p>
+            <p className="code-note">{en ? 'Implement each adapter on the server with the selected component’s official SDK or API. Never expose provider credentials in browser code.' : '请在服务端通过所选组件的官方 SDK 或 API 实现各阶段适配器，任何供应商密钥都不要暴露在浏览器代码中。'}</p>
           </section>
 
           <section>

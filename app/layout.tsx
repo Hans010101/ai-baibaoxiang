@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     description: '找到、看懂、接入每一种 AI 能力。',
     images: ['/og.png'],
   },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } } : {}),
 };
 
 export default function RootLayout({
@@ -50,7 +51,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" suppressHydrationWarning>
+      <head><script dangerouslySetInnerHTML={{ __html: "if(location.pathname==='/en'||location.pathname.startsWith('/en/'))document.documentElement.lang='en';" }} /></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

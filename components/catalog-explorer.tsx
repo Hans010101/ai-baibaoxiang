@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -7,6 +6,7 @@ import { localAdvisorPlan, rankAdvisorCandidates, type AdvisorPlan } from '@/lib
 import { authLabel, categoryLabel, statusLabel, typeLabel, type Locale } from '@/lib/i18n';
 import { scenarios } from '@/lib/scenarios';
 import { JsonLd, SiteFooter, SiteHeader } from '@/components/site-shell';
+import { ToolLogo } from '@/components/tool-logo';
 
 const typeIcons: Record<string, string> = { API: '⌁', MCP: '⋈', 模型: '◈', SDK: '{ }' };
 const categoryIcons: Record<string, string> = {
@@ -18,58 +18,43 @@ const categoryIcons: Record<string, string> = {
   '科学与研究': '⌬', '网络服务': '⌘', '艺术与设计': '✦', '邮件与通信': '@',
   '金融数据': '%', '音乐与视频': '♫',
 };
-const PAGE_SIZE = 48;
 const SCENARIO_PAGE_SIZE = 8;
-export type ExplorerItem = Pick<CatalogItem, 'slug' | 'name' | 'initial' | 'type' | 'category' | 'description' | 'auth' | 'free' | 'status' | 'accent' | 'tags' | 'officialUrl'>;
+export type ExplorerItem = Pick<CatalogItem, 'slug' | 'name' | 'initial' | 'type' | 'category' | 'description' | 'auth' | 'free' | 'status' | 'verifiedAt' | 'accent' | 'tags' | 'officialUrl' | 'docsUrl'>;
 type BilingualExplorerItem = ExplorerItem & Pick<CatalogItem, 'descriptionEn' | 'tagsEn'>;
 
-export function ToolLogo({ name, initial, officialUrl, accent, className, locale = 'zh' }: Pick<CatalogItem, 'name' | 'initial' | 'officialUrl' | 'accent'> & { className: string; locale?: Locale }) {
-  const [failed, setFailed] = useState(false);
-  let logoUrl = '';
-  try { logoUrl = `${new URL(officialUrl).origin}/favicon.ico`; } catch { /* invalid source falls back to the initial */ }
-
-  return (
-    <span className={`tool-logo ${className}`} style={{ background: accent }}>
-      <span aria-hidden="true">{initial}</span>
-      {!failed && logoUrl && <img src={logoUrl} alt={`${name} ${locale === 'en' ? 'official logo' : '官方标识'}`} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={() => setFailed(true)} />}
-    </span>
-  );
-}
-
-export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: BilingualExplorerItem[]; categories: string[]; locale?: Locale }) {
+export function CatalogExplorer({ items, categories, categoryCounts, totalCount, verifiedCount, locale = 'zh' }: { items: BilingualExplorerItem[]; categories: string[]; categoryCounts: Record<string, number>; totalCount: number; verifiedCount: number; locale?: Locale }) {
   const en = locale === 'en';
   const copy = en ? {
-    all: 'All', verified: 'Verified', pending: 'Pending review', free: 'Free tier', paid: 'Paid',
+    all: 'Featured', verified: 'Verified only', pending: 'Pending review', free: 'Free access reported', paid: 'Paid',
     title: <>Find, understand, and integrate<br /><em>every AI capability</em></>,
     subtitle: 'APIs, MCP services, models, SDKs, and agent tools—all in one place',
     collected: 'components listed', categories: 'capability categories', verifiedCount: 'verified and available', daily: 'Daily updates', schedule: 'Runs automatically at 00:20 UTC',
     explore: 'EXPLORE', browse: 'Browse by capability', browseNote: 'Start with the need, even if you do not know the tool name', components: 'components',
-    catalog: 'CATALOG', componentCatalog: 'Component catalog', found: 'components found', details: 'View integration guide',
+    catalog: 'CATALOG', componentCatalog: 'Featured components', found: 'components found', details: 'View integration guide',
     emptyTitle: 'No matching components yet', emptyText: 'Try a shorter keyword or clear the filters.', viewAll: 'View all components', loadMore: 'Load', more: 'more components',
     useCases: 'START WITH A GOAL', useCasesTitle: 'Turn an idea into a complete solution', useCasesNote: 'Choose a common goal for an architecture, implementation path, and practical stack', useCaseAction: 'View solution', moreScenarios: 'View more use cases',
     assistant: 'AI Advisor', assistantIntro: 'Tell me what you want to build. I’ll turn the directory into a practical tool plan.', assistantPlaceholder: 'What do you want to build?', send: 'Ask AI', close: 'Close AI advisor',
-    thinking: 'Building a tool plan…', advisorError: 'The AI assistant is temporarily unavailable. Showing a locally matched plan instead.', recommended: 'Recommended tools', open: 'Open guide',
+    thinking: 'Building a tool plan…', advisorError: 'The AI assistant is temporarily unavailable. Showing a locally matched plan instead.', recommended: 'Verified recommendations', open: 'Open evidence', evidence: 'Verified source', helpful: 'Was this useful?', yes: 'Yes', no: 'No', directory: 'Search the full directory',
   } : {
-    all: '全部', verified: '已验证', pending: '待确认', free: '有免费额度', paid: '付费',
+    all: '精选', verified: '仅看已验证', pending: '待确认', free: '有免费信息（待核实）', paid: '付费',
     title: <>找到、看懂、接入<br /><em>每一种 AI 能力</em></>,
     subtitle: '开放接口、MCP、模型、开发工具包与智能体工具，一站查清',
     collected: '已收录组件', categories: '能力分类', verifiedCount: '已验证可用', daily: '每日更新', schedule: '新加坡时间 08:20 自动运行',
     explore: '探索', browse: '按能力查找', browseNote: '从需求出发，不必先知道工具名字', components: '个组件',
-    catalog: '目录', componentCatalog: '组件目录', found: '个组件', details: '查看接入说明',
+    catalog: '目录', componentCatalog: '精选组件', found: '个组件', details: '查看接入说明',
     emptyTitle: '暂时没有匹配的组件', emptyText: '试试缩短关键词，或者清除筛选条件。', viewAll: '查看全部组件', loadMore: '继续查看', more: '个组件',
     useCases: '从目标出发', useCasesTitle: '把一个想法变成完整方案', useCasesNote: '选择常见目标，查看参考架构、实施路径与可落地的工具组合', useCaseAction: '查看方案', moreScenarios: '继续查看更多场景',
     assistant: 'AI 助手', assistantIntro: '告诉我你想实现什么，我会从全站组件中整理方案并推荐合适工具。', assistantPlaceholder: '例如：为电商网站搭建智能客服', send: '发送', close: '关闭 AI 助手',
-    thinking: '正在整理工具方案…', advisorError: 'AI 助手暂时不可用，已为你展示本地匹配方案。', recommended: '推荐工具', open: '查看接入说明',
+    thinking: '正在整理工具方案…', advisorError: 'AI 助手暂时不可用，已为你展示本地匹配方案。', recommended: '已验证推荐', open: '查看证据', evidence: '已核验来源', helpful: '这个方案有帮助吗？', yes: '有帮助', no: '需改进', directory: '搜索完整目录',
   };
   const [advisorInput, setAdvisorInput] = useState('');
   const [advisorOpen, setAdvisorOpen] = useState(false);
   const [advisorPlan, setAdvisorPlan] = useState<AdvisorPlan>();
   const [advisorLoading, setAdvisorLoading] = useState(false);
   const [advisorError, setAdvisorError] = useState(false);
-  const [category, setCategory] = useState('all');
   const [verifiedOnly, setVerifiedOnly] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [visibleScenarioCount, setVisibleScenarioCount] = useState(SCENARIO_PAGE_SIZE);
+  const [feedbackSent, setFeedbackSent] = useState(false);
   const advisorRef = useRef<HTMLTextAreaElement>(null);
   const origin = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aiboxhub.top';
   const pageUrl = `${origin}${en ? '/en' : '/'}`;
@@ -84,21 +69,20 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
     return () => window.removeEventListener('keydown', onKey);
   }, [advisorOpen]);
 
-  const filtered = useMemo(() => {
-    return items.filter((item) => (category === 'all' || item.category === category) && (!verifiedOnly || item.status === '已验证'));
-  }, [items, category, verifiedOnly]);
+  const filtered = useMemo(() => items.filter((item) => !verifiedOnly || item.status === '已验证'), [items, verifiedOnly]);
+  const advisorEndpoint = process.env.NEXT_PUBLIC_ADVISOR_ENDPOINT ?? 'https://ai-baibaoxiang-editor.hans-pan007.workers.dev/advisor';
 
-  const selectCategory = (value: string) => {
-    setCategory(value);
-    document.querySelector('#catalog')?.scrollIntoView({ behavior: 'smooth' });
+  const sendEvent = (event: 'advisor_feedback' | 'tool_open', value: string) => {
+    const endpoint = new URL('/event', advisorEndpoint).toString();
+    navigator.sendBeacon(endpoint, JSON.stringify({ event, value, locale }));
   };
 
   const askAdvisor = async (need: string) => {
     setAdvisorOpen(true);
-    const source = items.map((item) => ({
+    const source = items.filter((item) => item.status === '已验证').map((item) => ({
       slug: item.slug, name: item.name, category: categoryLabel(item.category, locale),
       description: en ? item.descriptionEn : item.description, tags: en ? item.tagsEn : item.tags,
-      status: item.status, free: item.free,
+      status: item.status, free: item.free, verifiedAt: item.verifiedAt,
     }));
     const ranked = rankAdvisorCandidates(need, source);
     const candidates = ranked.length ? ranked : source.filter((item) => item.status === '已验证').slice(0, 12);
@@ -112,7 +96,7 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
         session = crypto.randomUUID();
         localStorage.setItem('aibox-advisor-session', session);
       }
-      const response = await fetch(process.env.NEXT_PUBLIC_ADVISOR_ENDPOINT ?? 'https://ai-baibaoxiang-editor.hans-pan007.workers.dev/advisor', {
+      const response = await fetch(advisorEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'X-Aibox-Session': session },
         body: JSON.stringify({ query: need, locale, candidates }),
@@ -137,7 +121,7 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
           {
             '@type': 'CollectionPage', '@id': `${pageUrl}#directory`, url: pageUrl,
             name: en ? 'AI Toolbox directory' : 'AI 百宝箱组件目录', inLanguage: en ? 'en' : 'zh-CN', isPartOf: { '@id': `${origin}/#website` },
-            mainEntity: { '@type': 'ItemList', numberOfItems: items.length, itemListElement: items.slice(0, PAGE_SIZE).map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, url: `${origin}${en ? '/en' : ''}/tool/${item.slug}` })) },
+            mainEntity: { '@type': 'ItemList', numberOfItems: totalCount, itemListElement: items.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, url: `${origin}${en ? '/en' : ''}/tool/${item.slug}` })) },
           },
         ],
       }} />
@@ -150,9 +134,9 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
       </section>
 
       <section className="stats" aria-label={en ? 'Site statistics' : '网站数据'}>
-        <div><strong>{items.length}</strong><span>{copy.collected}</span></div>
+        <div><strong>{totalCount}</strong><span>{copy.collected}</span></div>
         <div><strong>{categories.length}</strong><span>{copy.categories}</span></div>
-        <div><strong>{items.filter((item) => item.status === '已验证').length}</strong><span>{copy.verifiedCount}</span></div>
+        <div><strong>{verifiedCount}</strong><span>{copy.verifiedCount}</span></div>
         <div><strong>{copy.daily}</strong><span>{copy.schedule}</span></div>
       </section>
 
@@ -181,30 +165,30 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
         </div>
         <div className="category-grid">
           {categories.map((name, index) => (
-            <button key={name} onClick={() => selectCategory(name)}>
+            <a key={name} href={`${en ? '/en' : ''}/catalog?category=${encodeURIComponent(name)}`}>
               <span className={`category-symbol symbol-${index % 6}`}>{categoryIcons[name] ?? name.slice(0, 1)}</span>
-              <span className="category-copy"><strong>{categoryLabel(name, locale)}</strong><small>{items.filter((item) => item.category === name).length} {copy.components}</small></span>
+              <span className="category-copy"><strong>{categoryLabel(name, locale)}</strong><small>{categoryCounts[name]} {copy.components}</small></span>
               <b>→</b>
-            </button>
+            </a>
           ))}
         </div>
       </section>
 
       <section className="section catalog-section" id="catalog">
         <div className="section-head catalog-head">
-          <div><span className="section-kicker">{copy.catalog}</span><h2>{category === 'all' ? copy.componentCatalog : categoryLabel(category, locale)}</h2></div>
+          <div><span className="section-kicker">{copy.catalog}</span><h2>{copy.componentCatalog}</h2></div>
           <div className="catalog-controls">
-            <button className={category === 'all' ? 'active' : ''} onClick={() => setCategory('all')}>{copy.all}</button>
+            <button className={!verifiedOnly ? 'active' : ''} onClick={() => setVerifiedOnly(false)}>{copy.all}</button>
             <button className={verifiedOnly ? 'active' : ''} onClick={() => setVerifiedOnly(!verifiedOnly)}>✓ {copy.verified}</button>
           </div>
         </div>
-        <div className="result-line"><span>{en ? `${filtered.length} ${copy.found}` : `找到 ${filtered.length} ${copy.found}`}</span></div>
+        <div className="result-line"><span>{en ? `${verifiedOnly ? verifiedCount : totalCount} ${copy.found}` : `找到 ${verifiedOnly ? verifiedCount : totalCount} ${copy.found}`}</span></div>
         {filtered.length ? (
           <div className="tool-grid">
-            {filtered.slice(0, visibleCount).map((tool) => (
+            {filtered.map((tool) => (
               <article className="tool-card" key={tool.slug}>
                 <div className="tool-top">
-                  <ToolLogo {...tool} className="tool-icon" locale={locale} />
+                  <ToolLogo {...tool} className="tool-icon" />
                   <div className="tool-title">
                     <h3>{tool.name}</h3>
                     <span className="type">{typeIcons[tool.type] || '◫'} {typeLabel(tool.type, locale)} · {categoryLabel(tool.category, locale)}</span>
@@ -214,15 +198,15 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
                 <p>{en ? tool.descriptionEn : tool.description}</p>
                 <div className="card-actions">
                   <div className="tags"><span>{authLabel(tool.auth, locale)}</span><span>{tool.free ? copy.free : copy.paid}</span></div>
-                  <a href={`${en ? '/en' : ''}/tool/${tool.slug}`}>{copy.details} <b>→</b></a>
+                  <a href={`${en ? '/en' : ''}/tool/${tool.slug}`} onClick={() => sendEvent('tool_open', tool.slug)}>{copy.details} <b>→</b></a>
                 </div>
               </article>
             ))}
           </div>
         ) : (
-          <div className="empty-state"><span>⌕</span><h3>{copy.emptyTitle}</h3><p>{copy.emptyText}</p><button onClick={() => { setCategory('all'); setVerifiedOnly(false); }}>{copy.viewAll}</button></div>
+          <div className="empty-state"><span>⌕</span><h3>{copy.emptyTitle}</h3><p>{copy.emptyText}</p><button onClick={() => setVerifiedOnly(false)}>{copy.viewAll}</button></div>
         )}
-        {visibleCount < filtered.length && <button className="load-more" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>{copy.loadMore} <b>{Math.min(PAGE_SIZE, filtered.length - visibleCount)}</b> {copy.more}</button>}
+        <a className="load-more" href={`${en ? '/en' : ''}/catalog`}>{copy.directory} →</a>
       </section>
 
       <SiteFooter locale={locale} />
@@ -247,10 +231,11 @@ export function CatalogExplorer({ items, categories, locale = 'zh' }: { items: B
                     {advisorPlan.recommendations.map((recommendation) => {
                       const tool = items.find((item) => item.slug === recommendation.slug);
                       if (!tool) return null;
-                      return <a key={recommendation.slug} href={`${en ? '/en' : ''}/tool/${recommendation.slug}`}><b>{tool.name}</b><span>{recommendation.role} · {recommendation.reason}</span><em>{copy.open} →</em></a>;
+                      return <a key={recommendation.slug} href={`${en ? '/en' : ''}/tool/${recommendation.slug}`} onClick={() => sendEvent('tool_open', recommendation.slug)}><b>{tool.name}</b><span>{recommendation.role} · {recommendation.reason}</span><small>✓ {copy.evidence} · {tool.verifiedAt}</small><em>{copy.open} →</em></a>;
                     })}
                   </div>
                   {advisorPlan.followUp && <p className="advisor-follow-up">{advisorPlan.followUp}</p>}
+                  {!feedbackSent && <div className="advisor-feedback"><span>{copy.helpful}</span><button onClick={() => { sendEvent('advisor_feedback', 'yes'); setFeedbackSent(true); }}>↑ {copy.yes}</button><button onClick={() => { sendEvent('advisor_feedback', 'no'); setFeedbackSent(true); }}>↓ {copy.no}</button></div>}
                 </section>
               )}
             </div>

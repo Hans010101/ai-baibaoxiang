@@ -22,8 +22,9 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - name: Discover and organize components
+      - name: Audit sources without expanding the catalog
         env:
+          MAX_NEW_COMPONENTS: "0"
           GITHUB_TOKEN: ${{ github.token }}
           CLOUDFLARE_EDITORIAL_ENDPOINT: ${{ vars.CLOUDFLARE_EDITORIAL_ENDPOINT }}
           EDITORIAL_API_TOKEN: ${{ secrets.EDITORIAL_API_TOKEN }}

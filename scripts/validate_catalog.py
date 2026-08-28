@@ -19,6 +19,7 @@ REQUIRED = {
 def validate(items: list[dict]) -> None:
     assert isinstance(items, list) and items, "catalog must be a non-empty list"
     slugs: set[str] = set()
+    official_urls: set[str] = set()
     for index, item in enumerate(items):
         missing = REQUIRED - item.keys()
         assert not missing, f"item {index} missing: {', '.join(sorted(missing))}"
@@ -32,9 +33,14 @@ def validate(items: list[dict]) -> None:
         for key in ("descriptionEn", "summaryEn"):
             assert re.search(r"[A-Za-z]", item[key]) and not re.search(r"[\u4e00-\u9fff]", item[key]), f"{key} must be English: {item['slug']}"
         assert item["tagsEn"] and item["useCasesEn"], f"English tags/useCases required: {item['slug']}"
-        for key in ("officialUrl", "docsUrl", "sourceUrl"):
+        for key in ("officialUrl", "docsUrl"):
             parsed = urlparse(item[key])
-            assert parsed.scheme in {"http", "https"} and parsed.netloc, f"invalid {key}: {item['slug']}"
+            assert parsed.scheme == "https" and parsed.netloc, f"insecure {key}: {item['slug']}"
+        source = urlparse(item["sourceUrl"])
+        assert source.scheme in {"http", "https"} and source.netloc, f"invalid sourceUrl: {item['slug']}"
+        normalized_url = item["officialUrl"].lower().removesuffix("/")
+        assert normalized_url not in official_urls, f"duplicate officialUrl: {item['slug']}"
+        official_urls.add(normalized_url)
 
 
 if __name__ == "__main__":

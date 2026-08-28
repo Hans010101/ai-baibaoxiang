@@ -18,7 +18,7 @@ STATE_PATH = ROOT / "data" / "sync-state.json"
 REPORT_PATH = ROOT / "data" / "update-report.json"
 PUBLIC_APIS_URL = "https://raw.githubusercontent.com/public-apis/public-apis/master/README.md"
 SOURCE_URL = "https://github.com/public-apis/public-apis"
-MAX_NEW = int(os.getenv("MAX_NEW_COMPONENTS", "8"))
+MAX_NEW = int(os.getenv("MAX_NEW_COMPONENTS", "0"))
 PALETTE = ["#315bea", "#18a87b", "#e48743", "#6f63d9", "#2877c7", "#d4634a"]
 
 CATEGORY_MAP = {

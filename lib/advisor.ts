@@ -8,6 +8,7 @@ export type AdvisorCandidate = {
   tags: string[];
   status: string;
   free: boolean;
+  verifiedAt: string;
 };
 
 export type AdvisorPlan = {
@@ -46,6 +47,7 @@ export function rankAdvisorCandidates(query: string, items: AdvisorCandidate[], 
   }
 
   return items
+    .filter((item) => item.status === '已验证')
     .map((item, index) => {
       const name = normalize(item.name);
       const category = normalize(item.category);
@@ -58,7 +60,6 @@ export function rankAdvisorCandidates(query: string, items: AdvisorCandidate[], 
         if (tags.includes(term)) score += 4;
         if (description.includes(term)) score += 2;
       }
-      if (score && item.status === '已验证') score += 1;
       return { item, score, index };
     })
     .filter(({ score }) => score > 0)

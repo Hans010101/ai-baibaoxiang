@@ -2,10 +2,10 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "ai-baibaoxiang-editor",
   "main": "worker/editor.ts",
-  "compatibility_date": "2026-08-23",
+  "compatibility_date": "2026-08-28",
   "ai": { "binding": "AI" },
   "ratelimits": [{ "name": "ADVISOR_RATE_LIMITER", "namespace_id": "41701", "simple": { "limit": 6, "period": 60 } }],
   "vars": { "EDITORIAL_TOKEN_SHA256": "ee55871c0f274c596048e19a1258693637d1716f0f2588edbb11f1370d4faeb8" },
   "secrets": { "required": ["EDITORIAL_API_TOKEN"] },
-  "observability": { "enabled": true }
+  "observability": { "enabled": true, "logs": { "enabled": true, "head_sampling_rate": 1 } }
 }

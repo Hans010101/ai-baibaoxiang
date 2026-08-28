@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { CatalogExplorer } from '@/components/catalog-explorer';
-import { getCatalog } from '@/lib/catalog';
+import { getCatalog, getCatalogOverview } from '@/lib/catalog';
 
 const description = 'Discover and compare free APIs, MCP services, AI models, SDKs, and agent tools with free-tier details, authentication, integration examples, use cases, and official sources.';
 
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 
 export default async function EnglishHome() {
   const catalog = await getCatalog();
-  const categories = [...new Set(catalog.map((item) => item.category))].sort();
-  const items = catalog.map(({ slug, name, initial, type, category, description, descriptionEn, auth, free, status, accent, tags, tagsEn, officialUrl }) => (
-    { slug, name, initial, type, category, description, descriptionEn, auth, free, status, accent, tags, tagsEn, officialUrl }
+  const overview = getCatalogOverview(catalog);
+  const items = overview.items.map(({ slug, name, initial, type, category, description, descriptionEn, auth, free, status, verifiedAt, accent, tags, tagsEn, officialUrl, docsUrl }) => (
+    { slug, name, initial, type, category, description, descriptionEn, auth, free, status, verifiedAt, accent, tags, tagsEn, officialUrl, docsUrl }
   ));
-  return <CatalogExplorer items={items} categories={categories} locale="en" />;
+  return <CatalogExplorer {...overview} items={items} locale="en" />;
 }

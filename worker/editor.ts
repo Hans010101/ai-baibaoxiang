@@ -34,14 +34,14 @@ function advisorPayload(value: unknown) {
   if (!value || typeof value !== 'object') return;
   const body = value as Record<string, unknown>;
   if (typeof body.query !== 'string' || !body.query.trim() || body.query.length > 1000 || (body.locale !== 'zh' && body.locale !== 'en') || !Array.isArray(body.candidates)) return;
-  const candidates = body.candidates.slice(0, 12).flatMap((item): AdvisorCandidate[] => {
+  const candidates = body.candidates.slice(0, 20).flatMap((item): AdvisorCandidate[] => {
     if (!item || typeof item !== 'object') return [];
     const candidate = item as Record<string, unknown>;
-    if (typeof candidate.slug !== 'string' || typeof candidate.name !== 'string' || typeof candidate.category !== 'string' || typeof candidate.description !== 'string' || !Array.isArray(candidate.tags) || typeof candidate.status !== 'string' || typeof candidate.free !== 'boolean') return [];
+    if (typeof candidate.slug !== 'string' || typeof candidate.name !== 'string' || typeof candidate.category !== 'string' || typeof candidate.description !== 'string' || !Array.isArray(candidate.tags) || candidate.status !== '已验证' || typeof candidate.free !== 'boolean' || typeof candidate.verifiedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(candidate.verifiedAt)) return [];
     return [{
       slug: candidate.slug.slice(0, 120), name: candidate.name.slice(0, 160), category: candidate.category.slice(0, 120),
       description: candidate.description.slice(0, 600), tags: candidate.tags.filter((tag): tag is string => typeof tag === 'string').slice(0, 10),
-      status: candidate.status.slice(0, 40), free: candidate.free,
+      status: candidate.status, free: candidate.free, verifiedAt: candidate.verifiedAt,
     }];
   });
   if (!candidates.length) return;
@@ -58,7 +58,7 @@ function parseModelResult(result: unknown): unknown {
 }
 
 function advisorPrompt(query: string, locale: AdvisorLocale, candidates: AdvisorCandidate[]) {
-  return `You are the AI Toolbox product advisor. Reply only with the requested JSON. Use ${locale === 'en' ? 'English' : 'Simplified Chinese'}. Analyze the user's goal, give 2-4 actionable steps, and recommend 3-5 tools only from the supplied candidates. Never invent a slug. Keep reasons concrete and concise.\nUser goal: ${query}\nCandidates: ${JSON.stringify(candidates)}`;
+  return `You are the AI Toolbox product advisor. Reply only with the requested JSON. Use ${locale === 'en' ? 'English' : 'Simplified Chinese'}. Analyze the user's goal, give 2-4 actionable steps, and recommend only verified tools from the supplied candidates. Never invent a slug. Mention concrete fit and evidence date in each reason. If budget, traffic, data sensitivity, or technical stack would materially change the plan, ask one concise question in followUp.\nUser goal: ${query}\nVerified candidates: ${JSON.stringify(candidates)}`;
 }
 
 const advisorSchema = {
@@ -94,12 +94,13 @@ async function deepSeekPlan(env: Env, prompt: string) {
 async function handleAdvisor(request: Request, env: Env) {
   const headers = cors(request);
   const origin = request.headers.get('Origin');
-  if (origin && !allowedOrigins.has(origin)) return new Response('Forbidden', { status: 403 });
+  if (!origin || !allowedOrigins.has(origin)) return new Response('Forbidden', { status: 403 });
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers });
   if (request.method !== 'POST') return new Response('Method not allowed', { status: 405, headers });
   const session = request.headers.get('X-Aibox-Session') ?? '';
   if (!/^[0-9a-f]{8}-[0-9a-f-]{27}$/i.test(session)) return new Response('Invalid session', { status: 400, headers });
-  if (!(await env.ADVISOR_RATE_LIMITER.limit({ key: session })).success) return new Response('Too many requests', { status: 429, headers: { ...headers, 'Retry-After': '60' } });
+  const rateKey = request.headers.get('CF-Connecting-IP') ?? session;
+  if (!(await env.ADVISOR_RATE_LIMITER.limit({ key: rateKey })).success) return new Response('Too many requests', { status: 429, headers: { ...headers, 'Retry-After': '60' } });
 
   let payload;
   try { payload = advisorPayload(await readJson(request, 32_768)); } catch { /* handled as invalid input */ }
@@ -116,10 +117,28 @@ async function handleAdvisor(request: Request, env: Env) {
     try { value = await deepSeekPlan(env, prompt); }
     catch (error) {
       console.warn(JSON.stringify({ event: 'advisor_provider_failed', provider, error: String(error).slice(0, 180) }));
-      return Response.json(fallback, { headers });
+      console.log(JSON.stringify({ event: 'advisor_completed', provider: 'local', locale: payload.locale, recommendations: fallback.recommendations.length }));
+      return Response.json(fallback, { headers: { ...headers, 'Cache-Control': 'no-store' } });
     }
   }
-  return Response.json({ ...normalizeAdvisorPlan(value, payload.candidates, fallback), provider }, { headers });
+  const plan = normalizeAdvisorPlan(value, payload.candidates, fallback);
+  console.log(JSON.stringify({ event: 'advisor_completed', provider, locale: payload.locale, recommendations: plan.recommendations.length }));
+  return Response.json({ ...plan, provider }, { headers: { ...headers, 'Cache-Control': 'no-store' } });
+}
+
+async function handleEvent(request: Request) {
+  const headers = cors(request);
+  const origin = request.headers.get('Origin');
+  if (!origin || !allowedOrigins.has(origin)) return new Response('Forbidden', { status: 403 });
+  if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers });
+  if (request.method !== 'POST') return new Response('Method not allowed', { status: 405, headers });
+  let body: unknown;
+  try { body = await readJson(request, 1024); } catch { return new Response('Invalid request', { status: 400, headers }); }
+  if (!body || typeof body !== 'object') return new Response('Invalid request', { status: 400, headers });
+  const { event, value, locale } = body as Record<string, unknown>;
+  if ((event !== 'advisor_feedback' && event !== 'tool_open') || typeof value !== 'string' || value.length > 120 || (locale !== 'zh' && locale !== 'en')) return new Response('Invalid request', { status: 400, headers });
+  console.log(JSON.stringify({ event, value, locale }));
+  return new Response(null, { status: 204, headers: { ...headers, 'Cache-Control': 'no-store' } });
 }
 
 async function handleEditorial(request: Request, env: Env) {
@@ -142,6 +161,10 @@ async function handleEditorial(request: Request, env: Env) {
 
 export default {
   fetch(request, env): Promise<Response> {
-    return new URL(request.url).pathname === '/advisor' ? handleAdvisor(request, env) : handleEditorial(request, env);
+    const path = new URL(request.url).pathname;
+    if (path === '/advisor') return handleAdvisor(request, env);
+    if (path === '/event') return handleEvent(request);
+    if (path === '/editorial') return handleEditorial(request, env);
+    return Promise.resolve(new Response('Not found', { status: 404 }));
   },
 } satisfies ExportedHandler<Env>;
