@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-08-31T03:41:08.620341+00:00",
+  "updatedAt": "2026-08-31T04:17:07.135734+00:00",
   "added": [
     {
-      "name": "Katalis UK Company Enrichment",
-      "slug": "katalis-uk-company-enrichment",
+      "name": "kru",
+      "slug": "kru",
       "status": "待确认"
     },
     {
-      "name": "TradeDataHub",
-      "slug": "tradedatahub",
+      "name": "swissdevjobs-cli",
+      "slug": "swissdevjobs-cli",
       "status": "待确认"
     },
     {
-      "name": "BTCGlobe",
-      "slug": "btcglobe",
+      "name": "china-travel-kit",
+      "slug": "china-travel-kit",
       "status": "待确认"
     }
   ]

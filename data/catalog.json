@@ -71441,5 +71441,128 @@
     "sourceCategory": "加密货币",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "kru",
+    "name": "kru",
+    "initial": "K",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "专为 AI 代理设计的本地优先密码和凭证管理器，安全存储 API 密钥等。",
+    "summary": "这是一个本地优先的 MCP 服务，允许 AI 代理安全地管理密码、API 密钥、SSH 身份和 TOTP 代码，而无需将明文暴露给模型。",
+    "officialUrl": "https://github.com/omaekumiko2-create/kru",
+    "docsUrl": "https://github.com/omaekumiko2-create/kru",
+    "sourceUrl": "https://github.com/omaekumiko2-create/kru",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-08-31",
+    "accent": "#d4634a",
+    "tags": [
+      "密码管理",
+      "安全",
+      "AI代理"
+    ],
+    "useCases": [
+      "安全存储 API 密钥",
+      "管理 SSH 登录凭证",
+      "生成 TOTP 验证码"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Local-first MCP password and credential manager for AI agents. Use passwords, API keys, SSH identities, and TOTP without exposing hidden plaintext to the model.",
+    "summaryEn": "kru provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/omaekumiko2-create/kru\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "swissdevjobs-cli",
+    "name": "swissdevjobs-cli",
+    "initial": "S",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "跨七国搜索透明薪资技术工作，支持终端和 AI 代理，零依赖 Python CLI。",
+    "summary": "这是一个零依赖的 Python CLI 工具，提供 MCP 服务器和 Claude Code 插件，帮助用户在终端或通过 AI 代理搜索并申请瑞士及欧洲七国的 4,700 多个薪资透明技术职位。",
+    "officialUrl": "https://github.com/Stupidoodle/swissdevjobs-cli",
+    "docsUrl": "https://github.com/Stupidoodle/swissdevjobs-cli",
+    "sourceUrl": "https://github.com/Stupidoodle/swissdevjobs-cli",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-08-31",
+    "accent": "#18a87b",
+    "tags": [
+      "职位搜索",
+      "CLI工具",
+      "求职"
+    ],
+    "useCases": [
+      "终端搜索瑞士工作",
+      "通过 AI 代理申请职位",
+      "查看透明薪资数据"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Search & apply to ~4,700 salary-transparent tech jobs across 7 countries (🇨🇭🇩🇪🇬🇧🇺🇸🇨🇦🇳🇱🇫🇷) from your terminal or AI agent — zero-dependency Python CLI + MCP server + Claude Code plugin.",
+    "summaryEn": "swissdevjobs-cli provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Stupidoodle/swissdevjobs-cli\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "china-travel-kit",
+    "name": "china-travel-kit",
+    "initial": "C",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供中国入境旅游数据，支持 CLI、HTTP API 和 MCP 服务器。",
+    "summary": "这是一个中国入境旅游数据源，提供 CLI 工具、HTTP API 和 MCP 服务器，帮助开发者获取相关的旅游信息用于应用开发。",
+    "officialUrl": "https://github.com/tczyliu/china-travel-kit",
+    "docsUrl": "https://github.com/tczyliu/china-travel-kit",
+    "sourceUrl": "https://github.com/tczyliu/china-travel-kit",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-08-31",
+    "accent": "#6f63d9",
+    "tags": [
+      "旅游数据",
+      "API",
+      "数据源"
+    ],
+    "useCases": [
+      "开发旅游查询应用",
+      "获取入境数据",
+      "集成 MCP 服务"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Source-aware China inbound travel data, CLI, HTTP API, and MCP server.",
+    "summaryEn": "china-travel-kit provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/tczyliu/china-travel-kit\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]
