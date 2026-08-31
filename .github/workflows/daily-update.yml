@@ -22,9 +22,9 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - name: Audit sources without expanding the catalog
+      - name: Discover up to three reviewable components
         env:
-          MAX_NEW_COMPONENTS: "0"
+          MAX_NEW_COMPONENTS: "3"
           GITHUB_TOKEN: ${{ github.token }}
           CLOUDFLARE_EDITORIAL_ENDPOINT: ${{ vars.CLOUDFLARE_EDITORIAL_ENDPOINT }}
           EDITORIAL_API_TOKEN: ${{ secrets.EDITORIAL_API_TOKEN }}

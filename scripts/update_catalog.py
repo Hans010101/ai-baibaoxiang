@@ -243,7 +243,7 @@ def assemble(candidate: dict, ai: dict, used_slugs: set[str]) -> dict:
         "summary": str(ai.get("summary") or candidate["description"]).strip(),
         "officialUrl": candidate["url"], "docsUrl": candidate["url"], "sourceUrl": candidate["source_url"],
         "auth": auth_zh(candidate["auth"]) if candidate.get("origin") == "public-apis" else candidate["auth"],
-        "free": True, "status": "待确认", "verifiedAt": dt.date.today().isoformat(),
+        "free": False, "status": "待确认", "verifiedAt": dt.date.today().isoformat(),
         "accent": PALETTE[int(hashlib.sha1(slug.encode()).hexdigest(), 16) % len(PALETTE)],
         "tags": [str(value)[:20] for value in tags[:4]],
         "useCases": [str(value)[:40] for value in cases[:3]],
@@ -398,7 +398,10 @@ def main(bootstrap: bool = False, full_import: bool = False) -> None:
 
     known = set(state.get("publicApis", [])) | set(state.get("githubRepos", []))
     existing = {item["officialUrl"] for item in catalog}
-    candidates = [item for item in public_items + github_items if item["url"] not in known and item["url"] not in existing][:MAX_NEW]
+    candidates = [
+        item for item in public_items + github_items
+        if item["url"].startswith("https://") and item["url"] not in known and item["url"] not in existing
+    ][:MAX_NEW]
     if not candidates:
         REPORT_PATH.write_text(json.dumps({
             "updatedAt": dt.datetime.now(dt.timezone.utc).isoformat(),
