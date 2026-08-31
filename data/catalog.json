@@ -71564,5 +71564,128 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/tczyliu/china-travel-kit\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "open-seo-mcp-skills",
+    "name": "open-seo-mcp-skills",
+    "initial": "O",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "基于 Claude 的开源 SEO + GEO 技能，支持关键词研究、排名追踪、网站审计等。通过 MCP 接入真实数据源，内置 DataForSEO。",
+    "summary": "专为 Claude 设计的开源 SEO 与 GEO 技能包，整合 DataForSEO。通过 MCP 连接真实搜索控制台和 GA4 数据，提供关键词研究、排名追踪、竞争对手分析及网站审计功能，助力提升 AI 可见度。",
+    "officialUrl": "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills",
+    "docsUrl": "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills",
+    "sourceUrl": "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-08-31",
+    "accent": "#d4634a",
+    "tags": [
+      "SEO",
+      "GEO",
+      "Claude"
+    ],
+    "useCases": [
+      "关键词研究",
+      "排名追踪",
+      "竞争对手分析"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Open-source SEO + GEO skills for Claude — keyword research, rank tracking, site audits, backlinks, competitor gaps, AI visibility. Runs on your real Search Console / GA4 / ads data via MCP, with DataForSEO built in. Free, MIT.",
+    "summaryEn": "open-seo-mcp-skills provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "threebrowserstudio",
+    "name": "ThreeBrowserStudio",
+    "initial": "T",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "基于 LLM 的 Three.js WebGPU 场景与动画创作工具，具备持久化原生视口和类型化 MCP 编辑功能。",
+    "summary": "专为 LLM 设计的 Three.js WebGPU 场景与动画创作平台，提供持久化原生视口和类型化 MCP 编辑。开发者可利用 AI 快速构建 3D 场景，支持 WebGPU 渲染，适合交互式 Web 应用的开发与调试。",
+    "officialUrl": "https://github.com/SamG-Coder/ThreeBrowserStudio",
+    "docsUrl": "https://github.com/SamG-Coder/ThreeBrowserStudio",
+    "sourceUrl": "https://github.com/SamG-Coder/ThreeBrowserStudio",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-08-31",
+    "accent": "#d4634a",
+    "tags": [
+      "3D",
+      "WebGPU",
+      "Three.js"
+    ],
+    "useCases": [
+      "3D 场景构建",
+      "动画制作",
+      "交互式 Web 开发"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "LLM-first Three.js WebGPU scene and animation authoring with a persistent native viewport and typed MCP editing.",
+    "summaryEn": "ThreeBrowserStudio provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/SamG-Coder/ThreeBrowserStudio\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "pi-delegate-mcp",
+    "name": "pi-delegate-mcp",
+    "initial": "P",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "将 pi 编码代理转变为可控后台工作者的 MCP 服务器，支持任务委派、中途重定向，并隔离上下文。",
+    "summary": "MCP 服务器将 pi 编码代理转化为可控的后台工作进程，允许用户委派任务、中途重定向执行流，并确保代理的上下文不会泄露到用户环境。适用于需要后台处理复杂任务且需保持隔离性的场景。",
+    "officialUrl": "https://github.com/howznguyen/pi-delegate-mcp",
+    "docsUrl": "https://github.com/howznguyen/pi-delegate-mcp",
+    "sourceUrl": "https://github.com/howznguyen/pi-delegate-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-08-31",
+    "accent": "#6f63d9",
+    "tags": [
+      "Agent",
+      "MCP",
+      "Background"
+    ],
+    "useCases": [
+      "后台任务处理",
+      "代码生成",
+      "任务重定向"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "MCP server that turns the pi coding agent into a steerable background worker: delegate a task, redirect it mid-run, and keep its context out of your own.",
+    "summaryEn": "pi-delegate-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/howznguyen/pi-delegate-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]

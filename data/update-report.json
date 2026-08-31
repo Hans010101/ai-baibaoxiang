@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-08-31T04:17:07.135734+00:00",
+  "updatedAt": "2026-08-31T05:45:52.874784+00:00",
   "added": [
     {
-      "name": "kru",
-      "slug": "kru",
+      "name": "open-seo-mcp-skills",
+      "slug": "open-seo-mcp-skills",
       "status": "待确认"
     },
     {
-      "name": "swissdevjobs-cli",
-      "slug": "swissdevjobs-cli",
+      "name": "ThreeBrowserStudio",
+      "slug": "threebrowserstudio",
       "status": "待确认"
     },
     {
-      "name": "china-travel-kit",
-      "slug": "china-travel-kit",
+      "name": "pi-delegate-mcp",
+      "slug": "pi-delegate-mcp",
       "status": "待确认"
     }
   ]
