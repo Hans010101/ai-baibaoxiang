@@ -71309,5 +71309,137 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/kpshinnik/docs_masked\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "katalis-uk-company-enrichment",
+    "name": "Katalis UK Company Enrichment",
+    "initial": "K",
+    "type": "API",
+    "category": "商业与金融",
+    "description": "基于英国公司注册处数据的经核实的英国公司资料，包含AI摘要和准确率评分。",
+    "summary": "提供经过验证的英国公司详细资料，利用人工智能生成摘要并计算数据准确率，帮助企业精准筛选合作伙伴。",
+    "officialUrl": "https://meetkatalis.com/apis",
+    "docsUrl": "https://meetkatalis.com/apis",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-08-31",
+    "accent": "#e48743",
+    "tags": [
+      "英国公司",
+      "企业数据",
+      "商业分析"
+    ],
+    "useCases": [
+      "B2B 客户筛选",
+      "企业尽职调查",
+      "市场调研"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Verified UK company profiles with an AI summary and accuracy score, from Companies House data.",
+    "summaryEn": "Katalis UK Company Enrichment provides business & finance capabilities for business research, financial analysis, and operational automation. Authentication: API key; HTTPS: supported; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Business",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "business research",
+      "financial analysis",
+      "operational automation"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://meetkatalis.com/apis\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS unknown.\n4. Choose an endpoint for business research and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "商业",
+    "https": "支持",
+    "cors": "未知"
+  },
+  {
+    "slug": "tradedatahub",
+    "name": "TradeDataHub",
+    "initial": "T",
+    "type": "API",
+    "category": "商业与金融",
+    "description": "提供美国承包商数据集，包含免费发现API用于检查覆盖范围、定价和脱敏预览。",
+    "summary": "面向美国承包商数据的综合平台，提供免费API接口以探索数据覆盖范围、价格及脱敏预览，助力商业决策。",
+    "officialUrl": "https://www.tradedatahub.net",
+    "docsUrl": "https://www.tradedatahub.net",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-08-31",
+    "accent": "#e48743",
+    "tags": [
+      "美国承包商",
+      "数据发现",
+      "商业情报"
+    ],
+    "useCases": [
+      "供应商资格审核",
+      "市场准入分析",
+      "竞争对手研究"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "U.S. contractor datasets with a free discovery API for coverage, pricing and masked previews.",
+    "summaryEn": "TradeDataHub provides business & finance capabilities for business research, financial analysis, and operational automation. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Business",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "business research",
+      "financial analysis",
+      "operational automation"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://www.tradedatahub.net\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for business research and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "商业",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "btcglobe",
+    "name": "BTCGlobe",
+    "initial": "B",
+    "type": "API",
+    "category": "区块链与加密",
+    "description": "实时提供比特币高度、费用、内存池和节点数据，源自两个自托管节点。",
+    "summary": "通过两个自托管节点实时推送比特币网络数据，包括区块高度、交易费用、内存池状态及节点信息，适合区块链开发者。",
+    "officialUrl": "https://btcglobe.live/join#makers",
+    "docsUrl": "https://btcglobe.live/join#makers",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-08-31",
+    "accent": "#315bea",
+    "tags": [
+      "比特币",
+      "区块链数据",
+      "实时节点"
+    ],
+    "useCases": [
+      "区块链监控",
+      "交易费分析",
+      "节点状态追踪"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Bitcoin height, fees, mempool and peer data served live from two self-hosted nodes.",
+    "summaryEn": "BTCGlobe provides blockchain & crypto capabilities for market dashboards, on-chain research, and asset alerts. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Cryptocurrency",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "market dashboards",
+      "on-chain research",
+      "asset alerts"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://btcglobe.live/join#makers\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for market dashboards and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "加密货币",
+    "https": "支持",
+    "cors": "支持"
   }
 ]

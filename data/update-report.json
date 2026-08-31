@@ -1,7 +1,20 @@
 {
-  "updatedAt": "2026-08-30T05:30:54.097388+00:00",
-  "mode": "daily",
-  "status": "no-changes",
-  "addedCount": 0,
-  "upstreamCount": 1706
+  "updatedAt": "2026-08-31T03:41:08.620341+00:00",
+  "added": [
+    {
+      "name": "Katalis UK Company Enrichment",
+      "slug": "katalis-uk-company-enrichment",
+      "status": "待确认"
+    },
+    {
+      "name": "TradeDataHub",
+      "slug": "tradedatahub",
+      "status": "待确认"
+    },
+    {
+      "name": "BTCGlobe",
+      "slug": "btcglobe",
+      "status": "待确认"
+    }
+  ]
 }
