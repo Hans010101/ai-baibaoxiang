@@ -33,11 +33,14 @@ def validate(items: list[dict]) -> None:
         for key in ("descriptionEn", "summaryEn"):
             assert re.search(r"[A-Za-z]", item[key]) and not re.search(r"[\u4e00-\u9fff]", item[key]), f"{key} must be English: {item['slug']}"
         assert item["tagsEn"] and item["useCasesEn"], f"English tags/useCases required: {item['slug']}"
+        for key in ("tagsEn", "useCasesEn"):
+            assert all(isinstance(value, str) and re.search(r"[A-Za-z]", value) and not re.search(r"[\u4e00-\u9fff]", value) for value in item[key]), f"{key} must be English: {item['slug']}"
+        assert re.search(r"[A-Za-z]", item["quickstartEn"]) and not re.search(r"[\u4e00-\u9fff]", item["quickstartEn"]), f"quickstartEn must be English: {item['slug']}"
         for key in ("officialUrl", "docsUrl"):
             parsed = urlparse(item[key])
             assert parsed.scheme == "https" and parsed.netloc, f"insecure {key}: {item['slug']}"
         source = urlparse(item["sourceUrl"])
-        assert source.scheme in {"http", "https"} and source.netloc, f"invalid sourceUrl: {item['slug']}"
+        assert source.scheme == "https" and source.netloc, f"insecure sourceUrl: {item['slug']}"
         normalized_url = item["officialUrl"].lower().removesuffix("/")
         assert normalized_url not in official_urls, f"duplicate officialUrl: {item['slug']}"
         official_urls.add(normalized_url)

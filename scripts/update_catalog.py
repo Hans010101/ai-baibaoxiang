@@ -8,6 +8,7 @@ import json
 import os
 import re
 import unicodedata
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -183,8 +184,43 @@ def discover_github(token: str) -> list[dict]:
                 "description": repo.get("description") or repo["name"],
                 "auth": "以官方文档为准", "category": category,
                 "type": component_type, "source_url": repo["html_url"], "origin": "github",
+                "stars": repo.get("stargazers_count", 0), "archived": repo.get("archived", False),
             })
     return found
+
+
+def normalize_url(value: str) -> str:
+    parsed = urllib.parse.urlsplit(value)
+    host = parsed.netloc.lower().removeprefix("www.")
+    path = parsed.path.rstrip("/") or "/"
+    return urllib.parse.urlunsplit((parsed.scheme.lower(), host, path, "", ""))
+
+
+def candidate_score(candidate: dict) -> int:
+    if candidate.get("origin") == "github":
+        return 100 + min(int(candidate.get("stars", 0)), 100)
+    return 50 + (10 if candidate.get("https", "").lower() == "yes" else 0) + (5 if candidate.get("cors", "").lower() == "yes" else 0)
+
+
+def candidate_meets_quality(candidate: dict) -> bool:
+    if not candidate["url"].startswith("https://") or len(candidate.get("description", "").strip()) < 8:
+        return False
+    if candidate.get("origin") == "public-apis":
+        return candidate.get("https", "").lower() == "yes"
+    return not candidate.get("archived", False) and int(candidate.get("stars", 0)) >= 10
+
+
+def reachable_over_https(url: str) -> bool:
+    headers = {"User-Agent": "ai-baibaoxiang/1.0", "Accept": "text/html,application/json;q=0.9,*/*;q=0.1"}
+    for method in ("HEAD", "GET"):
+        request_headers = headers | ({"Range": "bytes=0-1023"} if method == "GET" else {})
+        try:
+            request = urllib.request.Request(url, headers=request_headers, method=method)
+            with urllib.request.urlopen(request, timeout=20) as response:
+                return response.getcode() < 400 and response.geturl().startswith("https://")
+        except (urllib.error.URLError, TimeoutError, ValueError):
+            continue
+    return False
 
 
 def slugify(value: str) -> str:
@@ -396,17 +432,26 @@ def main(bootstrap: bool = False, full_import: bool = False) -> None:
         print(f"full import added {len(additions)} and updated {updated} components from {len(public_items)} upstream rows")
         return
 
-    known = set(state.get("publicApis", [])) | set(state.get("githubRepos", []))
-    existing = {item["officialUrl"] for item in catalog}
-    candidates = [
-        item for item in public_items + github_items
-        if item["url"].startswith("https://") and item["url"] not in known and item["url"] not in existing
-    ][:MAX_NEW]
+    known = {normalize_url(url) for url in state.get("publicApis", []) + state.get("githubRepos", [])}
+    existing = {normalize_url(item["officialUrl"]) for item in catalog}
+    unseen: list[dict] = []
+    seen = known | existing
+    for item in sorted(public_items + github_items, key=candidate_score, reverse=True):
+        normalized = normalize_url(item["url"])
+        if normalized not in seen and candidate_meets_quality(item):
+            unseen.append(item)
+            seen.add(normalized)
+    candidates: list[dict] = []
+    for item in unseen:
+        if len(candidates) >= MAX_NEW:
+            break
+        if reachable_over_https(item["url"]):
+            candidates.append(item)
     if not candidates:
         REPORT_PATH.write_text(json.dumps({
             "updatedAt": dt.datetime.now(dt.timezone.utc).isoformat(),
             "mode": "daily", "status": "no-changes", "addedCount": 0,
-            "upstreamCount": len(public_items),
+            "upstreamCount": len(public_items), "qualityCandidates": len(unseen),
         }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print("no new components")
         return
@@ -439,6 +484,8 @@ def self_check() -> None:
     assert localized["useCasesEn"][0] == "location services"
     assert parse_editorial_response('{"items":[{"description":"demo"}]}')[0]["description"] == "demo"
     assert slugify("Hello, API!") == "hello-api"
+    assert normalize_url("https://www.Example.com/docs/?utm_source=test") == "https://example.com/docs"
+    assert candidate_meets_quality(parsed[0])
     print("self-check passed")
 
 

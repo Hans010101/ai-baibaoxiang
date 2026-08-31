@@ -31,8 +31,12 @@ jobs:
         run: python3 scripts/update_catalog.py
       - name: Validate data and site
         run: |
+          python3 scripts/update_catalog.py --self-check
           python3 scripts/validate_catalog.py
           npm ci
+          npm run check:advisor
+          npm run check:scenarios
+          npm run lint
           npm run build
       - name: Publish validated update
         run: |
