@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-08-31T05:45:52.874784+00:00",
+  "updatedAt": "2026-09-02T00:45:21.447056+00:00",
   "added": [
     {
-      "name": "open-seo-mcp-skills",
-      "slug": "open-seo-mcp-skills",
+      "name": "agentic-resource-discovery",
+      "slug": "agentic-resource-discovery",
       "status": "待确认"
     },
     {
-      "name": "ThreeBrowserStudio",
-      "slug": "threebrowserstudio",
+      "name": "italia-mcp-servers",
+      "slug": "italia-mcp-servers",
       "status": "待确认"
     },
     {
-      "name": "pi-delegate-mcp",
-      "slug": "pi-delegate-mcp",
+      "name": "Habitus-AI",
+      "slug": "habitus-ai",
       "status": "待确认"
     }
   ]

@@ -71687,5 +71687,128 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/howznguyen/pi-delegate-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "agentic-resource-discovery",
+    "name": "agentic-resource-discovery",
+    "initial": "A",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "跨所有公开 ARD 注册表的联邦搜索，混合检索与 ARD-Bench 测试。",
+    "summary": "这是一个 MCP 资源发现索引，支持跨所有公开注册表的联邦搜索，结合混合检索与工具验证，并提供 ARD-Bench 基准测试，帮助开发者高效管理工具资源。",
+    "officialUrl": "https://github.com/neuronto/agentic-resource-discovery",
+    "docsUrl": "https://github.com/neuronto/agentic-resource-discovery",
+    "sourceUrl": "https://github.com/neuronto/agentic-resource-discovery",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-02",
+    "accent": "#d4634a",
+    "tags": [
+      "MCP 服务",
+      "联邦搜索",
+      "资源发现"
+    ],
+    "useCases": [
+      "MCP 工具索引管理",
+      "跨注册表资源检索",
+      "混合语义搜索"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Neuronto Agentic Resource Discovery (ARD) Index. Federated search across every public ARD registry, plus a verified tool index read from each MCP server's own tools/list, hybrid lexical and semantic retrieval, and ARD-Bench.",
+    "summaryEn": "agentic-resource-discovery provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/neuronto/agentic-resource-discovery\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "italia-mcp-servers",
+    "name": "italia-mcp-servers",
+    "initial": "I",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "意大利 MCP 服务器目录，涵盖公共数据、法律科技、税务和政府服务。",
+    "summary": "这是一个精选的意大利 MCP 服务器目录，包含公共数据、法律科技、税务和政府服务等多种资源，方便用户快速访问意大利本地化服务，支持本地化开发需求。",
+    "officialUrl": "https://github.com/bsab/italia-mcp-servers",
+    "docsUrl": "https://github.com/bsab/italia-mcp-servers",
+    "sourceUrl": "https://github.com/bsab/italia-mcp-servers",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-02",
+    "accent": "#18a87b",
+    "tags": [
+      "MCP 服务",
+      "意大利本地化",
+      "政府服务"
+    ],
+    "useCases": [
+      "意大利公共数据查询",
+      "法律科技文档检索",
+      "税务与发票处理"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Catalogo curato dei server MCP (Model Context Protocol) italiani — dati pubblici, legal-tech, fatturazione, PA e altro.",
+    "summaryEn": "italia-mcp-servers provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/bsab/italia-mcp-servers\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "habitus-ai",
+    "name": "Habitus-AI",
+    "initial": "H",
+    "type": "SDK",
+    "category": "智能体框架",
+    "description": "全新的 AI 智能体记忆系统与认知框架，双密码系统运行于正交图上，实时突变边，构建习惯与动态性格。",
+    "summary": "Habitus-AI 是一种全新的 AI 智能体记忆系统，采用双密码系统在正交图上运行，支持实时边突变，能够构建习惯和动态性格，无需 LLM 即可输出文本，实现自主反思。",
+    "officialUrl": "https://github.com/munch2u-a11y/Habitus-AI",
+    "docsUrl": "https://github.com/munch2u-a11y/Habitus-AI",
+    "sourceUrl": "https://github.com/munch2u-a11y/Habitus-AI",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-02",
+    "accent": "#d4634a",
+    "tags": [
+      "智能体框架",
+      "记忆系统",
+      "认知架构"
+    ],
+    "useCases": [
+      "智能体习惯养成",
+      "动态性格模拟",
+      "无 LLM 文本生成"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Habitus-AI is fundamentally new approach to AI Agent Memory Systems and Cognitive Harness. Dual-Cypher system runs along perpendicular graphs. Mutate edges in real time. Builds habits and dynamic personality traits. Can call tool reflectively, connect complex concepts to learned words, and send plain text outputs without needing an LLM.",
+    "summaryEn": "Habitus-AI provides agent frameworks capabilities for agent applications, retrieval-augmented generation, and multi-tool orchestration. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Agent Frameworks",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "agent applications",
+      "retrieval-augmented generation",
+      "multi-tool orchestration"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/munch2u-a11y/Habitus-AI\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for agent applications and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]
