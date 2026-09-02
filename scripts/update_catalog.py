@@ -249,16 +249,21 @@ items 每项只返回 description、summary、tags、useCases、quickstart、des
 要求：前五个字段使用简体中文，后五个字段使用自然、专业的英文且语义一致；description/descriptionEn 30-55 字或 12-24 words；summary/summaryEn 60-120 字或 25-55 words；tags/tagsEn 各 3 个短词；useCases/useCasesEn 各 3 个具体场景。quickstart 只在候选信息足以确认时给一条可复制命令，否则写“请先阅读官方文档并按项目说明安装。”；quickstartEn 对应写 “Read the official documentation and follow the project setup guide.”。不得虚构免费额度、密钥、命令或功能。
 候选：{json.dumps(candidates, ensure_ascii=False)}"""
     body = json.dumps({"prompt": prompt}, ensure_ascii=False).encode()
-    request = urllib.request.Request(endpoint, data=body, headers={
-        "Authorization": f"Bearer {token}", "Content-Type": "application/json",
-        "User-Agent": "ai-baibaoxiang/1.0",
-    })
-    with urllib.request.urlopen(request, timeout=90) as response:
-        payload = json.loads(response.read().decode("utf-8"))
-    enriched = parse_editorial_response(payload.get("response"))
-    if len(enriched) != len(candidates):
-        raise ValueError("Workers AI returned a different item count")
-    return enriched
+    for _ in range(3):
+        try:
+            request = urllib.request.Request(endpoint, data=body, headers={
+                "Authorization": f"Bearer {token}", "Content-Type": "application/json",
+                "User-Agent": "ai-baibaoxiang/1.0",
+            })
+            with urllib.request.urlopen(request, timeout=45) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            enriched = parse_editorial_response(payload.get("response"))
+            if len(enriched) == len(candidates):
+                return enriched
+        except (urllib.error.URLError, TimeoutError, ValueError, json.JSONDecodeError):
+            pass
+    print("Workers AI unavailable; using deterministic bilingual enrichment")
+    return [source_enrichment(candidate) for candidate in candidates]
 
 
 def assemble(candidate: dict, ai: dict, used_slugs: set[str]) -> dict:
