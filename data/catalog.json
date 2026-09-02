@@ -71810,5 +71810,131 @@
       "multi-tool orchestration"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/munch2u-a11y/Habitus-AI\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for agent applications and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "codex-remote-pro",
+    "name": "codex-remote-pro",
+    "initial": "C",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "连接 ChatGPT 与 Codex 的桥梁，本地编码代理可向 ChatGPT 询问建议，ChatGPT 也能检查或引导正在运行的 Codex 会话。",
+    "summary": "这是一个无需 API 密钥的 MCP 服务，旨在实现 ChatGPT 与本地 Codex 会话的双向交互。它允许编码代理在本地环境中获取 ChatGPT 的实时建议，同时支持远程检查和引导正在运行的代码生成任务，极大地增强了本地开发环境的智能化水平。",
+    "officialUrl": "https://github.com/Vuk97/codex-remote-pro",
+    "docsUrl": "https://github.com/Vuk97/codex-remote-pro",
+    "sourceUrl": "https://github.com/Vuk97/codex-remote-pro",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-02",
+    "accent": "#6f63d9",
+    "tags": [
+      "ChatGPT",
+      "Codex",
+      "本地开发"
+    ],
+    "useCases": [
+      "本地代码审查",
+      "智能编程辅助",
+      "远程代码会话控制"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "ChatGPT <-> Codex bridge: local coding agents ask ChatGPT for advice, and ChatGPT can inspect or steer your running Codex sessions. No API key.",
+    "summaryEn": "codex-remote-pro provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Vuk97/codex-remote-pro\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "pre-production-checklist",
+    "name": "pre-production-checklist",
+    "initial": "P",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "面向独立创始人的预生产检查清单，包含 4337 项内容，88% 可适配任何技术栈，涵盖 AI/代理安全及 AI 编程助手实际产生的 Bug。",
+    "summary": "这是一个专为独立创始人设计的全面预生产检查清单，拥有超过 4300 个检查项。它不仅具备极高的技术栈通用性，还特别关注 AI 代理的安全性问题以及 AI 编程助手容易引入的常见 Bug，帮助开发者在上线前进行全方位的质量把控。",
+    "officialUrl": "https://github.com/FarzamHabibi/pre-production-checklist",
+    "docsUrl": "https://github.com/FarzamHabibi/pre-production-checklist",
+    "sourceUrl": "https://github.com/FarzamHabibi/pre-production-checklist",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-02",
+    "accent": "#2877c7",
+    "tags": [
+      "创业工具",
+      "质量检查",
+      "AI 安全"
+    ],
+    "useCases": [
+      "产品上线前审计",
+      "AI 代码安全审查",
+      "技术栈选型验证"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Pre-production checklists for solo founders. 4,337 items, 88% portable to any stack, 26 stack supplements — plus AI/agent security and the bugs AI coding assistants actually write.",
+    "summaryEn": "pre-production-checklist provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/FarzamHabibi/pre-production-checklist\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "defillama",
+    "name": "DefiLlama",
+    "initial": "D",
+    "type": "API",
+    "category": "区块链与加密",
+    "description": "提供开放透明的 DeFi 数据，包括总锁仓量、代币价格、交易量和收益率。",
+    "summary": "DefiLlama 是一个提供去中心化金融数据的 API 服务，无需密钥即可访问。它汇总了各大 DeFi 协议的总锁仓量、代币价格、交易量及收益率等关键指标，为开发者提供了透明、实时的链上数据支持，适用于构建各种金融分析工具。",
+    "officialUrl": "https://defillama.com/docs/api",
+    "docsUrl": "https://defillama.com/docs/api",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-02",
+    "accent": "#d4634a",
+    "tags": [
+      "DeFi 数据",
+      "区块链",
+      "API"
+    ],
+    "useCases": [
+      "DeFi 协议分析",
+      "代币价格追踪",
+      "链上收益计算"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Open and transparent DeFi data, TVL, coin prices, volumes, and yields.",
+    "summaryEn": "DefiLlama provides blockchain & crypto capabilities for market dashboards, on-chain research, and asset alerts. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Cryptocurrency",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "market dashboards",
+      "on-chain research",
+      "asset alerts"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://defillama.com/docs/api\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for market dashboards and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "加密货币",
+    "https": "支持",
+    "cors": "支持"
   }
 ]

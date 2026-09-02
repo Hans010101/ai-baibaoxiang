@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-02T00:45:21.447056+00:00",
+  "updatedAt": "2026-09-02T04:43:49.650993+00:00",
   "added": [
     {
-      "name": "agentic-resource-discovery",
-      "slug": "agentic-resource-discovery",
+      "name": "codex-remote-pro",
+      "slug": "codex-remote-pro",
       "status": "待确认"
     },
     {
-      "name": "italia-mcp-servers",
-      "slug": "italia-mcp-servers",
+      "name": "pre-production-checklist",
+      "slug": "pre-production-checklist",
       "status": "待确认"
     },
     {
-      "name": "Habitus-AI",
-      "slug": "habitus-ai",
+      "name": "DefiLlama",
+      "slug": "defillama",
       "status": "待确认"
     }
   ]
