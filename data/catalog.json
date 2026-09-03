@@ -72062,5 +72062,137 @@
     "sourceCategory": "汇率兑换",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "currencybeacon",
+    "name": "CurrencyBeacon",
+    "initial": "C",
+    "type": "API",
+    "category": "商业与金融",
+    "description": "提供实时和历史货币汇率查询服务，支持免费层级。",
+    "summary": "该 API 提供实时和历史货币汇率数据，支持多种货币对，适合需要金融数据集成或汇率转换功能的开发者。",
+    "officialUrl": "https://currencybeacon.com/",
+    "docsUrl": "https://currencybeacon.com/",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-03",
+    "accent": "#315bea",
+    "tags": [
+      "货币汇率",
+      "金融数据",
+      "实时查询"
+    ],
+    "useCases": [
+      "货币转换应用",
+      "金融报表生成",
+      "跨境支付系统"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Real-time and historical currency exchange rates with free tier.",
+    "summaryEn": "CurrencyBeacon provides business & finance capabilities for business research, financial analysis, and operational automation. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Currency Exchange",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "business research",
+      "financial analysis",
+      "operational automation"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://currencybeacon.com/\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for business research and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "汇率兑换",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "crawl-readiness",
+    "name": "Crawl Readiness",
+    "initial": "C",
+    "type": "API",
+    "category": "开发者工具",
+    "description": "检查网站是否被主流 AI 爬虫（如 ChatGPT、Claude）访问，支持 30+ 种爬虫类型。",
+    "summary": "该工具帮助开发者验证网站对 AI 搜索引擎的抓取能力，确保内容能被 ChatGPT、Claude 等主流模型索引，优化 SEO 和内容可见性。",
+    "officialUrl": "https://crawlreadiness.com",
+    "docsUrl": "https://crawlreadiness.com",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-03",
+    "accent": "#d4634a",
+    "tags": [
+      "AI 爬虫",
+      "SEO 优化",
+      "网站可访问性"
+    ],
+    "useCases": [
+      "AI 搜索引擎优化",
+      "内容索引验证",
+      "网站抓取测试"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Check if AI crawlers (ChatGPT, Claude, Perplexity, 30+ others) can access any website.",
+    "summaryEn": "Crawl Readiness provides developer tools capabilities for developer tooling, test automation, and engineering analytics. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Development",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "developer tooling",
+      "test automation",
+      "engineering analytics"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://crawlreadiness.com\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for developer tooling and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "开发工具",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "gcrawlai",
+    "name": "GcrawlAI",
+    "initial": "G",
+    "type": "API",
+    "category": "开发者工具",
+    "description": "提供网页抓取、SERP 搜索结果、截图及 URL 转 Markdown 功能，内置预构建提取器。",
+    "summary": "该 API 集成了网页抓取、SERP 搜索结果获取、截图生成及 Markdown 转换功能，并提供预构建的数据提取器，适用于数据采集和内容处理场景。",
+    "officialUrl": "https://gcrawlai.com",
+    "docsUrl": "https://gcrawlai.com",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-03",
+    "accent": "#315bea",
+    "tags": [
+      "网页抓取",
+      "SERP API",
+      "数据提取"
+    ],
+    "useCases": [
+      "搜索引擎结果抓取",
+      "网页内容转换",
+      "数据采集与分析"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Web scraping, SERP API, screenshots, URL to Markdown and prebuilt extractors.",
+    "summaryEn": "GcrawlAI provides developer tools capabilities for developer tooling, test automation, and engineering analytics. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Development",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "developer tooling",
+      "test automation",
+      "engineering analytics"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://gcrawlai.com\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for developer tooling and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "开发工具",
+    "https": "支持",
+    "cors": "支持"
   }
 ]

@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-03T01:29:18.784463+00:00",
+  "updatedAt": "2026-09-03T04:40:49.498100+00:00",
   "added": [
     {
-      "name": "shim-mcp",
-      "slug": "shim-mcp",
+      "name": "CurrencyBeacon",
+      "slug": "currencybeacon",
       "status": "待确认"
     },
     {
-      "name": "2captcha-mcp",
-      "slug": "2captcha-mcp",
+      "name": "Crawl Readiness",
+      "slug": "crawl-readiness",
       "status": "待确认"
     },
     {
-      "name": "api-mint",
-      "slug": "api-mint",
+      "name": "GcrawlAI",
+      "slug": "gcrawlai",
       "status": "待确认"
     }
   ]
