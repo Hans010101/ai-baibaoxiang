@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-02T04:43:49.650993+00:00",
+  "updatedAt": "2026-09-03T01:29:18.784463+00:00",
   "added": [
     {
-      "name": "codex-remote-pro",
-      "slug": "codex-remote-pro",
+      "name": "shim-mcp",
+      "slug": "shim-mcp",
       "status": "待确认"
     },
     {
-      "name": "pre-production-checklist",
-      "slug": "pre-production-checklist",
+      "name": "2captcha-mcp",
+      "slug": "2captcha-mcp",
       "status": "待确认"
     },
     {
-      "name": "DefiLlama",
-      "slug": "defillama",
+      "name": "api-mint",
+      "slug": "api-mint",
       "status": "待确认"
     }
   ]

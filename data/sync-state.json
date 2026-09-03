@@ -125,6 +125,7 @@
     "https://api-docs.igdb.com",
     "https://api-docs.luchtmeetnet.nl/",
     "https://api-docs.pgamerx.com/",
+    "https://api-mint.hoiwan.workers.dev",
     "https://api-portal.systembolaget.se",
     "https://api-reference.shutterstock.com/",
     "https://api-thirukkural.web.app/",
@@ -1699,6 +1700,7 @@
     "https://zube.io/docs/api"
   ],
   "githubRepos": [
+    "https://github.com/2captcha/2captcha-mcp",
     "https://github.com/Consensus-NLP/consensus-mcp",
     "https://github.com/Cripacx/mediagen",
     "https://github.com/FarzamHabibi/pre-production-checklist",
@@ -1712,6 +1714,7 @@
     "https://github.com/duty1g/x64dbg-mcp-server",
     "https://github.com/fuqiuluo/ida-headless-mcp",
     "https://github.com/howznguyen/pi-delegate-mcp",
+    "https://github.com/justadityaraj/shim-mcp",
     "https://github.com/kpshinnik/docs_masked",
     "https://github.com/montezuma-p/harken",
     "https://github.com/munch2u-a11y/Habitus-AI",

@@ -71936,5 +71936,131 @@
     "sourceCategory": "加密货币",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "shim-mcp",
+    "name": "shim-mcp",
+    "initial": "S",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "shim-mcp 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/justadityaraj/shim-mcp",
+    "docsUrl": "https://github.com/justadityaraj/shim-mcp",
+    "sourceUrl": "https://github.com/justadityaraj/shim-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-03",
+    "accent": "#2877c7",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/justadityaraj/shim-mcp\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "WordPress MCP server plugin. Connect Claude Code, Cursor, or any MCP client to WordPress over stdio (WP-CLI) or HTTP. 58 abilities, self-contained, no cloud.",
+    "summaryEn": "shim-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/justadityaraj/shim-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "2captcha-mcp",
+    "name": "2captcha-mcp",
+    "initial": "2",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "2captcha-mcp 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/2captcha/2captcha-mcp",
+    "docsUrl": "https://github.com/2captcha/2captcha-mcp",
+    "sourceUrl": "https://github.com/2captcha/2captcha-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-03",
+    "accent": "#315bea",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/2captcha/2captcha-mcp\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "2Captcha MCP server for AI agents with web search, web scraping, browser automation, captcha solving, and scalable web data collection.",
+    "summaryEn": "2captcha-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/2captcha/2captcha-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "api-mint",
+    "name": "api-mint",
+    "initial": "A",
+    "type": "API",
+    "category": "商业与金融",
+    "description": "提供汇率兑换相关的数据查询与能力接入，可用于商业数据分析等场景。",
+    "summary": "api-mint 是一个汇率兑换类开放接口，可用于商业数据分析、行情与价格展示和决策辅助。认证方式为无需密钥，加密连接支持，跨域调用支持。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://api-mint.hoiwan.workers.dev",
+    "docsUrl": "https://api-mint.hoiwan.workers.dev",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-03",
+    "accent": "#e48743",
+    "tags": [
+      "汇率兑换",
+      "无需密钥",
+      "开放接口"
+    ],
+    "useCases": [
+      "商业数据分析",
+      "行情与价格展示",
+      "决策辅助"
+    ],
+    "quickstart": "1. 打开官方文档：https://api-mint.hoiwan.workers.dev\n2. 认证方式：无需密钥；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接支持；跨域调用支持。\n4. 从文档选择适合“商业数据分析”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Free utility APIs: timezone, forex rates, crypto prices, page metadata.",
+    "summaryEn": "api-mint provides business & finance capabilities for business research, financial analysis, and operational automation. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Currency Exchange",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "business research",
+      "financial analysis",
+      "operational automation"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://api-mint.hoiwan.workers.dev\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for business research and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "汇率兑换",
+    "https": "支持",
+    "cors": "支持"
   }
 ]
