@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-03T04:40:49.498100+00:00",
+  "updatedAt": "2026-09-04T00:44:16.882138+00:00",
   "added": [
     {
-      "name": "CurrencyBeacon",
-      "slug": "currencybeacon",
+      "name": "reverify",
+      "slug": "reverify",
       "status": "待确认"
     },
     {
-      "name": "Crawl Readiness",
-      "slug": "crawl-readiness",
+      "name": "jadx-mcp",
+      "slug": "jadx-mcp",
       "status": "待确认"
     },
     {
-      "name": "GcrawlAI",
-      "slug": "gcrawlai",
+      "name": "Labelixa",
+      "slug": "labelixa",
       "status": "待确认"
     }
   ]

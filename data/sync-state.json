@@ -969,6 +969,7 @@
     "https://kontests.net/api",
     "https://krakenkeys.com/api-docs",
     "https://kroki.io",
+    "https://labelixa.com/docs/api",
     "https://labs.ig.com/gettingstarted",
     "https://langbly.com/docs",
     "https://languagelayer.com/",
@@ -1703,6 +1704,8 @@
     "https://zube.io/docs/api"
   ],
   "githubRepos": [
+    "https://github.com/0xdad0/jadx-mcp",
+    "https://github.com/2akouwu/reverify",
     "https://github.com/2captcha/2captcha-mcp",
     "https://github.com/Consensus-NLP/consensus-mcp",
     "https://github.com/Cripacx/mediagen",

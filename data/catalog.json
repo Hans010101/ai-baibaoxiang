@@ -72194,5 +72194,131 @@
     "sourceCategory": "开发工具",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "reverify",
+    "name": "reverify",
+    "initial": "R",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "reverify 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/2akouwu/reverify",
+    "docsUrl": "https://github.com/2akouwu/reverify",
+    "sourceUrl": "https://github.com/2akouwu/reverify",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-04",
+    "accent": "#d4634a",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/2akouwu/reverify\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Anti-hallucination for AI agents that read binaries. The model proposes, deterministic tools decide: every claim is VERIFIED or REFUTED against the real bytes, with evidence, and grounded facts survive context resets. MCP server + CLI.",
+    "summaryEn": "reverify provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/2akouwu/reverify\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "jadx-mcp",
+    "name": "jadx-mcp",
+    "initial": "J",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "jadx-mcp 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/0xdad0/jadx-mcp",
+    "docsUrl": "https://github.com/0xdad0/jadx-mcp",
+    "sourceUrl": "https://github.com/0xdad0/jadx-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-04",
+    "accent": "#e48743",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/0xdad0/jadx-mcp\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "MCP (Model Context Protocol) server as a jadx-gui plugin. Lets an AI client (Claude Code, Claude Desktop, or any MCP client) analyze the app currently loaded in jadx-gui.",
+    "summaryEn": "jadx-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/0xdad0/jadx-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "labelixa",
+    "name": "Labelixa",
+    "initial": "L",
+    "type": "API",
+    "category": "开发者工具",
+    "description": "提供开发工具相关的数据查询与能力接入，可用于开发自动化等场景。",
+    "summary": "Labelixa 是一个开发工具类开放接口，可用于开发自动化、技术数据查询和Agent 工具调用。认证方式为API 密钥，加密连接支持，跨域调用支持。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://labelixa.com/docs/api",
+    "docsUrl": "https://labelixa.com/docs/api",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-04",
+    "accent": "#315bea",
+    "tags": [
+      "开发工具",
+      "API 密钥",
+      "开放接口"
+    ],
+    "useCases": [
+      "开发自动化",
+      "技术数据查询",
+      "Agent 工具调用"
+    ],
+    "quickstart": "1. 打开官方文档：https://labelixa.com/docs/api\n2. 认证方式：API 密钥；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接支持；跨域调用支持。\n4. 从文档选择适合“开发自动化”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Render, validate and generate Zebra ZPL label barcodes as PNG/PDF.",
+    "summaryEn": "Labelixa provides developer tools capabilities for developer tooling, test automation, and engineering analytics. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Development",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "developer tooling",
+      "test automation",
+      "engineering analytics"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://labelixa.com/docs/api\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for developer tooling and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "开发工具",
+    "https": "支持",
+    "cors": "支持"
   }
 ]
