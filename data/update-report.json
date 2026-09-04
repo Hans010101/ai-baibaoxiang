@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-04T00:44:16.882138+00:00",
+  "updatedAt": "2026-09-04T04:43:50.295167+00:00",
   "added": [
     {
-      "name": "reverify",
-      "slug": "reverify",
+      "name": "SMTPfast",
+      "slug": "smtpfast",
       "status": "待确认"
     },
     {
-      "name": "jadx-mcp",
-      "slug": "jadx-mcp",
+      "name": "WattFigure",
+      "slug": "wattfigure",
       "status": "待确认"
     },
     {
-      "name": "Labelixa",
-      "slug": "labelixa",
+      "name": "EOD Historical Data",
+      "slug": "eod-historical-data",
       "status": "待确认"
     }
   ]

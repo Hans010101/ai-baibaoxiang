@@ -72320,5 +72320,137 @@
     "sourceCategory": "开发工具",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "smtpfast",
+    "name": "SMTPfast",
+    "initial": "S",
+    "type": "API",
+    "category": "邮件与通信",
+    "description": "提供电子邮件相关的数据查询与能力接入，可用于消息通知等场景。",
+    "summary": "SMTPfast 是一个电子邮件类开放接口，可用于消息通知、地址或号码校验和通信自动化。认证方式为API 密钥，加密连接支持，跨域调用支持。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://smtpfa.st/docs",
+    "docsUrl": "https://smtpfa.st/docs",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-04",
+    "accent": "#6f63d9",
+    "tags": [
+      "电子邮件",
+      "API 密钥",
+      "开放接口"
+    ],
+    "useCases": [
+      "消息通知",
+      "地址或号码校验",
+      "通信自动化"
+    ],
+    "quickstart": "1. 打开官方文档：https://smtpfa.st/docs\n2. 认证方式：API 密钥；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接支持；跨域调用支持。\n4. 从文档选择适合“消息通知”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Send transactional email, manage contacts and broadcasts, free 3,000 emails/month.",
+    "summaryEn": "SMTPfast provides email & communication capabilities for message automation, notification services, and contact workflows. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Email",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "message automation",
+      "notification services",
+      "contact workflows"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://smtpfa.st/docs\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for message automation and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "电子邮件",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "wattfigure",
+    "name": "WattFigure",
+    "initial": "W",
+    "type": "API",
+    "category": "动物与自然",
+    "description": "提供环境相关的数据查询与能力接入，可用于自然数据应用等场景。",
+    "summary": "WattFigure 是一个环境类开放接口，可用于自然数据应用、科普内容服务和AI 知识问答。认证方式为无需密钥，加密连接支持，跨域调用支持。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://api.wattfigure.com/",
+    "docsUrl": "https://api.wattfigure.com/",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-04",
+    "accent": "#2877c7",
+    "tags": [
+      "环境",
+      "无需密钥",
+      "开放接口"
+    ],
+    "useCases": [
+      "自然数据应用",
+      "科普内容服务",
+      "AI 知识问答"
+    ],
+    "quickstart": "1. 打开官方文档：https://api.wattfigure.com/\n2. 认证方式：无需密钥；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接支持；跨域调用支持。\n4. 从文档选择适合“自然数据应用”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "US electricity rates by state, with appliance and EV charging running costs.",
+    "summaryEn": "WattFigure provides animals & nature capabilities for nature data products, educational content, and AI knowledge assistants. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Environment",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "nature data products",
+      "educational content",
+      "AI knowledge assistants"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://api.wattfigure.com/\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for nature data products and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "环境",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "eod-historical-data",
+    "name": "EOD Historical Data",
+    "initial": "E",
+    "type": "API",
+    "category": "商业与金融",
+    "description": "提供金融相关的数据查询与能力接入，可用于商业数据分析等场景。",
+    "summary": "EOD Historical Data 是一个金融类开放接口，可用于商业数据分析、行情与价格展示和决策辅助。认证方式为API 密钥，加密连接支持，跨域调用支持。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://eodhd.com/",
+    "docsUrl": "https://eodhd.com/",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-04",
+    "accent": "#18a87b",
+    "tags": [
+      "金融",
+      "API 密钥",
+      "开放接口"
+    ],
+    "useCases": [
+      "商业数据分析",
+      "行情与价格展示",
+      "决策辅助"
+    ],
+    "quickstart": "1. 打开官方文档：https://eodhd.com/\n2. 认证方式：API 密钥；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接支持；跨域调用支持。\n4. 从文档选择适合“商业数据分析”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Real-time and historical stock market data with 150+ exchanges.",
+    "summaryEn": "EOD Historical Data provides business & finance capabilities for business research, financial analysis, and operational automation. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Finance",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "business research",
+      "financial analysis",
+      "operational automation"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://eodhd.com/\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for business research and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "金融",
+    "https": "支持",
+    "cors": "支持"
   }
 ]
