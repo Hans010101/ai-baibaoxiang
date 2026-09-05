@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG_PATH = ROOT / "data" / "catalog.json"
 STATE_PATH = ROOT / "data" / "sync-state.json"
 REPORT_PATH = ROOT / "data" / "update-report.json"
+LOCAL_TIMEZONE = dt.timezone(dt.timedelta(hours=8))
 PUBLIC_APIS_URL = "https://raw.githubusercontent.com/public-apis/public-apis/master/README.md"
 SOURCE_URL = "https://github.com/public-apis/public-apis"
 MAX_NEW = int(os.getenv("MAX_NEW_COMPONENTS", "0"))
@@ -223,6 +224,17 @@ def reachable_over_https(url: str) -> bool:
     return False
 
 
+def already_updated_today(now: dt.datetime | None = None) -> bool:
+    if not REPORT_PATH.exists():
+        return False
+    report = json.loads(REPORT_PATH.read_text(encoding="utf-8"))
+    if not report.get("added") or not report.get("updatedAt"):
+        return False
+    updated = dt.datetime.fromisoformat(report["updatedAt"]).astimezone(LOCAL_TIMEZONE).date()
+    today = (now or dt.datetime.now(dt.timezone.utc)).astimezone(LOCAL_TIMEZONE).date()
+    return updated == today
+
+
 def slugify(value: str) -> str:
     normalized = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode().lower()
     slug = re.sub(r"[^a-z0-9]+", "-", normalized).strip("-")
@@ -388,6 +400,9 @@ def source_enrichment(candidate: dict) -> dict:
 def main(bootstrap: bool = False, full_import: bool = False) -> None:
     catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
     state = json.loads(STATE_PATH.read_text(encoding="utf-8")) if STATE_PATH.exists() else {}
+    if not bootstrap and not full_import and already_updated_today():
+        print("daily update already completed")
+        return
     public_items = parse_public_apis(fetch_text(PUBLIC_APIS_URL))
     public_urls = {item["url"] for item in public_items}
     github_token = os.getenv("GITHUB_TOKEN", "")
@@ -491,6 +506,7 @@ def self_check() -> None:
     assert slugify("Hello, API!") == "hello-api"
     assert normalize_url("https://www.Example.com/docs/?utm_source=test") == "https://example.com/docs"
     assert candidate_meets_quality(parsed[0])
+    assert already_updated_today(dt.datetime.fromisoformat(json.loads(REPORT_PATH.read_text())["updatedAt"]))
     print("self-check passed")
 
 
