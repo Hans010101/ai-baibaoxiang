@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-04T04:43:50.295167+00:00",
+  "updatedAt": "2026-09-05T00:47:13.189359+00:00",
   "added": [
     {
-      "name": "SMTPfast",
-      "slug": "smtpfast",
+      "name": "search-mcp",
+      "slug": "search-mcp",
       "status": "待确认"
     },
     {
-      "name": "WattFigure",
-      "slug": "wattfigure",
+      "name": "opencontext",
+      "slug": "opencontext",
       "status": "待确认"
     },
     {
-      "name": "EOD Historical Data",
-      "slug": "eod-historical-data",
+      "name": "FXNewsBias",
+      "slug": "fxnewsbias",
       "status": "待确认"
     }
   ]

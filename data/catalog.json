@@ -72452,5 +72452,131 @@
     "sourceCategory": "金融",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "search-mcp",
+    "name": "search-mcp",
+    "initial": "S",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "专为智能体提供的免费网页搜索与页面抓取服务，无需 API 密钥，开箱即用。",
+    "summary": "这是一个托管式的 MCP 服务器，允许智能体执行网络搜索并获取网页内容。它不需要用户配置 API 密钥，极大地简化了智能体获取实时信息的过程，非常适合需要联网能力的 AI 助手。",
+    "officialUrl": "https://github.com/parallel-web/search-mcp",
+    "docsUrl": "https://github.com/parallel-web/search-mcp",
+    "sourceUrl": "https://github.com/parallel-web/search-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-05",
+    "accent": "#2877c7",
+    "tags": [
+      "MCP",
+      "搜索",
+      "网页抓取"
+    ],
+    "useCases": [
+      "实时新闻检索",
+      "网页内容摘要",
+      "知识库更新"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Free web search and page fetching for agents. Hosted MCP, no API key required.",
+    "summaryEn": "search-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/parallel-web/search-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "opencontext",
+    "name": "opencontext",
+    "initial": "O",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "用于持久化存储项目特定 AI 智能体上下文的 Model Context Protocol 服务器，确保对话连贯性。",
+    "summary": "该工具通过 MCP 协议为智能体提供持久化的项目上下文存储功能。它能够保存智能体在特定项目中的对话历史和关键信息，帮助智能体在长时间运行中保持对项目状态的理解。",
+    "officialUrl": "https://github.com/slxca/opencontext",
+    "docsUrl": "https://github.com/slxca/opencontext",
+    "sourceUrl": "https://github.com/slxca/opencontext",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-05",
+    "accent": "#6f63d9",
+    "tags": [
+      "MCP",
+      "上下文管理",
+      "持久化"
+    ],
+    "useCases": [
+      "长对话记忆保持",
+      "项目状态追踪",
+      "代码库理解辅助"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "A Model Context Protocol server for persistent project-specific AI agent context.",
+    "summaryEn": "opencontext provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/slxca/opencontext\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "fxnewsbias",
+    "name": "FXNewsBias",
+    "initial": "F",
+    "type": "API",
+    "category": "商业与金融",
+    "description": "提供全球八大主要外汇货币的 AI 评分新闻情绪分析，每三小时自动更新。",
+    "summary": "该服务利用人工智能技术对主要外汇货币的新闻进行情绪评分，帮助用户快速判断市场情绪。数据每三小时刷新一次，为金融交易和投资决策提供实时的情绪指标参考。",
+    "officialUrl": "https://fxnewsbias.com/developers",
+    "docsUrl": "https://fxnewsbias.com/developers",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-05",
+    "accent": "#315bea",
+    "tags": [
+      "金融",
+      "外汇",
+      "情绪分析"
+    ],
+    "useCases": [
+      "外汇交易决策支持",
+      "市场情绪监控",
+      "投资风险评估"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "AI-scored news sentiment for the 8 major forex currencies, refreshed every 3 hours.",
+    "summaryEn": "FXNewsBias provides business & finance capabilities for business research, financial analysis, and operational automation. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Finance",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "business research",
+      "financial analysis",
+      "operational automation"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://fxnewsbias.com/developers\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for business research and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "金融",
+    "https": "支持",
+    "cors": "支持"
   }
 ]
