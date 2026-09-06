@@ -72578,5 +72578,134 @@
     "sourceCategory": "金融",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "openreality",
+    "name": "openreality",
+    "initial": "O",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "将手机视频转换为 AI 可查询的 3D 场景。包含 MCP 工具、自托管代理和 VGGT-SLAM 库。",
+    "summary": "Open Reality 是一个开源项目，旨在将手机录制的视频转换为可被 AI 查询的 3D 场景。它提供了 MCP 工具，方便在 Claude、Codex 和 Cursor 等编辑器中使用，同时包含自托管的代理服务器和 VGGT-SLAM 算法库，支持本地部署。",
+    "officialUrl": "https://github.com/reality-opened/openreality",
+    "docsUrl": "https://github.com/reality-opened/openreality",
+    "sourceUrl": "https://github.com/reality-opened/openreality",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-06",
+    "accent": "#6f63d9",
+    "tags": [
+      "3D重建",
+      "视频处理",
+      "MCP工具"
+    ],
+    "useCases": [
+      "视频内容数字化",
+      "AI 辅助场景分析",
+      "本地化 3D 数据库"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Open Reality: phone video to AI-queryable 3D scenes. MCP tools for Claude/Codex/Cursor (npm openreality-mcp), the self-hostable broker, and the VGGT-SLAM library, in one repo. BSD-2-Clause.",
+    "summaryEn": "openreality provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/reality-opened/openreality\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "crates-io",
+    "name": "crates.io",
+    "initial": "C",
+    "type": "API",
+    "category": "开发者工具",
+    "description": "获取 Rust crate 的版本、下载量和依赖元数据。",
+    "summary": "Crates.io 是 Rust 的包注册表，提供查询 Rust crate 的版本历史、下载统计以及依赖关系信息。该接口无需密钥即可访问，方便开发者获取开源库的详细数据以进行版本管理和依赖分析。",
+    "officialUrl": "https://crates.io/data-access",
+    "docsUrl": "https://crates.io/data-access",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-06",
+    "accent": "#315bea",
+    "tags": [
+      "Rust",
+      "包管理",
+      "API"
+    ],
+    "useCases": [
+      "查询库版本历史",
+      "分析依赖关系",
+      "统计下载量"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Rust crate versions, downloads and dependency metadata.",
+    "summaryEn": "crates.io provides developer tools capabilities for developer tooling, test automation, and engineering analytics. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Development",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "developer tooling",
+      "test automation",
+      "engineering analytics"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://crates.io/data-access\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for developer tooling and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "开发工具",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "rubygems",
+    "name": "RubyGems",
+    "initial": "R",
+    "type": "API",
+    "category": "开发者工具",
+    "description": "查询 Ruby gem 的元数据、版本和依赖关系。",
+    "summary": "RubyGems 提供了 Ruby 生态系统中 gem 包的元数据查询服务。开发者可以通过此接口获取特定 gem 的版本列表、依赖关系以及搜索功能，无需密钥即可快速检索和验证 Ruby 库信息。",
+    "officialUrl": "https://guides.rubygems.org/rubygems-org-api/",
+    "docsUrl": "https://guides.rubygems.org/rubygems-org-api/",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-06",
+    "accent": "#d4634a",
+    "tags": [
+      "Ruby",
+      "包管理",
+      "元数据"
+    ],
+    "useCases": [
+      "检索 gem 版本",
+      "验证依赖冲突",
+      "搜索开源库"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Ruby gem metadata, versions, dependencies and search.",
+    "summaryEn": "RubyGems provides developer tools capabilities for developer tooling, test automation, and engineering analytics. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Development",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "developer tooling",
+      "test automation",
+      "engineering analytics"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://guides.rubygems.org/rubygems-org-api/\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for developer tooling and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "开发工具",
+    "https": "支持",
+    "cors": "支持"
   }
 ]

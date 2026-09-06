@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-05T00:47:13.189359+00:00",
+  "updatedAt": "2026-09-06T00:42:51.986581+00:00",
   "added": [
     {
-      "name": "search-mcp",
-      "slug": "search-mcp",
+      "name": "openreality",
+      "slug": "openreality",
       "status": "待确认"
     },
     {
-      "name": "opencontext",
-      "slug": "opencontext",
+      "name": "crates.io",
+      "slug": "crates-io",
       "status": "待确认"
     },
     {
-      "name": "FXNewsBias",
-      "slug": "fxnewsbias",
+      "name": "RubyGems",
+      "slug": "rubygems",
       "status": "待确认"
     }
   ]
