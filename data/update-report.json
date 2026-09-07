@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-06T00:42:51.986581+00:00",
+  "updatedAt": "2026-09-07T00:44:31.900487+00:00",
   "added": [
     {
-      "name": "openreality",
-      "slug": "openreality",
+      "name": "gridcarbon",
+      "slug": "gridcarbon",
       "status": "待确认"
     },
     {
-      "name": "crates.io",
-      "slug": "crates-io",
+      "name": "FarmDash",
+      "slug": "farmdash",
       "status": "待确认"
     },
     {
-      "name": "RubyGems",
-      "slug": "rubygems",
+      "name": "Futures Clock",
+      "slug": "futures-clock",
       "status": "待确认"
     }
   ]
