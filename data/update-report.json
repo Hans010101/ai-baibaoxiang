@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-07T00:44:31.900487+00:00",
+  "updatedAt": "2026-09-08T00:43:49.016948+00:00",
   "added": [
     {
-      "name": "gridcarbon",
-      "slug": "gridcarbon",
+      "name": "gitwarren-app",
+      "slug": "gitwarren-app",
       "status": "待确认"
     },
     {
-      "name": "FarmDash",
-      "slug": "farmdash",
+      "name": "KoragraphMCP",
+      "slug": "koragraphmcp",
       "status": "待确认"
     },
     {
-      "name": "Futures Clock",
-      "slug": "futures-clock",
+      "name": "Helious",
+      "slug": "helious",
       "status": "待确认"
     }
   ]

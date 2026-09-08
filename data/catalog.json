@@ -72839,5 +72839,131 @@
     "sourceCategory": "金融",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "gitwarren-app",
+    "name": "gitwarren-app",
+    "initial": "G",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "跨平台桌面应用，用于本地代码审查。单用户单机，无需服务器或账号。",
+    "summary": "专为个人开发者设计的本地代码审查工具，支持跨平台运行。完全离线，无需服务器或账号，保护隐私。",
+    "officialUrl": "https://github.com/klarluft/gitwarren-app",
+    "docsUrl": "https://github.com/klarluft/gitwarren-app",
+    "sourceUrl": "https://github.com/klarluft/gitwarren-app",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-08",
+    "accent": "#e48743",
+    "tags": [
+      "代码审查",
+      "本地工具",
+      "跨平台"
+    ],
+    "useCases": [
+      "本地代码审查",
+      "个人项目维护",
+      "离线代码检查"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "A cross-platform desktop app for doing local code reviews of your own git repositories. Single user, single machine, no server, no account.",
+    "summaryEn": "gitwarren-app provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/klarluft/gitwarren-app\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "koragraphmcp",
+    "name": "KoragraphMCP",
+    "initial": "K",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "随使用而进化的记忆层。记录代码变更、依赖关系及未文档化的细节。锚定上下文，代码移动时记忆随之迁移。完全本地化。",
+    "summary": "智能记忆层，随使用不断进化，记录代码变更、依赖及未文档化的细节。锚定上下文，代码迁移时记忆同步更新。支持 Claude Code、Cursor、Codex，完全本地运行。",
+    "officialUrl": "https://github.com/Koragraph/KoragraphMCP",
+    "docsUrl": "https://github.com/Koragraph/KoragraphMCP",
+    "sourceUrl": "https://github.com/Koragraph/KoragraphMCP",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-08",
+    "accent": "#d4634a",
+    "tags": [
+      "代码记忆",
+      "上下文锚定",
+      "本地运行"
+    ],
+    "useCases": [
+      "代码变更追踪",
+      "依赖关系分析",
+      "AI 上下文管理"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "The memory layer that gets better as you use it. What broke, why, what depended on what, even the \"push this to Wednesday\" kind of thing that never makes it into any doc. No one has to write it down. Anchor your context to your code. when the code moves, so does the memory. works on claude code, cursor, codex. Completely local.",
+    "summaryEn": "KoragraphMCP provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Koragraph/KoragraphMCP\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "helious",
+    "name": "Helious",
+    "initial": "H",
+    "type": "API",
+    "category": "商业与金融",
+    "description": "提供美国国债拍卖结果（含尾差和投标人细分）及评分后的经济发布数据。",
+    "summary": "API 服务，提供美国国债拍卖结果（含尾差和投标人细分）以及经过评分的经济发布数据，助力金融分析。",
+    "officialUrl": "https://helious.io/developers/",
+    "docsUrl": "https://helious.io/developers/",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-08",
+    "accent": "#315bea",
+    "tags": [
+      "国债拍卖",
+      "经济数据",
+      "金融 API"
+    ],
+    "useCases": [
+      "国债市场分析",
+      "经济指标监控",
+      "金融数据集成"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "US Treasury auction results with the tail and bidder split, plus scored economic releases.",
+    "summaryEn": "Helious provides business & finance capabilities for business research, financial analysis, and operational automation. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Finance",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "business research",
+      "financial analysis",
+      "operational automation"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://helious.io/developers/\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for business research and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "金融",
+    "https": "支持",
+    "cors": "支持"
   }
 ]
