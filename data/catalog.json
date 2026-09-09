@@ -72965,5 +72965,128 @@
     "sourceCategory": "金融",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "okf-agent-memory",
+    "name": "okf-agent-memory",
+    "initial": "O",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "专为AI编程代理设计的Git原生持久化内存，零依赖纯Go实现，大幅削减Token开销。",
+    "summary": "实现Google OKF v0.2标准，内置嵌入式MCP服务器，支持毫秒级BM25搜索。通过渐进式披露机制，在零外部数据库依赖下，帮助AI代理有效管理上下文，显著降低Token消耗。",
+    "officialUrl": "https://github.com/okf-memory/okf-agent-memory",
+    "docsUrl": "https://github.com/okf-memory/okf-agent-memory",
+    "sourceUrl": "https://github.com/okf-memory/okf-agent-memory",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-09",
+    "accent": "#2877c7",
+    "tags": [
+      "MCP",
+      "内存",
+      "Go"
+    ],
+    "useCases": [
+      "代码审查",
+      "上下文管理",
+      "长期记忆"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Git-native persistent memory for AI coding agents. Implements Google OKF v0.2 with sub-300µs in-memory BM25 search, embedded MCP server, and progressive disclosure. Slashes token bloat by 80% with zero external databases or dependencies. Built in pure Go.",
+    "summaryEn": "okf-agent-memory provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/okf-memory/okf-agent-memory\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "bankmcp",
+    "name": "bankmcp",
+    "initial": "B",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "自托管只读MCP服务器，通过开放银行协议读取您的银行账户，支持Claude和Ollama。",
+    "summary": "BankMCP™是一个自托管、只读的MCP服务器，利用开放银行标准安全访问您的银行账户。它专为Claude和Ollama等本地模型设计，确保您的财务数据完全由您掌控，无需依赖第三方服务。",
+    "officialUrl": "https://github.com/noskillish/bankmcp",
+    "docsUrl": "https://github.com/noskillish/bankmcp",
+    "sourceUrl": "https://github.com/noskillish/bankmcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-09",
+    "accent": "#18a87b",
+    "tags": [
+      "MCP",
+      "银行",
+      "开放银行"
+    ],
+    "useCases": [
+      "财务分析",
+      "预算跟踪",
+      "账户查询"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "BankMCP™: your AI can now read your bank. Self-hosted, read-only MCP server for your own bank accounts via open banking (Enable Banking). Standard MCP; tested with Claude and Ollama.",
+    "summaryEn": "bankmcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/noskillish/bankmcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "ctrlrun",
+    "name": "ctrlrun",
+    "initial": "C",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "为AI代理提供执行安全层的工具，确保在自动化任务中的操作安全可控。",
+    "summary": "这是一个专为AI代理设计的执行安全层，旨在防止未经授权的操作和意外错误。通过提供细粒度的权限控制和沙箱机制，它增强了AI在执行复杂任务时的安全性，保护系统免受潜在威胁。",
+    "officialUrl": "https://github.com/CTRLRun/ctrlrun",
+    "docsUrl": "https://github.com/CTRLRun/ctrlrun",
+    "sourceUrl": "https://github.com/CTRLRun/ctrlrun",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-09",
+    "accent": "#d4634a",
+    "tags": [
+      "MCP",
+      "安全",
+      "代理"
+    ],
+    "useCases": [
+      "自动化运维",
+      "安全审计",
+      "任务隔离"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "The execution safety layer for AI agents.",
+    "summaryEn": "ctrlrun provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/CTRLRun/ctrlrun\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]

@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-08T00:43:49.016948+00:00",
+  "updatedAt": "2026-09-09T00:43:13.007228+00:00",
   "added": [
     {
-      "name": "gitwarren-app",
-      "slug": "gitwarren-app",
+      "name": "okf-agent-memory",
+      "slug": "okf-agent-memory",
       "status": "待确认"
     },
     {
-      "name": "KoragraphMCP",
-      "slug": "koragraphmcp",
+      "name": "bankmcp",
+      "slug": "bankmcp",
       "status": "待确认"
     },
     {
-      "name": "Helious",
-      "slug": "helious",
+      "name": "ctrlrun",
+      "slug": "ctrlrun",
       "status": "待确认"
     }
   ]
