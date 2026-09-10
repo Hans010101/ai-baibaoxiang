@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-09T00:43:13.007228+00:00",
+  "updatedAt": "2026-09-10T00:45:02.445428+00:00",
   "added": [
     {
-      "name": "okf-agent-memory",
-      "slug": "okf-agent-memory",
+      "name": "geiger",
+      "slug": "geiger",
       "status": "待确认"
     },
     {
-      "name": "bankmcp",
-      "slug": "bankmcp",
+      "name": "fantasy-football-manager",
+      "slug": "fantasy-football-manager",
       "status": "待确认"
     },
     {
-      "name": "ctrlrun",
-      "slug": "ctrlrun",
+      "name": "wildberries-mcp",
+      "slug": "wildberries-mcp",
       "status": "待确认"
     }
   ]

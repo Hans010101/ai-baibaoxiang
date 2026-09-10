@@ -73088,5 +73088,128 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/CTRLRun/ctrlrun\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "geiger",
+    "name": "geiger",
+    "initial": "G",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "AI 代理的盖革计数器，提供只读命令以盘点机器上的所有代理、MCP 服务器、插件和扩展。",
+    "summary": "这是一个用于 AI 代理的监控工具，能够通过单一只读命令扫描并列出当前系统上运行的所有代理、MCP 服务器、插件及扩展，帮助开发者全面了解环境状态。",
+    "officialUrl": "https://github.com/Atomburstofficial/geiger",
+    "docsUrl": "https://github.com/Atomburstofficial/geiger",
+    "sourceUrl": "https://github.com/Atomburstofficial/geiger",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-10",
+    "accent": "#e48743",
+    "tags": [
+      "监控",
+      "代理",
+      "扫描"
+    ],
+    "useCases": [
+      "环境审计",
+      "依赖排查",
+      "系统健康检查"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "A Geiger counter for AI agents — one read-only command that inventories every agent, MCP server, plugin, and AI extension on a machine.",
+    "summaryEn": "geiger provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Atomburstofficial/geiger\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "fantasy-football-manager",
+    "name": "fantasy-football-manager",
+    "initial": "F",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "为 Codex 和其他 MCP 客户端提供的 ESPN 起草和阵容工具，支持浏览器登录、审批模式、单队限制和服务器监控。",
+    "summary": "该组件为 Codex 及其他 MCP 客户端提供了 ESPN 起草和阵容管理功能，支持浏览器登录、审批模式、单队限制以及服务器监控，方便用户进行 Fantasy Football 管理。",
+    "officialUrl": "https://github.com/krmisystems/fantasy-football-manager",
+    "docsUrl": "https://github.com/krmisystems/fantasy-football-manager",
+    "sourceUrl": "https://github.com/krmisystems/fantasy-football-manager",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-10",
+    "accent": "#6f63d9",
+    "tags": [
+      "赛事管理",
+      "起草工具",
+      "阵容配置"
+    ],
+    "useCases": [
+      "赛季阵容调整",
+      "赛前名单筛选",
+      "赛事数据监控"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "ESPN draft and lineup tools for Codex and other MCP clients, with browser sign-in, approval modes, per-team limits, and server monitoring.",
+    "summaryEn": "fantasy-football-manager provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/krmisystems/fantasy-football-manager\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "wildberries-mcp",
+    "name": "wildberries-mcp",
+    "initial": "W",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "Wildberries 的 MCP 服务器，用于连接和管理 Wildberries 平台的相关功能。",
+    "summary": "这是一个 Wildberries 平台的 MCP 服务器，旨在帮助用户通过 MCP 协议连接并管理 Wildberries 平台上的相关业务功能，实现自动化操作。",
+    "officialUrl": "https://github.com/Sellematics/wildberries-mcp",
+    "docsUrl": "https://github.com/Sellematics/wildberries-mcp",
+    "sourceUrl": "https://github.com/Sellematics/wildberries-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-10",
+    "accent": "#315bea",
+    "tags": [
+      "电商",
+      "Wildberries",
+      "API集成"
+    ],
+    "useCases": [
+      "商品信息同步",
+      "订单状态查询",
+      "库存管理"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Wildberries MCP Server.",
+    "summaryEn": "wildberries-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Sellematics/wildberries-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]
