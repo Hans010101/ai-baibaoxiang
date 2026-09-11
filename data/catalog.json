@@ -73211,5 +73211,128 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/Sellematics/wildberries-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "google-seo-mcp",
+    "name": "google-seo-mcp",
+    "initial": "G",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "为 Claude、Codex、Cursor 等客户端提供 SEO & GEO 服务的 MCP 服务器，支持 GSC、GA4、PageSpeed、结构化数据及 AI 爬虫检查，共 80 个工具。",
+    "summary": "本工具集成了 Google Search Console、Analytics 4 和 PageSpeed Insights，提供 80 个技术 SEO 和生成式引擎优化工具，支持结构化数据检查及 AI 爬虫分析，适用于 Claude、Cursor 等客户端。",
+    "officialUrl": "https://github.com/Akxan/google-seo-mcp",
+    "docsUrl": "https://github.com/Akxan/google-seo-mcp",
+    "sourceUrl": "https://github.com/Akxan/google-seo-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-11",
+    "accent": "#e48743",
+    "tags": [
+      "SEO",
+      "MCP",
+      "服务器"
+    ],
+    "useCases": [
+      "技术SEO审计",
+      "网站性能优化",
+      "AI爬虫检测"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "SEO & GEO MCP server for Claude, Codex, Cursor and any MCP client: Google Search Console, Google Analytics 4, PageSpeed Insights, Core Web Vitals, structured data, llms.txt, AI crawler checks, WordPress (Yoast, WP-CLI over SSH) and GitHub — 80 tools for technical SEO, content optimization and generative engine optimization.",
+    "summaryEn": "google-seo-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Akxan/google-seo-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "structsmith",
+    "name": "StructSmith",
+    "initial": "S",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "本地优先的软件架构建模工具，采用 C4 风格语义模型和 React Flow 编辑器，支持 SQLite 存储，可作为 Structurizr 的自托管替代方案供 AI 客户端通过 MCP 编辑。",
+    "summary": "这是一个本地优先的架构建模工具，具备 C4 风格语义模型和 React Flow 编辑器。它使用 SQLite 存储，单容器运行，允许 AI 客户端通过 MCP 协议直接编辑软件架构图。",
+    "officialUrl": "https://github.com/dziksu/StructSmith",
+    "docsUrl": "https://github.com/dziksu/StructSmith",
+    "sourceUrl": "https://github.com/dziksu/StructSmith",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-11",
+    "accent": "#d4634a",
+    "tags": [
+      "架构建模",
+      "C4",
+      "本地化"
+    ],
+    "useCases": [
+      "软件架构可视化",
+      "系统设计建模",
+      "AI辅助架构设计"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Local-first, MCP-native tool for modelling software architecture. C4-style semantic model, React Flow editor, SQLite, single container — a self-hosted Structurizr alternative your AI client can edit over MCP.",
+    "summaryEn": "StructSmith provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/dziksu/StructSmith\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "arbitra",
+    "name": "Arbitra",
+    "initial": "A",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "面向代理经济的 AI 运营托管法庭与信誉协议，旨在确保智能体之间的交易安全与信任。",
+    "summary": "这是一个面向代理经济的 AI 运营托管法庭和信誉协议。它旨在确保智能体之间的交易安全，维护代理经济中的信任机制，为智能体交互提供仲裁服务。",
+    "officialUrl": "https://github.com/Ali-Adel-Nour/Arbitra",
+    "docsUrl": "https://github.com/Ali-Adel-Nour/Arbitra",
+    "sourceUrl": "https://github.com/Ali-Adel-Nour/Arbitra",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-11",
+    "accent": "#6f63d9",
+    "tags": [
+      "信誉协议",
+      "仲裁",
+      "代理经济"
+    ],
+    "useCases": [
+      "智能体交易仲裁",
+      "信誉系统构建",
+      "代理经济信任管理"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "The AI-operated escrow court and reputation protocol for the agentic economy.",
+    "summaryEn": "Arbitra provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Ali-Adel-Nour/Arbitra\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]

@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-10T00:45:02.445428+00:00",
+  "updatedAt": "2026-09-11T04:49:55.870455+00:00",
   "added": [
     {
-      "name": "geiger",
-      "slug": "geiger",
+      "name": "google-seo-mcp",
+      "slug": "google-seo-mcp",
       "status": "待确认"
     },
     {
-      "name": "fantasy-football-manager",
-      "slug": "fantasy-football-manager",
+      "name": "StructSmith",
+      "slug": "structsmith",
       "status": "待确认"
     },
     {
-      "name": "wildberries-mcp",
-      "slug": "wildberries-mcp",
+      "name": "Arbitra",
+      "slug": "arbitra",
       "status": "待确认"
     }
   ]
