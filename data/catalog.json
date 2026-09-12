@@ -73334,5 +73334,128 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/Ali-Adel-Nour/Arbitra\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "ai-security-tool",
+    "name": "ai-security-tool",
+    "initial": "A",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "开源 AI 驱动的安全终端与漏洞扫描器，支持 SSH、RDP 等协议及多 AI 代理自动化安全工作流。",
+    "summary": "集成了 DeepSeek 和 OpenAI 等多个自主 AI 代理，支持 CVE 和 SBOM 扫描，提供跨平台 Web UI，用于自动化安全运维和 CTF 竞赛。",
+    "officialUrl": "https://github.com/ZeroDayEvil/ai-security-tool",
+    "docsUrl": "https://github.com/ZeroDayEvil/ai-security-tool",
+    "sourceUrl": "https://github.com/ZeroDayEvil/ai-security-tool",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-12",
+    "accent": "#6f63d9",
+    "tags": [
+      "安全扫描",
+      "自动化运维",
+      "CTF"
+    ],
+    "useCases": [
+      "自动化漏洞扫描",
+      "DevSecOps 流程",
+      "CTF 竞赛"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "🛡️ Free open-source AI-powered security terminal & vulnerability scanner (CVE, SBOM). Supports SSH, SFTP, RDP, VNC, Serial, and 12+ autonomous AI agents (DeepSeek, OpenAI) for automated security workflows, CTF & DevSecOps. Cross-platform & Web UI.",
+    "summaryEn": "ai-security-tool provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/ZeroDayEvil/ai-security-tool\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "baron",
+    "name": "baron",
+    "initial": "B",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "为编程代理提供持久化本地记忆，能超越对话上下文，并对每个回答给出裁决。目前处于公开测试阶段。",
+    "summary": "Baron Munchausen 是一款为编程代理提供持久化本地记忆的工具，能超越对话上下文，并对每个回答给出裁决，目前处于公开测试阶段。",
+    "officialUrl": "https://github.com/shinegang/baron",
+    "docsUrl": "https://github.com/shinegang/baron",
+    "sourceUrl": "https://github.com/shinegang/baron",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-12",
+    "accent": "#18a87b",
+    "tags": [
+      "代码辅助",
+      "记忆管理",
+      "代码审查"
+    ],
+    "useCases": [
+      "代码上下文持久化",
+      "智能代码审查",
+      "长期对话记忆"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Baron Munchausen — local memory for coding agents that outlives the chat, with a verdict on every answer. Public alpha.",
+    "summaryEn": "baron provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/shinegang/baron\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "mcp",
+    "name": "mcp",
+    "initial": "M",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "Paxa Labs API 的官方 MCP 服务器，支持泰语和英语语音 AI，具备本地播放、泰语翻译及文档 OCR 功能。",
+    "summary": "提供泰语和英语语音识别服务，支持本地播放和泰语翻译，以及文档 OCR 功能，专为 Paxa Labs API 设计。",
+    "officialUrl": "https://github.com/paxalabs/mcp",
+    "docsUrl": "https://github.com/paxalabs/mcp",
+    "sourceUrl": "https://github.com/paxalabs/mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-12",
+    "accent": "#d4634a",
+    "tags": [
+      "语音识别",
+      "OCR",
+      "翻译"
+    ],
+    "useCases": [
+      "泰语语音交互",
+      "文档数字化",
+      "多语言翻译"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Official MCP server for the Paxa Labs API: Thai and English speech AI with local playback, translation to Thai, and document OCR.",
+    "summaryEn": "mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/paxalabs/mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]
