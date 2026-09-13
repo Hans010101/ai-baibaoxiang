@@ -73457,5 +73457,134 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/paxalabs/mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "dearagent",
+    "name": "dearagent",
+    "initial": "D",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "专为 AI 代理设计的邮箱 API，可自托管于 Cloudflare Workers。开源项目，提供 MCP 服务器，是 AgentMail 的替代方案。",
+    "summary": "这是一个基于 Cloudflare Workers 的自托管邮箱 API 服务，专为 AI 代理打造。它支持 MCP 协议，允许代理直接访问和管理邮件收件箱，提供开源的解决方案，旨在作为 AgentMail 的有力替代品。",
+    "officialUrl": "https://github.com/panda-sandeep/dearagent",
+    "docsUrl": "https://github.com/panda-sandeep/dearagent",
+    "sourceUrl": "https://github.com/panda-sandeep/dearagent",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-13",
+    "accent": "#18a87b",
+    "tags": [
+      "MCP",
+      "邮箱",
+      "自托管"
+    ],
+    "useCases": [
+      "AI 代理邮件管理",
+      "自动化邮件处理",
+      "邮件收件箱集成"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Email inbox API for AI agents, self-hosted on Cloudflare Workers. Open source, with an MCP server. AgentMail alternative.",
+    "summaryEn": "dearagent provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/panda-sandeep/dearagent\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "invoicein",
+    "name": "InvoiceIn",
+    "initial": "I",
+    "type": "API",
+    "category": "商业与金融",
+    "description": "解析和验证电子发票：支持 XRechnung、ZUGFeRD、Peppol、FatturaPA、KSeF 等标准。",
+    "summary": "InvoiceIn 是一个强大的电子发票解析与验证 API，支持多种国际标准格式。它能够处理 XRechnung、ZUGFeRD、Peppol、FatturaPA 和 KSeF 等发票类型，帮助企业自动化财务流程，确保数据准确无误。",
+    "officialUrl": "https://invoicein.peculiar.systems/",
+    "docsUrl": "https://invoicein.peculiar.systems/",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-13",
+    "accent": "#2877c7",
+    "tags": [
+      "发票解析",
+      "财务自动化",
+      "API"
+    ],
+    "useCases": [
+      "企业财务自动化",
+      "发票数据提取",
+      "跨境支付验证"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Parse and validate received e-invoices: XRechnung, ZUGFeRD, Peppol, FatturaPA, KSeF.",
+    "summaryEn": "InvoiceIn provides business & finance capabilities for business research, financial analysis, and operational automation. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Business",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "business research",
+      "financial analysis",
+      "operational automation"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://invoicein.peculiar.systems/\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for business research and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "商业",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "apizone",
+    "name": "APIzone",
+    "initial": "A",
+    "type": "API",
+    "category": "开发者工具",
+    "description": "监控 200 多个流行 API 的独立运行时间和状态。",
+    "summary": "APIzone 提供独立于第三方服务的 API 运行时间和状态监控服务，覆盖超过 200 个流行的 API。开发者可以实时查看这些 API 的健康状况，及时发现并解决连接问题，保障业务连续性。",
+    "officialUrl": "https://apizone.io/api-docs",
+    "docsUrl": "https://apizone.io/api-docs",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-13",
+    "accent": "#2877c7",
+    "tags": [
+      "API 监控",
+      "状态检查",
+      "开发者工具"
+    ],
+    "useCases": [
+      "API 健康检查",
+      "服务可用性监控",
+      "故障排查"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Independent uptime & status monitoring for 200+ popular APIs.",
+    "summaryEn": "APIzone provides developer tools capabilities for developer tooling, test automation, and engineering analytics. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Development",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "developer tooling",
+      "test automation",
+      "engineering analytics"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://apizone.io/api-docs\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for developer tooling and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "开发工具",
+    "https": "支持",
+    "cors": "支持"
   }
 ]

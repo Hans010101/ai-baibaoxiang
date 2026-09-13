@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-12T04:43:13.212779+00:00",
+  "updatedAt": "2026-09-13T04:56:52.127349+00:00",
   "added": [
     {
-      "name": "ai-security-tool",
-      "slug": "ai-security-tool",
+      "name": "dearagent",
+      "slug": "dearagent",
       "status": "待确认"
     },
     {
-      "name": "baron",
-      "slug": "baron",
+      "name": "InvoiceIn",
+      "slug": "invoicein",
       "status": "待确认"
     },
     {
-      "name": "mcp",
-      "slug": "mcp",
+      "name": "APIzone",
+      "slug": "apizone",
       "status": "待确认"
     }
   ]
