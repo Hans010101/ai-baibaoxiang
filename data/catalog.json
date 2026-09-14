@@ -73586,5 +73586,137 @@
     "sourceCategory": "开发工具",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "globalentity",
+    "name": "GlobalEntity",
+    "initial": "G",
+    "type": "API",
+    "category": "商业与金融",
+    "description": "56个欧洲商业登记处的官方公司数据，以标准化JSON格式提供",
+    "summary": "提供来自欧洲56个商业登记处的标准化公司数据，支持API密钥认证，便于企业信息查询与合规分析。",
+    "officialUrl": "https://www.globalentityapi.com/docs",
+    "docsUrl": "https://www.globalentityapi.com/docs",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-14",
+    "accent": "#6f63d9",
+    "tags": [
+      "企业信息",
+      "欧洲数据",
+      "JSON API"
+    ],
+    "useCases": [
+      "企业尽职调查",
+      "合规审计",
+      "市场研究"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Official company data from 56 European business registers as normalized JSON.",
+    "summaryEn": "GlobalEntity provides business & finance capabilities for business research, financial analysis, and operational automation. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Business",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "business research",
+      "financial analysis",
+      "operational automation"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://www.globalentityapi.com/docs\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for business research and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "商业",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "kontragentpro",
+    "name": "KontragentPro",
+    "initial": "K",
+    "type": "API",
+    "category": "商业与金融",
+    "description": "通过INN或OGRN从国家登记处获取俄罗斯公司数据，包含档案、财务和时间线",
+    "summary": "支持通过INN或OGRN查询俄罗斯公司档案、财务状况及历史记录，无需密钥，适合本地化业务分析。",
+    "officialUrl": "https://kontragentpro.ru/api/v2/docs",
+    "docsUrl": "https://kontragentpro.ru/api/v2/docs",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-14",
+    "accent": "#2877c7",
+    "tags": [
+      "俄罗斯公司",
+      "国家登记",
+      "财务数据"
+    ],
+    "useCases": [
+      "俄罗斯市场调研",
+      "财务尽职调查",
+      "法律合规"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Russian company data from state registers by INN or OGRN: profile, finances, timeline.",
+    "summaryEn": "KontragentPro provides business & finance capabilities for business research, financial analysis, and operational automation. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Business",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "business research",
+      "financial analysis",
+      "operational automation"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://kontragentpro.ru/api/v2/docs\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for business research and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "商业",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "fair-draw",
+    "name": "Fair Draw",
+    "initial": "F",
+    "type": "API",
+    "category": "开发者工具",
+    "description": "可验证的随机抽奖，绑定到drand公共随机性信标",
+    "summary": "基于drand公共随机性信标的可验证随机抽奖服务，确保结果透明公正，适用于需要公平性的应用场景。",
+    "officialUrl": "https://bettip.co.za/fair-draw/api/",
+    "docsUrl": "https://bettip.co.za/fair-draw/api/",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-14",
+    "accent": "#e48743",
+    "tags": [
+      "随机数",
+      "公平抽奖",
+      "可验证"
+    ],
+    "useCases": [
+      "彩票开奖",
+      "抽奖活动",
+      "游戏公平性"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Verifiable random draws bound to the drand public randomness beacon.",
+    "summaryEn": "Fair Draw provides developer tools capabilities for developer tooling, test automation, and engineering analytics. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Development",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "developer tooling",
+      "test automation",
+      "engineering analytics"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://bettip.co.za/fair-draw/api/\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for developer tooling and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "开发工具",
+    "https": "支持",
+    "cors": "支持"
   }
 ]

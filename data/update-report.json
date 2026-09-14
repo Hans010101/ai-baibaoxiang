@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-13T04:56:52.127349+00:00",
+  "updatedAt": "2026-09-14T01:26:39.196420+00:00",
   "added": [
     {
-      "name": "dearagent",
-      "slug": "dearagent",
+      "name": "GlobalEntity",
+      "slug": "globalentity",
       "status": "待确认"
     },
     {
-      "name": "InvoiceIn",
-      "slug": "invoicein",
+      "name": "KontragentPro",
+      "slug": "kontragentpro",
       "status": "待确认"
     },
     {
-      "name": "APIzone",
-      "slug": "apizone",
+      "name": "Fair Draw",
+      "slug": "fair-draw",
       "status": "待确认"
     }
   ]
