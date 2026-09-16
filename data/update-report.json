@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-15T05:03:15.270932+00:00",
+  "updatedAt": "2026-09-16T01:03:29.874881+00:00",
   "added": [
     {
-      "name": "superstack",
-      "slug": "superstack",
+      "name": "mcp-airlock",
+      "slug": "mcp-airlock",
       "status": "待确认"
     },
     {
-      "name": "daidocs",
-      "slug": "daidocs",
+      "name": "yelp-mcp",
+      "slug": "yelp-mcp",
       "status": "待确认"
     },
     {
-      "name": "glassdoor-mcp",
-      "slug": "glassdoor-mcp",
+      "name": "bing-mcp",
+      "slug": "bing-mcp",
       "status": "待确认"
     }
   ]

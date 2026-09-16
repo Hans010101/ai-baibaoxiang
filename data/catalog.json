@@ -73841,5 +73841,128 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/HasData/glassdoor-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "mcp-airlock",
+    "name": "mcp-airlock",
+    "initial": "M",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "无状态治理代理，支持策略、试运行和人工确认，提供审计与追踪。",
+    "summary": "这是一个无状态治理代理，用于管理策略执行、试运行和人工确认。它提供审计日志和追踪功能，确保 MCP 交互的安全合规。",
+    "officialUrl": "https://github.com/Shalimov04/mcp-airlock",
+    "docsUrl": "https://github.com/Shalimov04/mcp-airlock",
+    "sourceUrl": "https://github.com/Shalimov04/mcp-airlock",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-16",
+    "accent": "#2877c7",
+    "tags": [
+      "治理",
+      "安全",
+      "审计"
+    ],
+    "useCases": [
+      "策略执行",
+      "试运行",
+      "合规审计"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Stateless governance proxy for MCP (2026-07-28): policy, dry-run, human confirmation, audit, tracing.",
+    "summaryEn": "mcp-airlock provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Shalimov04/mcp-airlock\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "yelp-mcp",
+    "name": "yelp-mcp",
+    "initial": "Y",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "Yelp 商业搜索与评论数据 MCP 服务器，提供地点详情和 JSON 格式评论。无需 API 密钥，每月赠送 1,000 免费积分。",
+    "summary": "该 MCP 服务器托管 Yelp 数据，提供商业搜索、地点详情和 JSON 格式的完整评论流。它无需 API 密钥，每月提供 1,000 免费积分，便于快速集成。",
+    "officialUrl": "https://github.com/HasData/yelp-mcp",
+    "docsUrl": "https://github.com/HasData/yelp-mcp",
+    "sourceUrl": "https://github.com/HasData/yelp-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-16",
+    "accent": "#315bea",
+    "tags": [
+      "数据获取",
+      "商业信息",
+      "评论分析"
+    ],
+    "useCases": [
+      "商业搜索",
+      "评论情感分析",
+      "地点详情查询"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "MCP server for Yelp: business search, place details and the full review feed as JSON. Hosted, no Yelp Fusion key. 1,000 free credits every month.",
+    "summaryEn": "yelp-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/HasData/yelp-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "bing-mcp",
+    "name": "bing-mcp",
+    "initial": "B",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "Bing 搜索 MCP 服务器，支持有机结果、广告拦截和 Copilot 回答。支持地理、市场和语言定位，无需 Azure 订阅。",
+    "summary": "该服务器提供 Bing 搜索功能，包括有机结果、广告拦截和 Copilot 回答。它支持地理、市场和语言定位，无需 Azure 订阅，每月提供 1,000 免费积分。",
+    "officialUrl": "https://github.com/HasData/bing-mcp",
+    "docsUrl": "https://github.com/HasData/bing-mcp",
+    "sourceUrl": "https://github.com/HasData/bing-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-16",
+    "accent": "#2877c7",
+    "tags": [
+      "搜索引擎",
+      "Copilot",
+      "定位"
+    ],
+    "useCases": [
+      "网页搜索",
+      "Copilot 集成",
+      "地理定位"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "MCP server for Bing search: organic results, the ad block and the Copilot answer, with geo, market and language targeting. No Azure subscription. 1,000 free credits every month.",
+    "summaryEn": "bing-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/HasData/bing-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]
