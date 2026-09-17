@@ -73964,5 +73964,131 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/HasData/bing-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "facebook-mcp",
+    "name": "facebook-mcp",
+    "initial": "F",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "MCP 服务器，通过账号获取点赞、粉丝、联系信息及帖子动态。无需 Meta 开发者应用，每月 1,000 免费额度。",
+    "summary": "提供 Facebook 公共主页或个人资料的实时数据服务，包括粉丝数、互动数据及帖子动态。无需 Meta 开发者应用，每月赠送 1,000 免费积分。",
+    "officialUrl": "https://github.com/HasData/facebook-mcp",
+    "docsUrl": "https://github.com/HasData/facebook-mcp",
+    "sourceUrl": "https://github.com/HasData/facebook-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-17",
+    "accent": "#e48743",
+    "tags": [
+      "Facebook",
+      "数据获取",
+      "社交媒体"
+    ],
+    "useCases": [
+      "社交媒体分析",
+      "公众号粉丝统计",
+      "竞品动态监控"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "MCP server for Facebook: a public page or profile by handle with likes, followers, contact details and the post feed with reactions. No Meta developer app. 1,000 free credits every month.",
+    "summaryEn": "facebook-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/HasData/facebook-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "maintainer-skills-lab",
+    "name": "maintainer-skills-lab",
+    "initial": "M",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "为 Codex、Claude Code 等工具提供 16 个可复用技能和 6 个智能体，涵盖人机交互、机器学习调试、代码审查等功能。",
+    "summary": "一套面向开发者的技能与智能体库，支持 Codex、Claude Code 等主流编程助手。包含人机交互、机器学习调试及代码审查等 16 个技能和 6 个智能体。",
+    "officialUrl": "https://github.com/00200200/maintainer-skills-lab",
+    "docsUrl": "https://github.com/00200200/maintainer-skills-lab",
+    "sourceUrl": "https://github.com/00200200/maintainer-skills-lab",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-17",
+    "accent": "#d4634a",
+    "tags": [
+      "代码审查",
+      "智能体",
+      "开发辅助"
+    ],
+    "useCases": [
+      "自动化代码审查",
+      "机器学习调试辅助",
+      "开发者技能库集成"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "16 reusable skills and 6 agents for Codex, Claude Code, Cursor, OpenCode and Grok Bot: Humanizer, ML debugging, PR review and Skill Watch.",
+    "summaryEn": "maintainer-skills-lab provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/00200200/maintainer-skills-lab\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "the-coin-analysis",
+    "name": "The Coin Analysis",
+    "initial": "T",
+    "type": "API",
+    "category": "区块链与加密",
+    "description": "提供加密货币的实时和历史价格、市值、波动率和回撤数据。",
+    "summary": "获取加密货币市场的实时和历史数据，包括价格、市值、波动率及回撤指标，适用于金融分析。",
+    "officialUrl": "https://www.thecoinanalysis.com/developers",
+    "docsUrl": "https://www.thecoinanalysis.com/developers",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-17",
+    "accent": "#2877c7",
+    "tags": [
+      "加密货币",
+      "市场数据",
+      "金融分析"
+    ],
+    "useCases": [
+      "加密货币价格追踪",
+      "市场波动分析",
+      "投资风险评估"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Live and historical cryptocurrency prices, market caps, volatility and drawdown.",
+    "summaryEn": "The Coin Analysis provides blockchain & crypto capabilities for market dashboards, on-chain research, and asset alerts. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Cryptocurrency",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "market dashboards",
+      "on-chain research",
+      "asset alerts"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://www.thecoinanalysis.com/developers\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for market dashboards and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "加密货币",
+    "https": "支持",
+    "cors": "支持"
   }
 ]

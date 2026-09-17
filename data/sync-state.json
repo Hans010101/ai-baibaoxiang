@@ -1661,6 +1661,7 @@
     "https://www.tcgdex.net/docs",
     "https://www.theaudiodb.com/api_guide.php",
     "https://www.thecocktaildb.com/api.php",
+    "https://www.thecoinanalysis.com/developers",
     "https://www.thegazette.co.uk/data",
     "https://www.themealdb.com/api.php",
     "https://www.themoviedb.org/documentation/api",
@@ -1719,6 +1720,7 @@
     "https://zube.io/docs/api"
   ],
   "githubRepos": [
+    "https://github.com/00200200/maintainer-skills-lab",
     "https://github.com/0xdad0/jadx-mcp",
     "https://github.com/2akouwu/reverify",
     "https://github.com/2captcha/2captcha-mcp",
@@ -1730,6 +1732,7 @@
     "https://github.com/Cripacx/mediagen",
     "https://github.com/FarzamHabibi/pre-production-checklist",
     "https://github.com/HasData/bing-mcp",
+    "https://github.com/HasData/facebook-mcp",
     "https://github.com/HasData/glassdoor-mcp",
     "https://github.com/HasData/yelp-mcp",
     "https://github.com/Kerneta/daidocs",

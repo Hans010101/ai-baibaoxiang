@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-16T01:03:29.874881+00:00",
+  "updatedAt": "2026-09-17T01:04:55.351725+00:00",
   "added": [
     {
-      "name": "mcp-airlock",
-      "slug": "mcp-airlock",
+      "name": "facebook-mcp",
+      "slug": "facebook-mcp",
       "status": "待确认"
     },
     {
-      "name": "yelp-mcp",
-      "slug": "yelp-mcp",
+      "name": "maintainer-skills-lab",
+      "slug": "maintainer-skills-lab",
       "status": "待确认"
     },
     {
-      "name": "bing-mcp",
-      "slug": "bing-mcp",
+      "name": "The Coin Analysis",
+      "slug": "the-coin-analysis",
       "status": "待确认"
     }
   ]
