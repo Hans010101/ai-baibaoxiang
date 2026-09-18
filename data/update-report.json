@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-17T01:04:55.351725+00:00",
+  "updatedAt": "2026-09-18T01:02:48.071754+00:00",
   "added": [
     {
-      "name": "facebook-mcp",
-      "slug": "facebook-mcp",
+      "name": "blitzstrike",
+      "slug": "blitzstrike",
       "status": "待确认"
     },
     {
-      "name": "maintainer-skills-lab",
-      "slug": "maintainer-skills-lab",
+      "name": "google-scholar-mcp",
+      "slug": "google-scholar-mcp",
       "status": "待确认"
     },
     {
-      "name": "The Coin Analysis",
-      "slug": "the-coin-analysis",
+      "name": "Face Shape Guide Lookup",
+      "slug": "face-shape-guide-lookup",
       "status": "待确认"
     }
   ]

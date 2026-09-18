@@ -74090,5 +74090,131 @@
     "sourceCategory": "加密货币",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "blitzstrike",
+    "name": "blitzstrike",
+    "initial": "B",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "通用的 MCP 渗透测试工具包，包含侦察、攻击面映射和源到汇分析。",
+    "summary": "提供 57 种升级链和 130 种工具目录，支持情报数据层，一个服务器管理所有代理。",
+    "officialUrl": "https://github.com/shinthink/blitzstrike",
+    "docsUrl": "https://github.com/shinthink/blitzstrike",
+    "sourceUrl": "https://github.com/shinthink/blitzstrike",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-18",
+    "accent": "#315bea",
+    "tags": [
+      "渗透测试",
+      "安全工具",
+      "MCP"
+    ],
+    "useCases": [
+      "自动化渗透测试",
+      "攻击面映射",
+      "安全评估"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "⚡ Blitz Strike — a universal MCP penetration-testing toolbelt. Structured methodology: reconnaissance & attack-surface mapping, source-to-sink analysis, and live validation. 57 escalation chains, 130-tool catalog, intelligence data layer. One server, every agent.",
+    "summaryEn": "blitzstrike provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/shinthink/blitzstrike\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "google-scholar-mcp",
+    "name": "google-scholar-mcp",
+    "initial": "G",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "Google Scholar 的 MCP 服务器，支持搜索论文、引用查找及多种格式导出。",
+    "summary": "提供 Scholar 操作符搜索、年份范围查询及引用分析，每月赠送 1000 免费额度。",
+    "officialUrl": "https://github.com/HasData/google-scholar-mcp",
+    "docsUrl": "https://github.com/HasData/google-scholar-mcp",
+    "sourceUrl": "https://github.com/HasData/google-scholar-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-18",
+    "accent": "#315bea",
+    "tags": [
+      "学术搜索",
+      "论文检索",
+      "MCP"
+    ],
+    "useCases": [
+      "文献调研",
+      "引用分析",
+      "学术研究"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "MCP server for Google Scholar: search papers with Scholar operators, year ranges, cited-by and all-versions lookups, plus citations in five styles with BibTeX export. 1,000 free credits every month.",
+    "summaryEn": "google-scholar-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/HasData/google-scholar-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "face-shape-guide-lookup",
+    "name": "Face Shape Guide Lookup",
+    "initial": "F",
+    "type": "API",
+    "category": "艺术与设计",
+    "description": "只读查询已发布的脸型指南记录，提供公开的 API 接口。",
+    "summary": "无需密钥即可访问脸型指南数据，支持 CORS，适合前端直接调用。",
+    "officialUrl": "https://myfaceshapechart.com/openapi.json",
+    "docsUrl": "https://myfaceshapechart.com/openapi.json",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-18",
+    "accent": "#d4634a",
+    "tags": [
+      "脸型分析",
+      "美容数据",
+      "API"
+    ],
+    "useCases": [
+      "面部特征识别",
+      "美妆推荐",
+      "时尚咨询"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Read-only lookup for published face-shape guide records.",
+    "summaryEn": "Face Shape Guide Lookup provides art & design capabilities for creative asset search, design automation, and content production. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Art & Design",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "creative asset search",
+      "design automation",
+      "content production"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://myfaceshapechart.com/openapi.json\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for creative asset search and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "艺术与设计",
+    "https": "支持",
+    "cors": "支持"
   }
 ]
