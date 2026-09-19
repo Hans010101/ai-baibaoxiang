@@ -74216,5 +74216,128 @@
     "sourceCategory": "艺术与设计",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "aunostudio",
+    "name": "AunoStudio",
+    "initial": "A",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "面向 AI 原生、可编辑视频、动态影像、纪录片创作及社交发布的自托管工作室。",
+    "summary": "这是一个专为 AI 原生工作流设计的自托管视频制作平台。它支持可编辑视频、动态影像、纪录片创作以及团队协作和社交发布，旨在为创作者提供一站式的工作空间。",
+    "officialUrl": "https://github.com/dhtoan/AunoStudio",
+    "docsUrl": "https://github.com/dhtoan/AunoStudio",
+    "sourceUrl": "https://github.com/dhtoan/AunoStudio",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-19",
+    "accent": "#315bea",
+    "tags": [
+      "视频制作",
+      "自托管",
+      "团队协作"
+    ],
+    "useCases": [
+      "AI 辅助纪录片制作",
+      "团队协作视频编辑",
+      "社交媒体动态发布"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "AI-native, self-hosted studio for editable video, motion, documentary creation, social publishing, and workspace collaboration.",
+    "summaryEn": "AunoStudio provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/dhtoan/AunoStudio\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "artifact-site",
+    "name": "artifact-site",
+    "initial": "A",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "团队 AI 生成页面与文档的自托管存储库。将 HTML、构建文件夹、ZIP 和 PDF 发布为沙盒化、可追溯的链接。支持 CLI 和远程 MCP。",
+    "summary": "该工具为团队 AI 生成的内容提供了一个安全的自托管存储空间。它允许将各种文件格式（如 HTML、ZIP 和 PDF）转换为沙盒化且可追溯的链接，方便 AI 代理通过 CLI 和远程 MCP 进行访问。",
+    "officialUrl": "https://github.com/lexmount/artifact-site",
+    "docsUrl": "https://github.com/lexmount/artifact-site",
+    "sourceUrl": "https://github.com/lexmount/artifact-site",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-19",
+    "accent": "#e48743",
+    "tags": [
+      "文档托管",
+      "AI 代理",
+      "版本控制"
+    ],
+    "useCases": [
+      "AI 生成报告的在线预览",
+      "构建产物归档与分享",
+      "团队知识库管理"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "A self-hosted home for your team’s AI-generated pages and documents. Publish HTML, build folders, ZIPs and PDFs as sandboxed, versioned links. CLI + remote MCP for AI agents.",
+    "summaryEn": "artifact-site provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/lexmount/artifact-site\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "jev-browser",
+    "name": "jev-browser",
+    "initial": "J",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "LLM 规划与 Jev（类型安全系统一）决策的浏览器自动化工具。提供库、CLI 和 MCP 服务器。",
+    "summary": "这是一个结合了大型语言模型（LLM）规划能力与 Jev 决策系统的浏览器自动化解决方案。它通过提供库、命令行界面和 MCP 服务器，实现了智能化的网页交互与操作，适用于复杂的自动化任务。",
+    "officialUrl": "https://github.com/Ying-Kai-Liao/jev-browser",
+    "docsUrl": "https://github.com/Ying-Kai-Liao/jev-browser",
+    "sourceUrl": "https://github.com/Ying-Kai-Liao/jev-browser",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-19",
+    "accent": "#18a87b",
+    "tags": [
+      "浏览器自动化",
+      "LLM 集成",
+      "MCP 服务器"
+    ],
+    "useCases": [
+      "复杂网页数据抓取",
+      "自动化测试与验证",
+      "智能交互流程编排"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Browser automation where an LLM plans and Jev (Typesafe System One) decides. Library, CLI and MCP server.",
+    "summaryEn": "jev-browser provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Ying-Kai-Liao/jev-browser\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]

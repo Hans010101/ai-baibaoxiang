@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-18T01:02:48.071754+00:00",
+  "updatedAt": "2026-09-19T01:01:15.130429+00:00",
   "added": [
     {
-      "name": "blitzstrike",
-      "slug": "blitzstrike",
+      "name": "AunoStudio",
+      "slug": "aunostudio",
       "status": "待确认"
     },
     {
-      "name": "google-scholar-mcp",
-      "slug": "google-scholar-mcp",
+      "name": "artifact-site",
+      "slug": "artifact-site",
       "status": "待确认"
     },
     {
-      "name": "Face Shape Guide Lookup",
-      "slug": "face-shape-guide-lookup",
+      "name": "jev-browser",
+      "slug": "jev-browser",
       "status": "待确认"
     }
   ]
