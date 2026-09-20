@@ -74339,5 +74339,134 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/Ying-Kai-Liao/jev-browser\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "awwards-mcp",
+    "name": "Awwards-mcp",
+    "initial": "A",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "免费开源 MCP 服务器，为 AI 编码代理提供获奖网站的设计灵感。支持截图搜索、提取设计 DNA 及录制实时网站。无需 API 密钥。",
+    "summary": "该工具专为 AI 编码助手打造，通过分析 Awwwards 获奖网站的设计元素，帮助开发者获取设计灵感。它支持实时网站录制和截图搜索，是 Mobbin 的开源替代方案，无需任何密钥即可使用。",
+    "officialUrl": "https://github.com/INSANE0777/Awwards-mcp",
+    "docsUrl": "https://github.com/INSANE0777/Awwards-mcp",
+    "sourceUrl": "https://github.com/INSANE0777/Awwards-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-20",
+    "accent": "#e48743",
+    "tags": [
+      "MCP",
+      "设计灵感",
+      "开源"
+    ],
+    "useCases": [
+      "获取网页设计灵感",
+      "AI 辅助代码生成",
+      "网站设计参考"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Free, open-source MCP server that gives AI coding agents (Claude Code, Codex, Cursor, OpenCode, ZCode…) design inspiration from award-winning websites — search with real screenshots, pull design DNA, capture and record live sites. A Mobbin alternative. No API key.",
+    "summaryEn": "Awwards-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/INSANE0777/Awwards-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "corpstacking",
+    "name": "CorpStacking",
+    "initial": "C",
+    "type": "API",
+    "category": "区块链与加密",
+    "description": "提供企业、政府和 ETF 的比特币、以太坊和 Solana 资金库披露数据。",
+    "summary": "该 API 服务聚合了企业、政府及 ETF 机构持有的比特币、以太坊和 Solana 资金库披露信息，帮助用户追踪加密货币的持有情况，适用于链上数据分析与合规审查。",
+    "officialUrl": "https://www.corpstacking.com/feed.json",
+    "docsUrl": "https://www.corpstacking.com/feed.json",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-20",
+    "accent": "#e48743",
+    "tags": [
+      "区块链",
+      "资金库披露",
+      "API"
+    ],
+    "useCases": [
+      "追踪机构持仓",
+      "区块链合规分析",
+      "加密货币投资研究"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Corporate, government and ETF Bitcoin, Ethereum and Solana treasury disclosures.",
+    "summaryEn": "CorpStacking provides blockchain & crypto capabilities for market dashboards, on-chain research, and asset alerts. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Cryptocurrency",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "market dashboards",
+      "on-chain research",
+      "asset alerts"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://www.corpstacking.com/feed.json\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for market dashboards and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "加密货币",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "deep-blue-alpha",
+    "name": "Deep Blue Alpha",
+    "initial": "D",
+    "type": "API",
+    "category": "区块链与加密",
+    "description": "实时追踪以太坊巨鲸钱包、DEX 交易、资金净流入及信心评分。",
+    "summary": "该服务提供以太坊巨鲸钱包的实时追踪功能，涵盖 DEX 交易、资金净流入及信心评分，帮助用户洞察大户动向并分析市场情绪，辅助投资决策与风险控制。",
+    "officialUrl": "https://deepbluealpha.io/whale-api",
+    "docsUrl": "https://deepbluealpha.io/whale-api",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-20",
+    "accent": "#18a87b",
+    "tags": [
+      "区块链",
+      "巨鲸追踪",
+      "实时数据"
+    ],
+    "useCases": [
+      "市场情绪分析",
+      "大户持仓监控",
+      "DEX 交易监控"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Real-time Ethereum whale wallet tracking, DEX trades, net flow, and conviction scoring.",
+    "summaryEn": "Deep Blue Alpha provides blockchain & crypto capabilities for market dashboards, on-chain research, and asset alerts. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Cryptocurrency",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "market dashboards",
+      "on-chain research",
+      "asset alerts"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://deepbluealpha.io/whale-api\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for market dashboards and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "加密货币",
+    "https": "支持",
+    "cors": "支持"
   }
 ]

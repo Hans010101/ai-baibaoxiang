@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-19T01:01:15.130429+00:00",
+  "updatedAt": "2026-09-20T01:08:42.804826+00:00",
   "added": [
     {
-      "name": "AunoStudio",
-      "slug": "aunostudio",
+      "name": "Awwards-mcp",
+      "slug": "awwards-mcp",
       "status": "待确认"
     },
     {
-      "name": "artifact-site",
-      "slug": "artifact-site",
+      "name": "CorpStacking",
+      "slug": "corpstacking",
       "status": "待确认"
     },
     {
-      "name": "jev-browser",
-      "slug": "jev-browser",
+      "name": "Deep Blue Alpha",
+      "slug": "deep-blue-alpha",
       "status": "待确认"
     }
   ]
