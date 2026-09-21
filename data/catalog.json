@@ -74468,5 +74468,131 @@
     "sourceCategory": "加密货币",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "jev-seo",
+    "name": "jev-seo",
+    "initial": "J",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "jev-seo 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/AkashPriyadarshii/jev-seo",
+    "docsUrl": "https://github.com/AkashPriyadarshii/jev-seo",
+    "sourceUrl": "https://github.com/AkashPriyadarshii/jev-seo",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-21",
+    "accent": "#e48743",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/AkashPriyadarshii/jev-seo\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "100% free ₹0 agent-first SEO & GEO CLI suite and MCP server in Rust replacing Semrush and OpenSEO via DuckDuckGo and TypeSafe Jev System One.",
+    "summaryEn": "jev-seo provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/AkashPriyadarshii/jev-seo\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "jev-use",
+    "name": "jev-use",
+    "initial": "J",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "jev-use 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/shitianfang/jev-use",
+    "docsUrl": "https://github.com/shitianfang/jev-use",
+    "sourceUrl": "https://github.com/shitianfang/jev-use",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-21",
+    "accent": "#e48743",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/shitianfang/jev-use\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Claude Code / Codex / pi plugin that hands agent steps needing no text output to Jev (TypeSafe's judgment model) — measured p50 ~230 ms and ~$0.02 per 1,000 judgments, with typed escalation back to the LLM.",
+    "summaryEn": "jev-use provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/shitianfang/jev-use\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "scanmalware",
+    "name": "ScanMalware",
+    "initial": "S",
+    "type": "API",
+    "category": "安全与认证",
+    "description": "提供恶意软件防护相关的数据查询与能力接入，可用于身份认证等场景。",
+    "summary": "ScanMalware 是一个恶意软件防护类开放接口，可用于身份认证、安全检测和风险控制。认证方式为无需密钥，加密连接支持，跨域调用支持。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://scanmalware.com",
+    "docsUrl": "https://scanmalware.com",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-21",
+    "accent": "#e48743",
+    "tags": [
+      "恶意软件防护",
+      "无需密钥",
+      "开放接口"
+    ],
+    "useCases": [
+      "身份认证",
+      "安全检测",
+      "风险控制"
+    ],
+    "quickstart": "1. 打开官方文档：https://scanmalware.com\n2. 认证方式：无需密钥；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接支持；跨域调用支持。\n4. 从文档选择适合“身份认证”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Scan URLs in a sandboxed browser and search past scans by domain, IP, ASN, JARM or favicon hash.",
+    "summaryEn": "ScanMalware provides security & authentication capabilities for identity verification, risk controls, and account security. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Anti-Malware",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "identity verification",
+      "risk controls",
+      "account security"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://scanmalware.com\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for identity verification and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "恶意软件防护",
+    "https": "支持",
+    "cors": "支持"
   }
 ]

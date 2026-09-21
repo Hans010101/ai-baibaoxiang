@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-20T01:08:42.804826+00:00",
+  "updatedAt": "2026-09-21T01:09:38.992862+00:00",
   "added": [
     {
-      "name": "Awwards-mcp",
-      "slug": "awwards-mcp",
+      "name": "jev-seo",
+      "slug": "jev-seo",
       "status": "待确认"
     },
     {
-      "name": "CorpStacking",
-      "slug": "corpstacking",
+      "name": "jev-use",
+      "slug": "jev-use",
       "status": "待确认"
     },
     {
-      "name": "Deep Blue Alpha",
-      "slug": "deep-blue-alpha",
+      "name": "ScanMalware",
+      "slug": "scanmalware",
       "status": "待确认"
     }
   ]
