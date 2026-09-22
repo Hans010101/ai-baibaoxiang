@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-21T01:09:38.992862+00:00",
+  "updatedAt": "2026-09-22T01:03:34.043615+00:00",
   "added": [
     {
-      "name": "jev-seo",
-      "slug": "jev-seo",
+      "name": "jev-cli",
+      "slug": "jev-cli",
       "status": "待确认"
     },
     {
-      "name": "jev-use",
-      "slug": "jev-use",
+      "name": "SwiftNodes",
+      "slug": "swiftnodes",
       "status": "待确认"
     },
     {
-      "name": "ScanMalware",
-      "slug": "scanmalware",
+      "name": "EuroValidate",
+      "slug": "eurovalidate",
       "status": "待确认"
     }
   ]

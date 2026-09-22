@@ -74594,5 +74594,134 @@
     "sourceCategory": "恶意软件防护",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "jev-cli",
+    "name": "jev-cli",
+    "initial": "J",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "用于 TypeSafe AI Jev 模型的命令行工具。对文本提问并获取校准概率。答案转为 Shell 退出码、JSON 或 MCP 工具。",
+    "summary": "这是一个专为 TypeSafe AI Jev 模型设计的命令行工具，支持对任意文本进行是/否、多选及评分提问，并返回校准后的概率。它将答案转换为 Shell 退出码、JSON 数据或 MCP 工具，方便集成到脚本、CI 流程及 AI 代理中。",
+    "officialUrl": "https://github.com/shaharia-lab/jev-cli",
+    "docsUrl": "https://github.com/shaharia-lab/jev-cli",
+    "sourceUrl": "https://github.com/shaharia-lab/jev-cli",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-22",
+    "accent": "#315bea",
+    "tags": [
+      "命令行工具",
+      "AI 模型",
+      "MCP"
+    ],
+    "useCases": [
+      "自动化测试脚本",
+      "CI/CD 流程集成",
+      "AI 代理工具调用"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Command-line tool for TypeSafe AI's Jev model. Ask yes/no, multiple-choice and rubric questions about any text and get calibrated probabilities back. Answers become exit codes for shells and CI, JSON for scripts, and MCP tools for AI agents.",
+    "summaryEn": "jev-cli provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/shaharia-lab/jev-cli\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "swiftnodes",
+    "name": "SwiftNodes",
+    "initial": "S",
+    "type": "API",
+    "category": "区块链与加密",
+    "description": "支持以太坊、Solana 等 75+ 网络的多链区块链 RPC 节点服务。",
+    "summary": "提供覆盖以太坊、Solana 等超过 75 个区块链网络的高性能 RPC 节点服务。开发者可以通过 API 调用这些节点进行链上数据交互，适用于构建去中心化应用或进行区块链数据分析。",
+    "officialUrl": "https://swiftnodes.io",
+    "docsUrl": "https://swiftnodes.io",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-22",
+    "accent": "#18a87b",
+    "tags": [
+      "区块链",
+      "RPC 节点",
+      "多链"
+    ],
+    "useCases": [
+      "去中心化应用开发",
+      "区块链数据分析",
+      "Web3 项目部署"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Multi-chain blockchain RPC nodes (Ethereum, Solana and 75+ networks).",
+    "summaryEn": "SwiftNodes provides blockchain & crypto capabilities for market dashboards, on-chain research, and asset alerts. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Blockchain",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "market dashboards",
+      "on-chain research",
+      "asset alerts"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://swiftnodes.io\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for market dashboards and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "区块链",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "eurovalidate",
+    "name": "EuroValidate",
+    "initial": "E",
+    "type": "API",
+    "category": "商业与金融",
+    "description": "提供欧盟 VAT (VIES)、IBAN 和 EORI 验证及企业名称地址查询服务。",
+    "summary": "这是一款专业的商业合规验证 API，支持欧盟 VAT (VIES)、IBAN 和 EORI 的格式校验，并提供企业名称与地址的查询功能。帮助企业确保跨境交易的税务与合规性，适用于电商及进出口业务。",
+    "officialUrl": "https://eurovalidate.com",
+    "docsUrl": "https://eurovalidate.com",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "API 密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-22",
+    "accent": "#d4634a",
+    "tags": [
+      "商业合规",
+      "欧盟税务",
+      "数据验证"
+    ],
+    "useCases": [
+      "跨境电商税务合规",
+      "进出口企业注册",
+      "金融交易验证"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "EU VAT (VIES), IBAN and EORI validation with company name & address lookup.",
+    "summaryEn": "EuroValidate provides business & finance capabilities for business research, financial analysis, and operational automation. Authentication: API key; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Business",
+      "API key",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "business research",
+      "financial analysis",
+      "operational automation"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://eurovalidate.com\n2. Authentication: API key; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for business research and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "商业",
+    "https": "支持",
+    "cors": "支持"
   }
 ]
