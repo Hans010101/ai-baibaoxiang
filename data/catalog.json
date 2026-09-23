@@ -74723,5 +74723,131 @@
     "sourceCategory": "商业",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "jevcore",
+    "name": "jevcore",
+    "initial": "J",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "专为 DeepSeek 和 MCP 设计的 Jev，支持 Node.js，默认离线，类型安全。",
+    "summary": "这是一个基于 Node.js 的类型安全 Jev 工具，专为 DeepSeek 和 MCP 协议打造，支持离线运行，提供类型化的判断而非文本描述。",
+    "officialUrl": "https://github.com/PerryLink/jevcore",
+    "docsUrl": "https://github.com/PerryLink/jevcore",
+    "sourceUrl": "https://github.com/PerryLink/jevcore",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-23",
+    "accent": "#6f63d9",
+    "tags": [
+      "DeepSeek",
+      "MCP",
+      "Node.js"
+    ],
+    "useCases": [
+      "DeepSeek 模型集成",
+      "MCP 协议开发",
+      "离线推理环境"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "TypeSafe Jev for DeepSeek Harness, the Model Context Protocol, and plain Node: typed judgments instead of prose, offline by default.",
+    "summaryEn": "jevcore provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/PerryLink/jevcore\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "jev-ultrafast-mcp",
+    "name": "jev-ultrafast-mcp",
+    "initial": "J",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "MCP 服务器，利用决策模型驱动页面，将浏览器操作转化为单次工具调用，支持 CDP 协议与 Chrome 通信。",
+    "summary": "这是一个高性能 MCP 服务器，通过决策模型驱动浏览器页面，将复杂的点击流程简化为单次工具调用，支持 CDP 协议与 Chrome 交互，提供基于引用的元素表和代码断言。",
+    "officialUrl": "https://github.com/jiawei686/jev-ultrafast-mcp",
+    "docsUrl": "https://github.com/jiawei686/jev-ultrafast-mcp",
+    "sourceUrl": "https://github.com/jiawei686/jev-ultrafast-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-23",
+    "accent": "#e48743",
+    "tags": [
+      "MCP",
+      "浏览器自动化",
+      "Chrome DevTools"
+    ],
+    "useCases": [
+      "网页自动化测试",
+      "智能代理页面交互",
+      "浏览器操作流程优化"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Hand the browser work off: an MCP server where a decision model drives the page for your agent, so a flow costs one tool call instead of a turn per click. Ref-based element tables, code-checked assertions, zero-model macro replay. Speaks CDP to your Chrome.",
+    "summaryEn": "jev-ultrafast-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/jiawei686/jev-ultrafast-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "fraudcoins",
+    "name": "FraudCoins",
+    "initial": "F",
+    "type": "API",
+    "category": "区块链与加密",
+    "description": "提供加密货币代币的链上前十大持币集中度和合约权限数据。",
+    "summary": "这是一个区块链数据 API，专注于提供加密货币代币的链上前十大持币集中度分析以及合约权限查询服务，帮助用户评估代币风险。",
+    "officialUrl": "https://fraudcoins.com/data/",
+    "docsUrl": "https://fraudcoins.com/data/",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-23",
+    "accent": "#d4634a",
+    "tags": [
+      "区块链",
+      "加密货币",
+      "数据分析"
+    ],
+    "useCases": [
+      "代币风险分析",
+      "持币集中度监控",
+      "合约权限审计"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "On-chain top-10 holder concentration and contract permissions for crypto tokens.",
+    "summaryEn": "FraudCoins provides blockchain & crypto capabilities for market dashboards, on-chain research, and asset alerts. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Cryptocurrency",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "market dashboards",
+      "on-chain research",
+      "asset alerts"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://fraudcoins.com/data/\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for market dashboards and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "加密货币",
+    "https": "支持",
+    "cors": "支持"
   }
 ]

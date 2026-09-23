@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-22T01:03:34.043615+00:00",
+  "updatedAt": "2026-09-23T01:02:30.588407+00:00",
   "added": [
     {
-      "name": "jev-cli",
-      "slug": "jev-cli",
+      "name": "jevcore",
+      "slug": "jevcore",
       "status": "待确认"
     },
     {
-      "name": "SwiftNodes",
-      "slug": "swiftnodes",
+      "name": "jev-ultrafast-mcp",
+      "slug": "jev-ultrafast-mcp",
       "status": "待确认"
     },
     {
-      "name": "EuroValidate",
-      "slug": "eurovalidate",
+      "name": "FraudCoins",
+      "slug": "fraudcoins",
       "status": "待确认"
     }
   ]
