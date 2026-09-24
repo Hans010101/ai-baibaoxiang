@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-23T01:02:30.588407+00:00",
+  "updatedAt": "2026-09-24T01:05:01.664147+00:00",
   "added": [
     {
-      "name": "jevcore",
-      "slug": "jevcore",
+      "name": "system1-agents",
+      "slug": "system1-agents",
       "status": "待确认"
     },
     {
-      "name": "jev-ultrafast-mcp",
-      "slug": "jev-ultrafast-mcp",
+      "name": "jev-judge-mcp",
+      "slug": "jev-judge-mcp",
       "status": "待确认"
     },
     {
-      "name": "FraudCoins",
-      "slug": "fraudcoins",
+      "name": "HostDeFi",
+      "slug": "hostdefi",
       "status": "待确认"
     }
   ]

@@ -74849,5 +74849,131 @@
     "sourceCategory": "加密货币",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "system1-agents",
+    "name": "system1-agents",
+    "initial": "S",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "system1-agents 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/ThinkFlowLab/system1-agents",
+    "docsUrl": "https://github.com/ThinkFlowLab/system1-agents",
+    "sourceUrl": "https://github.com/ThinkFlowLab/system1-agents",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-24",
+    "accent": "#2877c7",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/ThinkFlowLab/system1-agents\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "System 1 decision models (Jev, Laya, Cua-S1) as brain for agents: Browser use, computer use, games and robotics.",
+    "summaryEn": "system1-agents provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/ThinkFlowLab/system1-agents\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "jev-judge-mcp",
+    "name": "jev-judge-mcp",
+    "initial": "J",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "jev-judge-mcp 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/PyModel/jev-judge-mcp",
+    "docsUrl": "https://github.com/PyModel/jev-judge-mcp",
+    "sourceUrl": "https://github.com/PyModel/jev-judge-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-24",
+    "accent": "#6f63d9",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/PyModel/jev-judge-mcp\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Typed judgment tools for MCP agents. TypeSafe's Jev model as verify, screen, find, classify, rerank, decide, compare, extract, review, gate, and score: the model judges, policy decides auto, review, or escalate.",
+    "summaryEn": "jev-judge-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/PyModel/jev-judge-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "hostdefi",
+    "name": "HostDeFi",
+    "initial": "H",
+    "type": "API",
+    "category": "区块链与加密",
+    "description": "提供加密货币相关的数据查询与能力接入，可用于链上数据查询等场景。",
+    "summary": "HostDeFi 是一个加密货币类开放接口，可用于链上数据查询、资产行情展示和研究分析。认证方式为无需密钥，加密连接支持，跨域调用支持。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://hostdefi.com/docs/api/",
+    "docsUrl": "https://hostdefi.com/docs/api/",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-24",
+    "accent": "#18a87b",
+    "tags": [
+      "加密货币",
+      "无需密钥",
+      "开放接口"
+    ],
+    "useCases": [
+      "链上数据查询",
+      "资产行情展示",
+      "研究分析"
+    ],
+    "quickstart": "1. 打开官方文档：https://hostdefi.com/docs/api/\n2. 认证方式：无需密钥；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接支持；跨域调用支持。\n4. 从文档选择适合“链上数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Free A+–F token-safety grades across Solana and EVM chains.",
+    "summaryEn": "HostDeFi provides blockchain & crypto capabilities for market dashboards, on-chain research, and asset alerts. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Cryptocurrency",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "market dashboards",
+      "on-chain research",
+      "asset alerts"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://hostdefi.com/docs/api/\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for market dashboards and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "加密货币",
+    "https": "支持",
+    "cors": "支持"
   }
 ]
