@@ -74975,5 +74975,131 @@
     "sourceCategory": "加密货币",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "morocco-communes",
+    "name": "morocco-communes",
+    "initial": "M",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "摩洛哥1503个市镇的开放数据，包含HCP代码、人口普查、边界及API。",
+    "summary": "提供摩洛哥市镇的详细地理与人口数据，支持HTTP API和MCP服务器，方便开发者集成。",
+    "officialUrl": "https://github.com/zkousama/morocco-communes",
+    "docsUrl": "https://github.com/zkousama/morocco-communes",
+    "sourceUrl": "https://github.com/zkousama/morocco-communes",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-26",
+    "accent": "#6f63d9",
+    "tags": [
+      "摩洛哥",
+      "开放数据",
+      "地理信息"
+    ],
+    "useCases": [
+      "城市规划分析",
+      "人口统计研究",
+      "地理信息系统开发"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Morocco's 1,503 communes as open data: HCP codes, the 2024 and 2014 censuses, boundaries, an HTTP API and an MCP server.",
+    "summaryEn": "morocco-communes provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/zkousama/morocco-communes\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "farhand",
+    "name": "farhand",
+    "initial": "F",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "为编码代理提供远程操作能力，通过SSH在远程主机运行代码，保护本地凭证并审计所有操作。",
+    "summary": "这是一个MCP服务器，允许AI代理通过SSH在远程服务器执行代码，确保本地环境安全并记录操作日志。",
+    "officialUrl": "https://github.com/CogFlux/farhand",
+    "docsUrl": "https://github.com/CogFlux/farhand",
+    "sourceUrl": "https://github.com/CogFlux/farhand",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-26",
+    "accent": "#315bea",
+    "tags": [
+      "远程执行",
+      "SSH",
+      "安全审计"
+    ],
+    "useCases": [
+      "远程服务器代码部署",
+      "敏感数据本地化处理",
+      "AI代理安全操作"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Remote hands for coding agents: an MCP server that runs OpenCode / Claude Code / Codex work on a remote host over SSH, keeps credentials and the local machine closed, and audits everything.",
+    "summaryEn": "farhand provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/CogFlux/farhand\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "greenlit-books",
+    "name": "Greenlit Books",
+    "initial": "G",
+    "type": "API",
+    "category": "知识与内容",
+    "description": "实用AI书籍目录，提供搜索、系列、术语表和索赔账本功能。",
+    "summary": "一个实用的AI书籍资源库，包含搜索、系列分类、术语表和索赔记录，帮助开发者获取高质量学习资料。",
+    "officialUrl": "https://greenlitbooks.com/developers",
+    "docsUrl": "https://greenlitbooks.com/developers",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-26",
+    "accent": "#315bea",
+    "tags": [
+      "AI书籍",
+      "学习资源",
+      "API接口"
+    ],
+    "useCases": [
+      "AI技术选型参考",
+      "开发者知识库建设",
+      "技术书籍推荐"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Catalog of practical AI books with search, series, glossary and a claim ledger.",
+    "summaryEn": "Greenlit Books provides knowledge & content capabilities for knowledge retrieval, content enrichment, and research assistants. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Books",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "knowledge retrieval",
+      "content enrichment",
+      "research assistants"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://greenlitbooks.com/developers\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for knowledge retrieval and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "图书",
+    "https": "支持",
+    "cors": "支持"
   }
 ]

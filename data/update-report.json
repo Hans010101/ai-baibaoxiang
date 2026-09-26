@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-24T01:05:01.664147+00:00",
+  "updatedAt": "2026-09-26T01:02:36.951174+00:00",
   "added": [
     {
-      "name": "system1-agents",
-      "slug": "system1-agents",
+      "name": "morocco-communes",
+      "slug": "morocco-communes",
       "status": "待确认"
     },
     {
-      "name": "jev-judge-mcp",
-      "slug": "jev-judge-mcp",
+      "name": "farhand",
+      "slug": "farhand",
       "status": "待确认"
     },
     {
-      "name": "HostDeFi",
-      "slug": "hostdefi",
+      "name": "Greenlit Books",
+      "slug": "greenlit-books",
       "status": "待确认"
     }
   ]
