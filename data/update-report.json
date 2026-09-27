@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-26T01:02:36.951174+00:00",
+  "updatedAt": "2026-09-27T01:12:49.911325+00:00",
   "added": [
     {
-      "name": "morocco-communes",
-      "slug": "morocco-communes",
+      "name": "mcp-audit-tool",
+      "slug": "mcp-audit-tool",
       "status": "待确认"
     },
     {
-      "name": "farhand",
-      "slug": "farhand",
+      "name": "genspark-claw",
+      "slug": "genspark-claw",
       "status": "待确认"
     },
     {
-      "name": "Greenlit Books",
-      "slug": "greenlit-books",
+      "name": "MadeOnSol",
+      "slug": "madeonsol",
       "status": "待确认"
     }
   ]
