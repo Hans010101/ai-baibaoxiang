@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-27T01:12:49.911325+00:00",
+  "updatedAt": "2026-09-28T01:13:01.435102+00:00",
   "added": [
     {
-      "name": "mcp-audit-tool",
-      "slug": "mcp-audit-tool",
+      "name": "usagetrim",
+      "slug": "usagetrim",
       "status": "待确认"
     },
     {
-      "name": "genspark-claw",
-      "slug": "genspark-claw",
+      "name": "proxy-scraper",
+      "slug": "proxy-scraper",
       "status": "待确认"
     },
     {
-      "name": "MadeOnSol",
-      "slug": "madeonsol",
+      "name": "app",
+      "slug": "app",
       "status": "待确认"
     }
   ]

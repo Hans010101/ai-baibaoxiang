@@ -75227,5 +75227,128 @@
     "sourceCategory": "加密货币",
     "https": "支持",
     "cors": "支持"
+  },
+  {
+    "slug": "usagetrim",
+    "name": "usagetrim",
+    "initial": "U",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "本地 CLI + MCP，折叠冗长工具输出，适配 Claude Code、Codex、Cursor 等工具。",
+    "summary": "这是一个本地命令行工具与 MCP 服务器，旨在帮助开发者过滤和折叠 AI 编程工具的冗长输出，提升代码编写效率与体验。",
+    "officialUrl": "https://github.com/00200200/usagetrim",
+    "docsUrl": "https://github.com/00200200/usagetrim",
+    "sourceUrl": "https://github.com/00200200/usagetrim",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-28",
+    "accent": "#d4634a",
+    "tags": [
+      "CLI",
+      "MCP",
+      "过滤"
+    ],
+    "useCases": [
+      "过滤 Claude 输出",
+      "优化 Cursor 体验",
+      "简化 Codex 日志"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Keep the signal. Cut the noise. Local CLI + MCP — fold verbose tool output for Claude Code, Codex, Cursor & Desktop.",
+    "summaryEn": "usagetrim provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/00200200/usagetrim\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "proxy-scraper",
+    "name": "proxy-scraper",
+    "initial": "P",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供免费可用代理，含 700+ 源，每小时验证，支持轮换代理与 MCP 服务器，专为 AI 代理设计。",
+    "summary": "这是一个强大的代理抓取工具，整合了 700 多个数据源，自动验证代理可用性并每小时更新，同时提供轮换代理服务器和 MCP 接口，方便 AI 代理调用。",
+    "officialUrl": "https://github.com/maximilianfeix/proxy-scraper",
+    "docsUrl": "https://github.com/maximilianfeix/proxy-scraper",
+    "sourceUrl": "https://github.com/maximilianfeix/proxy-scraper",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-28",
+    "accent": "#2877c7",
+    "tags": [
+      "代理",
+      "验证",
+      "MCP"
+    ],
+    "useCases": [
+      "AI 代理网络请求",
+      "爬虫代理池",
+      "隐私保护访问"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Free proxies that actually work: 700+ sources, every hit verified (honeypots, injected scripts, TLS), a live list every hour, a rotating proxy server and an MCP server for AI agents.",
+    "summaryEn": "proxy-scraper provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/maximilianfeix/proxy-scraper\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "app",
+    "name": "app",
+    "initial": "A",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "macOS 本地优先应用，支持听写、会议笔记与记忆，内置 MCP 服务器，隐私设计，开源免费。",
+    "summary": "专为 macOS 设计的本地优先应用，集成了语音听写、会议记录和记忆功能，并提供 MCP 服务器接口，强调隐私保护，完全开源且免费。",
+    "officialUrl": "https://github.com/binders-io/app",
+    "docsUrl": "https://github.com/binders-io/app",
+    "sourceUrl": "https://github.com/binders-io/app",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-28",
+    "accent": "#e48743",
+    "tags": [
+      "macOS",
+      "听写",
+      "记忆"
+    ],
+    "useCases": [
+      "语音会议记录",
+      "本地知识库构建",
+      "隐私优先笔记"
+    ],
+    "quickstart": "请先阅读官方文档并按项目说明安装。",
+    "descriptionEn": "Binders for macOS: local-first dictation, meeting notes and memory, with an MCP server for your AI tools. Private by design, free, open source.",
+    "summaryEn": "app provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/binders-io/app\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]
