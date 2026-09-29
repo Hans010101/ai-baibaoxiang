@@ -75350,5 +75350,128 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/binders-io/app\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "jevmem",
+    "name": "jevmem",
+    "initial": "J",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "jevmem 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/Avinash-jetwani/jevmem",
+    "docsUrl": "https://github.com/Avinash-jetwani/jevmem",
+    "sourceUrl": "https://github.com/Avinash-jetwani/jevmem",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-29",
+    "accent": "#e48743",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/Avinash-jetwani/jevmem\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Automatic project memory for Claude Code. Also works with Cursor and Codex.",
+    "summaryEn": "jevmem provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/Avinash-jetwani/jevmem\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "reverse-cad",
+    "name": "reverse-cad",
+    "initial": "R",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "reverse-cad 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/grizlizora/reverse-cad",
+    "docsUrl": "https://github.com/grizlizora/reverse-cad",
+    "sourceUrl": "https://github.com/grizlizora/reverse-cad",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-29",
+    "accent": "#6f63d9",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/grizlizora/reverse-cad\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "⚙️ Industrial-grade deterministic STL ➔ STEP AP242 solid B-Rep converter & semantic CAD Features JSON engine with built-in MCP server for AI agents. Sub-second speed, ISO threads (M2–M24), Print-in-Place kinematics, and 99.958% RSVS mathematical fidelity across macOS, Windows, and Linux.",
+    "summaryEn": "reverse-cad provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/grizlizora/reverse-cad\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "oh-my-android",
+    "name": "oh-my-android",
+    "initial": "O",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "oh-my-android 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/ateymoori/oh-my-android",
+    "docsUrl": "https://github.com/ateymoori/oh-my-android",
+    "sourceUrl": "https://github.com/ateymoori/oh-my-android",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-09-29",
+    "accent": "#6f63d9",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/ateymoori/oh-my-android\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Android emulator & ADB GUI for Mac: dark mode, font size, RTL, TalkBack, network, GPS, Layout Inspector in dp. Built-in MCP server lets Claude Code, Codex and Cursor drive the emulator.",
+    "summaryEn": "oh-my-android provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/ateymoori/oh-my-android\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]

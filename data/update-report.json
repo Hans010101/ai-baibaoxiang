@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-28T01:13:01.435102+00:00",
+  "updatedAt": "2026-09-29T01:11:07.398996+00:00",
   "added": [
     {
-      "name": "usagetrim",
-      "slug": "usagetrim",
+      "name": "jevmem",
+      "slug": "jevmem",
       "status": "待确认"
     },
     {
-      "name": "proxy-scraper",
-      "slug": "proxy-scraper",
+      "name": "reverse-cad",
+      "slug": "reverse-cad",
       "status": "待确认"
     },
     {
-      "name": "app",
-      "slug": "app",
+      "name": "oh-my-android",
+      "slug": "oh-my-android",
       "status": "待确认"
     }
   ]
