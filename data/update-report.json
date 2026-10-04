@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-09-29T01:11:07.398996+00:00",
+  "updatedAt": "2026-10-04T01:35:58.476093+00:00",
   "added": [
     {
-      "name": "jevmem",
-      "slug": "jevmem",
+      "name": "showtime",
+      "slug": "showtime",
       "status": "待确认"
     },
     {
-      "name": "reverse-cad",
-      "slug": "reverse-cad",
+      "name": "AdLibrarySpy",
+      "slug": "adlibraryspy",
       "status": "待确认"
     },
     {
-      "name": "oh-my-android",
-      "slug": "oh-my-android",
+      "name": "loci",
+      "slug": "loci",
       "status": "待确认"
     }
   ]
