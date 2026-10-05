@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-04T01:35:58.476093+00:00",
+  "updatedAt": "2026-10-05T01:13:26.614041+00:00",
   "added": [
     {
-      "name": "showtime",
-      "slug": "showtime",
+      "name": "kenfold",
+      "slug": "kenfold",
       "status": "待确认"
     },
     {
-      "name": "AdLibrarySpy",
-      "slug": "adlibraryspy",
+      "name": "BashCut",
+      "slug": "bashcut",
       "status": "待确认"
     },
     {
-      "name": "loci",
-      "slug": "loci",
+      "name": "snapp-mcp",
+      "slug": "snapp-mcp",
       "status": "待确认"
     }
   ]
