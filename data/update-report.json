@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-05T01:13:26.614041+00:00",
+  "updatedAt": "2026-10-06T01:07:36.305302+00:00",
   "added": [
     {
-      "name": "kenfold",
-      "slug": "kenfold",
+      "name": "official-mcp-servers",
+      "slug": "official-mcp-servers",
       "status": "待确认"
     },
     {
-      "name": "BashCut",
-      "slug": "bashcut",
+      "name": "AiPC",
+      "slug": "aipc",
       "status": "待确认"
     },
     {
-      "name": "snapp-mcp",
-      "slug": "snapp-mcp",
+      "name": "arabic-ai-atlas",
+      "slug": "arabic-ai-atlas",
       "status": "待确认"
     }
   ]

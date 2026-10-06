@@ -75719,5 +75719,128 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/sepehr071/snapp-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "official-mcp-servers",
+    "name": "official-mcp-servers",
+    "initial": "O",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "official-mcp-servers 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/VoltAgent/official-mcp-servers",
+    "docsUrl": "https://github.com/VoltAgent/official-mcp-servers",
+    "sourceUrl": "https://github.com/VoltAgent/official-mcp-servers",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-10-06",
+    "accent": "#2877c7",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/VoltAgent/official-mcp-servers\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "A curated directory of 280+ official MCP servers from the companies behind the products. No unofficial forks, no abandoned projects.",
+    "summaryEn": "official-mcp-servers provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/VoltAgent/official-mcp-servers\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "aipc",
+    "name": "AiPC",
+    "initial": "A",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "AiPC 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/SysikNagibator/AiPC",
+    "docsUrl": "https://github.com/SysikNagibator/AiPC",
+    "sourceUrl": "https://github.com/SysikNagibator/AiPC",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-10-06",
+    "accent": "#315bea",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/SysikNagibator/AiPC\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Give the agent \"this\" and he gets a real PC.",
+    "summaryEn": "AiPC provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/SysikNagibator/AiPC\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "arabic-ai-atlas",
+    "name": "arabic-ai-atlas",
+    "initial": "A",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "arabic-ai-atlas 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/h9-tec/arabic-ai-atlas",
+    "docsUrl": "https://github.com/h9-tec/arabic-ai-atlas",
+    "sourceUrl": "https://github.com/h9-tec/arabic-ai-atlas",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-10-06",
+    "accent": "#e48743",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/h9-tec/arabic-ai-atlas\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "The Arabic AI ecosystem as a map, a list, and a skill your agent can install.",
+    "summaryEn": "arabic-ai-atlas provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/h9-tec/arabic-ai-atlas\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
   }
 ]
