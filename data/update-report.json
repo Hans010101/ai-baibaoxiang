@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-06T01:07:36.305302+00:00",
+  "updatedAt": "2026-10-07T01:10:50.394398+00:00",
   "added": [
     {
-      "name": "official-mcp-servers",
-      "slug": "official-mcp-servers",
+      "name": "passportsim",
+      "slug": "passportsim",
       "status": "待确认"
     },
     {
-      "name": "AiPC",
-      "slug": "aipc",
+      "name": "framejam",
+      "slug": "framejam",
       "status": "待确认"
     },
     {
-      "name": "arabic-ai-atlas",
-      "slug": "arabic-ai-atlas",
+      "name": "amber-notes",
+      "slug": "amber-notes",
       "status": "待确认"
     }
   ]
