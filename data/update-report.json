@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-07T01:10:50.394398+00:00",
+  "updatedAt": "2026-10-08T01:10:41.638607+00:00",
   "added": [
     {
-      "name": "passportsim",
-      "slug": "passportsim",
+      "name": "paper-preflight",
+      "slug": "paper-preflight",
       "status": "待确认"
     },
     {
-      "name": "framejam",
-      "slug": "framejam",
+      "name": "digikala-mcp",
+      "slug": "digikala-mcp",
       "status": "待确认"
     },
     {
-      "name": "amber-notes",
-      "slug": "amber-notes",
+      "name": "shipstores",
+      "slug": "shipstores",
       "status": "待确认"
     }
   ]
