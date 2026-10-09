@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-08T01:10:41.638607+00:00",
+  "updatedAt": "2026-10-09T01:12:44.433242+00:00",
   "added": [
     {
-      "name": "paper-preflight",
-      "slug": "paper-preflight",
+      "name": "verifiedhandles-mcp",
+      "slug": "verifiedhandles-mcp",
       "status": "待确认"
     },
     {
-      "name": "digikala-mcp",
-      "slug": "digikala-mcp",
+      "name": "raFont",
+      "slug": "rafont",
       "status": "待确认"
     },
     {
-      "name": "shipstores",
-      "slug": "shipstores",
+      "name": "The Color API",
+      "slug": "the-color-api",
       "status": "待确认"
     }
   ]

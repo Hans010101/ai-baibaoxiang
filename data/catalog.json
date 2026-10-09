@@ -76088,5 +76088,134 @@
       "context enrichment"
     ],
     "quickstartEn": "1. Open the official documentation: https://github.com/FidelisMM/shipstores\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "verifiedhandles-mcp",
+    "name": "verifiedhandles-mcp",
+    "initial": "V",
+    "type": "MCP",
+    "category": "MCP 服务",
+    "description": "提供MCP 服务相关的数据查询与能力接入，可用于数据查询等场景。",
+    "summary": "verifiedhandles-mcp 是一个MCP 服务类开放接口，可用于数据查询、产品能力扩展和自动化工作流。认证方式为以官方文档为准，加密连接未知，跨域调用未知。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://github.com/jameshaworthcs/verifiedhandles-mcp",
+    "docsUrl": "https://github.com/jameshaworthcs/verifiedhandles-mcp",
+    "sourceUrl": "https://github.com/jameshaworthcs/verifiedhandles-mcp",
+    "auth": "以官方文档为准",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-10-09",
+    "accent": "#2877c7",
+    "tags": [
+      "MCP 服务",
+      "以官方文档为准",
+      "开放接口"
+    ],
+    "useCases": [
+      "数据查询",
+      "产品能力扩展",
+      "自动化工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://github.com/jameshaworthcs/verifiedhandles-mcp\n2. 认证方式：以官方文档为准；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接未知；跨域调用未知。\n4. 从文档选择适合“数据查询”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Connect an AI agent to Verified Handles: setup for each client, the MCP Registry listing, a Claude Desktop extension.",
+    "summaryEn": "verifiedhandles-mcp provides mcp services capabilities for AI tool integration, agent workflows, and context enrichment. Authentication: See official docs; HTTPS: unknown; CORS: unknown. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "MCP Services",
+      "See official docs",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "AI tool integration",
+      "agent workflows",
+      "context enrichment"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://github.com/jameshaworthcs/verifiedhandles-mcp\n2. Authentication: See official docs; configure credentials as documented.\n3. Connectivity: HTTPS unknown; CORS unknown.\n4. Choose an endpoint for AI tool integration and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version."
+  },
+  {
+    "slug": "rafont",
+    "name": "raFont",
+    "initial": "R",
+    "type": "API",
+    "category": "艺术与设计",
+    "description": "提供艺术与设计相关的数据查询与能力接入，可用于创意素材检索等场景。",
+    "summary": "raFont 是一个艺术与设计类开放接口，可用于创意素材检索、视觉内容应用和设计工作流。认证方式为无需密钥，加密连接支持，跨域调用支持。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://rafont.com/api-docs",
+    "docsUrl": "https://rafont.com/api-docs",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-10-09",
+    "accent": "#2877c7",
+    "tags": [
+      "艺术与设计",
+      "无需密钥",
+      "开放接口"
+    ],
+    "useCases": [
+      "创意素材检索",
+      "视觉内容应用",
+      "设计工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://rafont.com/api-docs\n2. 认证方式：无需密钥；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接支持；跨域调用支持。\n4. 从文档选择适合“创意素材检索”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "1,500+ free downloadable fonts with categories, tags and preview images.",
+    "summaryEn": "raFont provides art & design capabilities for creative asset search, design automation, and content production. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Art & Design",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "creative asset search",
+      "design automation",
+      "content production"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://rafont.com/api-docs\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for creative asset search and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "艺术与设计",
+    "https": "支持",
+    "cors": "支持"
+  },
+  {
+    "slug": "the-color-api",
+    "name": "The Color API",
+    "initial": "T",
+    "type": "API",
+    "category": "艺术与设计",
+    "description": "提供艺术与设计相关的数据查询与能力接入，可用于创意素材检索等场景。",
+    "summary": "The Color API 是一个艺术与设计类开放接口，可用于创意素材检索、视觉内容应用和设计工作流。认证方式为无需密钥，加密连接支持，跨域调用支持。接入前请阅读官方文档，核对参数、调用限制与最新免费政策。",
+    "officialUrl": "https://www.thecolorapi.com",
+    "docsUrl": "https://www.thecolorapi.com",
+    "sourceUrl": "https://github.com/public-apis/public-apis",
+    "auth": "无需密钥",
+    "free": false,
+    "status": "待确认",
+    "verifiedAt": "2026-10-09",
+    "accent": "#e48743",
+    "tags": [
+      "艺术与设计",
+      "无需密钥",
+      "开放接口"
+    ],
+    "useCases": [
+      "创意素材检索",
+      "视觉内容应用",
+      "设计工作流"
+    ],
+    "quickstart": "1. 打开官方文档：https://www.thecolorapi.com\n2. 认证方式：无需密钥；按官方说明申请并配置所需凭证。\n3. 连接能力：加密连接支持；跨域调用支持。\n4. 从文档选择适合“创意素材检索”的端点，按官方参数示例发起测试请求。\n5. 上线前核对速率限制、免费额度、数据许可和最新接口版本。",
+    "descriptionEn": "Convert and generate color schemes.",
+    "summaryEn": "The Color API provides art & design capabilities for creative asset search, design automation, and content production. Authentication: No key required; HTTPS: supported; CORS: supported. Check the official documentation for current parameters, limits, and terms.",
+    "tagsEn": [
+      "Art & Design",
+      "No key required",
+      "Open API"
+    ],
+    "useCasesEn": [
+      "creative asset search",
+      "design automation",
+      "content production"
+    ],
+    "quickstartEn": "1. Open the official documentation: https://www.thecolorapi.com\n2. Authentication: No key required; configure credentials as documented.\n3. Connectivity: HTTPS supported; CORS supported.\n4. Choose an endpoint for creative asset search and test it with the official parameter examples.\n5. Before launch, confirm rate limits, free-tier terms, data licensing, and the latest API version.",
+    "sourceCategory": "艺术与设计",
+    "https": "支持",
+    "cors": "支持"
   }
 ]
